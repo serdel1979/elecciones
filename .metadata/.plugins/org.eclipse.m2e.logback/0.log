@@ -12861,3 +12861,4 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache
 2023-07-30 15:47:03,769 [Worker-30: Launching elecciones2021-master] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.workspace.cli_0.3.1 [355])
 2023-07-30 15:47:03,771 [Worker-30: Launching elecciones2021-master] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.workspace.cli_0.3.1.jar
 2023-07-30 15:47:13,833 [Worker-12: Launching elecciones2021-master] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.workspace.cli_0.3.1 [355])
+2023-07-30 15:47:13,834 [Worker-12: Launching elecciones2021-master] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.workspace.cli_0.3.1.jar
