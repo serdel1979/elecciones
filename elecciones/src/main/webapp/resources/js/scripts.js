@@ -564,24 +564,43 @@ function cargar_mesa()
 				$("#total_votos_recurridos_diputados_nacionales").val(provider.mesa.totalVotosRecurridosDiputadosNacionales);
 				$("#total_votos_recurridos_intendente").val(provider.mesa.totalVotosRecurridosIntendente);
 				
-
+				$("#total_votos_impugnados_presidente").val(provider.mesa.totalVotosImpugnadoPresidente);
+				$("#total_votos_impugnados_senadores").val(provider.mesa.totalVotosImpugnadoLegisladoresProvinciales);
 				$("#total_votos_impugnados_diputados_nacionales").val(provider.mesa.totalVotosImpugnadoDiputadosNacionales);
+				$("#total_votos_impugnados_parlamentarios_mercosur").val(provider.mesa.totalVotosImpugnadoParlamentariosMercosur);
+				$("#total_votos_impugnados_gobernador").val(provider.mesa.totalVotosImpugnadoGobernador);
 				$("#total_votos_impugnados_legisladores_provinciales").val(provider.mesa.totalVotosImpugnadoLegisladoresProvinciales);
-				$("#total_votos_impugnados_concejales").val(provider.mesa.totalVotosImpugnadoSobresConcejales);
+				$("#total_votos_impugnados_intendente").val(provider.mesa.totalVotosImpugnadoIntendente);
+				$("#total_votos_impugnados_concejales").val(provider.mesa.totalVotosImpugnadoConcejales);
 				
 
+				$("#total_votos_comando_electoral_presidente").val(provider.mesa.totalVotosBolsinPresidente);
+				$("#total_votos_comando_electoral_senadores").val(provider.mesa.totalVotosBolsinSenadores);
 				$("#total_votos_comando_electoral_diputados_nacionales").val(provider.mesa.totalVotosBolsinDiputadosNacionales);
+				$("#total_votos_comando_electoral_parlamentarios_mercosur").val(provider.mesa.totalVotosBolsinParlamentariosMercosur);
+				$("#total_votos_comando_electoral_gobernador").val(provider.mesa.totalVotosBolsinGobernador);
 				$("#total_votos_comando_electoral_legisladores_provinciales").val(provider.mesa.totalVotosBolsinLegisladoresProvinciales);
+				$("#total_votos_comando_electoral_intendente").val(provider.mesa.totalVotosBolsinIntendente);
 				$("#total_votos_comando_electoral_concejales").val(provider.mesa.totalVotosBolsinConcejales);
 				
 
+				$("#total_votos_en_blanco_presidente").val(provider.mesa.totalVotosBlancoPresidente);
+				$("#total_votos_en_blanco_senadores").val(provider.mesa.totalVotosBlancoSenadores);
 				$("#total_votos_en_blanco_diputados_nacionales").val(provider.mesa.totalVotosBlancoDiputadosNacionales);
+				$("#total_votos_en_blanco_parlamentarios_mercosur").val(provider.mesa.totalVotosBlancoParlamentariosMercosur);
+				$("#total_votos_en_blanco_gobernador").val(provider.mesa.totalVotosBlancoGobernador);
 				$("#total_votos_en_blanco_legisladores_provinciales").val(provider.mesa.totalVotosBlancoLegisladoresProvinciales);
+				$("#total_votos_en_blanco_intendente").val(provider.mesa.totalVotosBlancoIntendente);
 				$("#total_votos_en_blanco_concejales").val(provider.mesa.totalVotosBlancoConcejales);
 			
-				$("#total_votos_x_columna_diputados_nacionales").val(provider.mesa.totalXColumnaDiputadosNacionales);
-				$("#total_votos_x_columna_legisladores_provinciales").val(provider.mesa.totalXColumnaLegisladoresProvinciales);
-				$("#total_votos_x_columna_concejales").val(provider.mesa.totalVotosXColumnaConcejales);				
+				$("#total_votos_x_columna_presidente").val(provider.mesa.totalVotosXColumnaPresidente);
+				$("#total_votos_x_columna_senadores").val(provider.mesa.totalVotosXColumnaSenadores);
+				$("#total_votos_x_columna_diputados_nacionales").val(provider.mesa.totalXColumnaDiputadosNacionales);	
+				$("#total_votos_x_columna_parlamentarios_mercosur").val(provider.mesa.totalVotosXColumnaParlamentariosMercosur);
+				$("#total_votos_x_columna_gobernador").val(provider.mesa.totalVotosXColumnaGobernador);
+				$("#total_votos_x_columna_legisladores_provinciales").val(provider.mesa.totalXColumnaLegisladoresProvinciales);	
+				$("#total_votos_x_columna_intendente").val(provider.mesa.totalVotosXColumnaIntendente);
+				$("#total_votos_x_columna_concejales").val(provider.mesa.totalVotosXColumnaConcejales);
 				
 
 				alertDipNac();
