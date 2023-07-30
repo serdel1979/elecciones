@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\sergio\Desktop\elecciones-spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2346165469.index
+3527947550.index
+3458316078.index
+1681503865.index
+1157786214.index
+4082530744.index

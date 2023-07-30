@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="cargar"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="cargar"/>
+			<item value="$(&quot;#li_senadores_&quot;+value.idListaInterna).val(totalVotosSenadores);"/>
+			<item value="&#x09; m.setTotalVotosDiputadosNacionales(Integer.valueOf(dataRequest.get(&quot;total_votos_agrupaciones_politicas_diputados_nacionales&quot;).toString()));"/>
+			<item value="detalle_registro_votos"/>
+			<item value="detalle."/>
+			<item value="total_votos_agrupaciones_politicas_intendente"/>
+			<item value="alertLegProv"/>
+			<item value="alertPresidente"/>
+			<item value="tr_totales_label"/>
+			<item value="agrupaciones"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="271"/>
+		<item key="DIALOG_Y_ORIGIN" value="123"/>
+		<item key="DIALOG_WIDTH" value="322"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

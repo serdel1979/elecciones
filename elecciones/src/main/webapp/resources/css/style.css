@@ -1,0 +1,130 @@
+html { height:100%; }
+body { position:absolute; top:0; bottom:0; right:0; left:0; }
+
+.form-basic {
+				max-width: 1215px !important;
+				padding-left:0px !important;
+				padding-right:0px !important;
+				padding-top:15px !important;
+				padding-bottom:0px !important;
+				height:100% !important;
+			}
+.principal
+			{
+				width:100%;
+				border:2px #000 solid;
+				height:100%;
+				overflow-y:auto;
+			}
+#principal_descripcion
+{
+	float:left;
+	margin-top:3px;
+	width:75%;
+	border-right:2px #000 solid;
+}
+#principal_descripcion > img
+{
+	height:100px;
+	float:left;
+	margin-left:2px;
+}
+
+.texto_no_resaltado
+{
+	margin:5px;
+	font: normal 12px sans-serif;
+}
+
+.texto_resaltado_grande
+{
+	font-size:20px;
+}
+
+.main-content
+{
+	height:100%
+}
+#principal_circuito_mesa
+{
+	float:left;
+	text-align:center;
+	width:25%;
+}
+
+#principal_circuito_mesa > .texto_no_resaltado > input 
+{
+	width:50px !important;
+	padding: 0px !important;
+	margin-left:5px !important;
+	margin-right:5px !important;
+
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{padding:5px 5px;border-style:solid;border-width:2px;overflow:hidden;word-break:normal;}
+.tg th{font-weight:normal;padding:5px 5px;border-style:solid;border-width:2px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+
+.tg-yw4l > input
+{
+	padding: 0px !important;
+	margin-left:5px !important;
+	margin-right:5px !important;
+	text-align: center;
+}
+
+.tg-yw4l
+{
+	font-size: 12px !important;
+	text-align: center;
+}
+
+ .agrupaciones-politicas {
+	word-wrap: break-word;
+    white-space: normal;
+    max-height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+ }
+
+.cellempty
+{
+	padding:10px 10px !important;
+}
+.aleft
+{
+	text-align: left !important;
+	font-weight: bold !important;
+}
+
+#b_cargar_mesa
+{
+	margin:0 auto !important;
+	margin-top:5px !important;
+	padding:3px !important;
+	cursor:pointer;
+}
+
+input[type='text']
+{
+	text-align: center !important;
+}
+
+.form-basic button
+{
+	margin: 0 auto !important;
+    margin-bottom: 15px !important;
+    margin-top: 10px !important;
+    padding:5px 5px !important;
+}
+
+.detalle_registro_votos > th
+{
+	font: bold 12px sans-serif !important;
+}
+
+.error_columna_totales
+{
+	    box-shadow: 0px 0px 5px 0 rgb(255, 0, 0) !important;
+	
+}
