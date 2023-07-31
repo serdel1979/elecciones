@@ -221,7 +221,7 @@
 							  </tr>
 													  
 							  <tr>
-								<td colspan="8">(*) SR. PRESIDENTE: LA SUMA DE LOS TOTALES POR COLUMNA DEBERA COINCIDIR CON LA CANTIDAD DE SOBRES UTILIZADOS EN LA URNA</td>
+								<td colspan="11">(*) SR. PRESIDENTE: LA SUMA DE LOS TOTALES POR COLUMNA DEBERA COINCIDIR CON LA CANTIDAD DE SOBRES UTILIZADOS EN LA URNA</td>
 								
 							  </tr>
 							  

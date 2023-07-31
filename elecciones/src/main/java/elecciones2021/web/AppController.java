@@ -535,8 +535,11 @@ public class AppController {
     			
     			//obtener el lugar de votacion
     			
+    			System.out.println("Busca circuito mesa con circuito "+String.valueOf(m.getCircuito())+" y mesa "+String.valueOf(m.getIdMesa()));
+    			
     			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
     			
+    			System.out.println(cm);
     			
     			Cell cell1 = row.createCell(columnCount++);
     			
