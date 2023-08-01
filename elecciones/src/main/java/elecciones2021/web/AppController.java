@@ -498,7 +498,7 @@ public class AppController {
     	HashMap<String, Object> returnValue = new HashMap<String,Object>();	
     	
     	
-        //ahora plasmar la parte de presidente
+        //plasmar la parte de presidente
     	
     	
     	List<Mesa> mesasAll_presidente = mesaRepository.findLoaded();
@@ -1282,10 +1282,25 @@ public class AppController {
     		
     		sheet.autoSizeColumn(i);
     	
+
+    	String relativeDirectoryPath = "data/"; 
+
+    	// Combina la ruta del directorio relativo con el nombre del archivo
+    	String filePath = System.getProperty("user.dir") + "/" + relativeDirectoryPath + "Paso2023.xlsx";
+    	// Asegurarse de que el directorio exista, si no, crearlo
+    	try {
+    	    Files.createDirectories(Paths.get(System.getProperty("user.dir"), relativeDirectoryPath));
+    	} catch (IOException e) {
+    	    e.printStackTrace();
+    	    returnValue.put("success", false);
+    	    returnValue.put("message", "Ha ocurrido un error al crear el directorio");
+    	    return returnValue;
+    	}
     	//Escupir el archivo a la direccion utilizada
-        try (FileOutputStream outputStream = new FileOutputStream("C:\\Users\\sergio\\Documents\\Paso2023.xlsx")) {
+       // try (FileOutputStream outputStream = new FileOutputStream("C:\\Users\\sergio\\Documents\\Paso2023.xlsx")) {
     	//try (FileOutputStream outputStream = new FileOutputStream("/tmp/DetallePaso2019.xlsx")) {
-            workbook.write(outputStream);
+    	try (FileOutputStream outputStream = new FileOutputStream(filePath)) {
+    		workbook.write(outputStream);
             returnValue.put("success", true);
         }
         catch (Exception e) {
