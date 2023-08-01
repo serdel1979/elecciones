@@ -162,7 +162,7 @@ public class AppController {
 		responseResultDashboardDTO.setTotalesxDiputadosNacionales(mesaRepository.getTotalesDiputadosNacionales());
 		responseResultDashboardDTO.setTotalesxLegisladoresProvinciales(mesaRepository.getTotalesLegisladoresProvinciales());
 		responseResultDashboardDTO.setTotalesxConcejales(mesaRepository.getTotalesConcejales());
-
+		responseResultDashboardDTO.setTotalesxSenadores(mesaRepository.getTotalesSenadoresNacionales());
 
 		return responseResultDashboardDTO;
 

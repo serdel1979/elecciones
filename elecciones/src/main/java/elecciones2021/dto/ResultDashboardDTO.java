@@ -26,6 +26,8 @@ public class ResultDashboardDTO {
 	
 	List<Map<String, Object>> totalesxParlamentarios;
 	
+	List<Map<String, Object>> totalesxSenadores;
+	
 
     public int getNroTable() {
         return nroTable;
@@ -62,9 +64,19 @@ public class ResultDashboardDTO {
     	
     	this.totalesxGobernador = new  ArrayList<Map<String, Object>>();
     	
+    	this.totalesxSenadores = new  ArrayList<Map<String, Object>>();
+    	
     }
 
-    public long getTotalTables() {
+    public List<Map<String, Object>> getTotalesxSenadores() {
+		return totalesxSenadores;
+	}
+
+	public void setTotalesxSenadores(List<Map<String, Object>> totalesxSenadores) {
+		this.totalesxSenadores = totalesxSenadores;
+	}
+
+	public long getTotalTables() {
         return totalTables;
     }
 
