@@ -4782,3 +4782,6 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-01 10:29:57.348
 !MESSAGE Classpath changed for project: elecciones
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-01 10:58:13.970
+!MESSAGE Classpath changed for project: elecciones

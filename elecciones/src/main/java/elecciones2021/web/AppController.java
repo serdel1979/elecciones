@@ -276,6 +276,8 @@ public class AppController {
 //	}
 	
 	
+	//"C:\\Users\\sergio\\Documents\\Paso2023.xlsx"
+	
 	@Transactional
 	@RequestMapping(value = "/updateMesa", method = RequestMethod.POST, headers = {"Content-type=application/json"}, produces="application/json")
 	
@@ -426,9 +428,9 @@ public class AppController {
         //If user is not authorized - he should be thrown out from here itself
 
         //Authorized user will download the file
-        String dataDirectory = "C:\\tmp";
+        String dataDirectory = "C:\\Users\\sergio\\Documents\\";
 		//String dataDirectory = "/tmp";
-        Path file = Paths.get(dataDirectory, "DetalleGenerales2021.xlsx");
+        Path file = Paths.get(dataDirectory, "Paso2023.xlsx");
         if (Files.exists(file))
         {
             response.setContentType("application/excel");
@@ -443,6 +445,8 @@ public class AppController {
             }
         }
     }
+	
+	
 
     @RequestMapping(value={"/generateReport"}, method={RequestMethod.GET}, produces={"application/json"})
     @ResponseBody
