@@ -40,10 +40,13 @@ public interface MesaRepository extends JpaRepository<Mesa, Long> {
 	List<Map<String, Object>> getTotalesConcejales();
 	
 	
+	//@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistampal() as p on li.id_lista_interna = p.id_lista_interna")
 	List<Map<String, Object>> getTotalesPresidente();
 	List<Map<String, Object>> getTotalesGobernador();
 	List<Map<String, Object>> getTotalesIntendente();
 	List<Map<String, Object>> getTotalesParlamentario();
+	
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistampal() as p on li.id_lista_interna = p.id_lista_interna")
 	List<Map<String, Object>> getTotalesSenadoresNacionales();
 	
 }
