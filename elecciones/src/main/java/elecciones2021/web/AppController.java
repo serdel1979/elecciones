@@ -428,9 +428,11 @@ public class AppController {
         //If user is not authorized - he should be thrown out from here itself
 
         //Authorized user will download the file
-        String dataDirectory = "C:\\Users\\sergio\\Documents\\";
+        //String dataDirectory = "C:\\Users\\sergio\\Documents\\";
 		//String dataDirectory = "/tmp";
-        Path file = Paths.get(dataDirectory, "Paso2023.xlsx");
+        String relativeDirectoryPath = "data/"; 
+        String filePath = System.getProperty("user.dir") + "/" + relativeDirectoryPath;
+        Path file = Paths.get(filePath, "Paso2023.xlsx");
         if (Files.exists(file))
         {
             response.setContentType("application/excel");
@@ -499,7 +501,7 @@ public class AppController {
     	
     	
         //plasmar la parte de presidente
-    	
+
     	
     	List<Mesa> mesasAll_presidente = mesaRepository.findLoaded();
     	Iterator<Mesa> it_mesas_presidente = mesasAll_presidente.iterator();
@@ -577,7 +579,6 @@ public class AppController {
     	
     	
         //ahora plasmar la parte de senadores
-    	
     	
     	List<Mesa> mesasAll_senadores = mesaRepository.findLoaded();
     	Iterator<Mesa> it_mesas_senadores = mesasAll_senadores.iterator();
@@ -758,7 +759,6 @@ public class AppController {
     	}
 
     	
-    	
     	//PARLAMENTARIOS DEL MERCOSUR
     	
     	List<Mesa> mesasAll_parlamentarios_mercosur = mesaRepository.findLoaded();
@@ -861,10 +861,6 @@ public class AppController {
 
     	
     	//GOBERNADOR
-    	
-    	
-    	//PARLAMENTARIOS DEL MERCOSUR
-    	
     	List<Mesa> mesasAll_gobernador = mesaRepository.findLoaded();
     	
     	Iterator<Mesa> it_mesas_gobernador = mesasAll_gobernador.iterator();
@@ -964,9 +960,8 @@ public class AppController {
     	}
     	
     	
-    	
     	//Plasmar la parte de los Legisladores Provinciales
-    	
+    	System.out.println("legisladores");
     	List<Mesa> mesasAll_legisladores_provinciales = mesaRepository.findLoaded();
     	
     	Iterator<Mesa> it_mesas_legisladores_provinciales = mesasAll_legisladores_provinciales.iterator();
@@ -1066,11 +1061,9 @@ public class AppController {
     	}
     	
     	
-    	//parte de intendente
     	
     	
     	//PARLAMENTARIOS DEL MERCOSUR
-    	
     	List<Mesa> mesasAll_intendente = mesaRepository.findLoaded();
     	
     	Iterator<Mesa> it_mesas_intendente = mesasAll_intendente.iterator();
