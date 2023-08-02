@@ -143,7 +143,7 @@
 								<th class="tg-yw4l aleft" colspan="3">TOTAL VOTOS AGRUPACIONES POLITICAS</th>
 								
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_presidente" onkeyup="alertPresidente()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_senadores" onkeyup="total_votos_senadores()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_senadores" onkeyup="alertSenadores()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_diputados_nacionales" onkeyup="total_votos_dip_nac()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_parlamentarios_mercosur" onkeyup="alertParlamentarios()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_gobernador" onkeyup="total_votos_gobernador()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>

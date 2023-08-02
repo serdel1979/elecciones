@@ -30,7 +30,7 @@ function total_votos_senadores()
 
 			  total = total + parseInt($( this ).val());
 	});
-	console.log(total);
+	console.log("senadores ",total);
 	return total;
 }
 
@@ -40,17 +40,20 @@ function alertSenadores()
 
 	if($("#total_votos_agrupaciones_politicas_senadores").val()=="")
 		$("#total_votos_agrupaciones_politicas_senadores").removeClass("error_columna_totales");
+	
 	else
 		{
 			if(parseInt($("#total_votos_agrupaciones_politicas_senadores").val())!=total_votos_senadores() )
 			{
+				console.log('es igual')
 				if (!$("#total_votos_agrupaciones_politicas_senadores").hasClass("error_columna_totales"))
 					$("#total_votos_agrupaciones_politicas_senadores").addClass("error_columna_totales");
 			}	
-			else
-				$("#total_votos_agrupaciones_politicas_senadores").removeClass("error_columna_totales");
-		
-		
+			else{
+				console.log('no es igual');
+				$("#total_votos_agrupaciones_politicas_senadores").removeClass("error_columna_totales");				
+			}
+
 		}
 }
 
@@ -63,6 +66,7 @@ function total_votos_intendente()
 
 			  total = total + parseInt($( this ).val());
 	});
+	console.log("intendente ",total);
 	return total;
 }
 
@@ -95,6 +99,7 @@ function total_votos_gobernador()
 
 			  total = total + parseInt($( this ).val());
 	});
+	console.log('total gobernador ',total);
 	return total;
 }
 
@@ -129,6 +134,7 @@ function total_votos_parlamentarios()
 
 			  total = total + parseInt($( this ).val());
 	});
+	console.log('parlamentarios', total);
 	return total;
 }
 
@@ -164,6 +170,7 @@ function total_votos_dip_nac()
 
 			  total = total + parseInt($( this ).val());
 	});
+	console.log('diput nac ',total);
 	return total;
 }
 
@@ -198,6 +205,7 @@ function total_votos_leg_prov()
 
 			  total = total + parseInt($( this ).val());
 	});
+	console.log('legisl prov ',total);
 	return total;
 }
 
@@ -231,6 +239,7 @@ function total_votos_presidente()
 
 			  total = total + parseInt($( this ).val());
 	});
+	console.log('presidente ',total);
 	return total;
 }
 
@@ -263,6 +272,7 @@ function total_votos_concej()
 
 			  total = total + parseInt($( this ).val());
 	});
+	console.log('consejal ',total);
 	return total;
 }
 
