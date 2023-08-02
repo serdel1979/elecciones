@@ -3,7 +3,7 @@ html{
 }
 
 .form-basic{
-    max-width: 640px;
+    max-width: 1650px !important;
     margin: 0 auto;
     padding: 55px;
     box-sizing: border-box;
