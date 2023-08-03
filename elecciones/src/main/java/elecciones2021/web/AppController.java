@@ -71,7 +71,7 @@ import elecciones2021.repository.UserRepository;
 
 @Controller
 //@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = {"http://localhost:4200", "https://resultadostresdefebrero2021.com.ar","http://192.168.0.20:8080","http://192.168.1.9:8080"})
+@CrossOrigin(origins = {"http://localhost:4200", "https://resultadostresdefebrero2021.com.ar","http://192.168.0.20:8080","http://192.168.1.9:8080","https://pasos2023-production.up.railway.app"})
 
 @RequestMapping(value={"/client"})
 public class AppController {
