@@ -200,10 +200,10 @@
                     </executions>
                     <configuration>
                         <executable>npm</executable>
-                        <workingDirectory>src/main/angularapp/ngx-admin/</workingDirectory>
+                        <workingDirectory>src/main/angularapp/elecciones-ng/</workingDirectory>
                         <arguments>
                             <argument>run-script</argument>
-                            <argument>build:prod</argument>
+                       <!--     <argument>build:prod</argument> -->
                         </arguments>
                     </configuration>
                  </plugin>

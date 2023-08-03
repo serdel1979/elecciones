@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-sm">
+    <ngx-telegrams-card [telegramSubjectSettings]="telegramLoadedSubjectSettings"></ngx-telegrams-card>
+    <ngx-telegrams-card [telegramSubjectSettings]="telegramToLoadSubjectSettings"></ngx-telegrams-card>
+
+  </div>
+  <div class="col-sm">
+    <ngx-electoral-circuit [circuitSubjectSettings]="circuitLoadedSubjectSettings"></ngx-electoral-circuit>
+  </div>
+  <div class="col-sm">
+    <ngx-electoral-circuit [circuitSubjectSettings]="circuitToLoadSubjectSettings"></ngx-electoral-circuit>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarDiputado.asObservable()"></ngx-result-bar>
+  </div>
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarSenador.asObservable()"></ngx-result-bar>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarConcejal.asObservable()"></ngx-result-bar>
+  </div>
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarPresidente.asObservable()"></ngx-result-bar>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarGobernador.asObservable()"></ngx-result-bar>
+  </div>
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarIntendente.asObservable()"></ngx-result-bar>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarParlamentariosMercosur.asObservable()"></ngx-result-bar>
+  </div>
+  <div class="col-sm">
+    <ngx-result-bar [onResultBarSettingsChange]="changeBarSenador.asObservable()"></ngx-result-bar>
+  </div>
+</div> 

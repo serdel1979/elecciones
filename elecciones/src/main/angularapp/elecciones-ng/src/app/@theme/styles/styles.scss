@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/globals';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/grid';
+
+// loading progress bar theme
+@import './pace.theme';
+
+@import './layout';
+@import './overrides';
+
+// install the framework and custom global styles
+@include nb-install() {
+
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+
+  @include ngx-layout();
+  // loading progress bar
+  @include ngx-pace-theme();
+
+  @include nb-overrides();
+};
+
+nb-layout-header.fixed:after {
+  content:"";
+  background: linear-gradient(to right, #a02382 0%,#e62328 17%,#e62328 17%,#e62328 39%,#f58723 61%,#ffd205 84%,#ffd205 100%);
+  display: block;
+  height:15px;
+  width: 100%;
+  position: absolute;
+  bottom:0;
+}
+
+nav.fixed
+{
+  padding-bottom: 30px !important;
+}
+
+.logo
+{
+  background-image: url(../../../assets/images/logo-juntos-por-el-cambio-negro-sm.png);
+  background-size: 97px 44px;
+
+  width: 97px;
+  height: 44px;
+}
+
+.nb-theme-default nb-card.size-tiny {
+  height: 18.25rem !important;
+}
