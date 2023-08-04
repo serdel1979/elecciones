@@ -36,8 +36,8 @@ public class ListaInterna implements Serializable {
 	@Column(name = "permite_legisladores_provinciales", columnDefinition = "boolean default true")
 	private boolean allowLegProv;
 	
-	@Column(name = "permite_concejales", columnDefinition = "boolean default true")
-	private boolean allowConcejales;
+	@Column(name = "permite_parlamentarios_mercosur_reg", columnDefinition = "boolean default true")
+	private boolean allowParlamentariosMercosurReg;
 	
 	@Column(name = "permite_senadores_nacionales", columnDefinition = "boolean default true")
 	private boolean allowSenadores;
@@ -128,12 +128,12 @@ public class ListaInterna implements Serializable {
 		this.allowLegProv = allowLegProv;
 	}
 
-	public boolean isAllowConcejales() {
-		return allowConcejales;
+	public boolean isAllowParlamentariosMercosurReg() {
+		return allowParlamentariosMercosurReg;
 	}
 
-	public void setAllowConcejales(boolean allowConcejales) {
-		this.allowConcejales = allowConcejales;
+	public void setAllowParlamentariosMercosurReg(boolean allowConcejales) {
+		this.allowParlamentariosMercosurReg = allowConcejales;
 	}
 
 	public String getNro_lista() {

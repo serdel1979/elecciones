@@ -31,8 +31,8 @@ public class Escrutinio implements Serializable {
 	@Column(name = "total_votos_legisladores_provinciales")
 	private int totalVotosLegisladoresProvinciales;
 
-	@Column(name = "total_votos_concejales")
-	private int totalVotosConcejales;
+	@Column(name = "total_votos_parlamentarios_mercosur_reg")
+	private int totalVotosParlamentariosRercosurReg;
 	
 	
 	@Column(name = "total_votos_senadores")
@@ -119,8 +119,8 @@ public class Escrutinio implements Serializable {
 		return totalVotosLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosConcejales() {
-		return totalVotosConcejales;
+	public int getTotalVotosParlamentariosMercosurReg() {
+		return totalVotosParlamentariosRercosurReg;
 	}
 
 	public void setTotalVotosDiputadosNacionales(int totalVotosDiputadosNacionales) {
@@ -131,8 +131,8 @@ public class Escrutinio implements Serializable {
 		this.totalVotosLegisladoresProvinciales = totalVotosLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosConcejales(int totalVotosConcejales) {
-		this.totalVotosConcejales = totalVotosConcejales;
+	public void setTotalVotosParlamentariosMercosurReg(int totalVotosConcejales) {
+		this.totalVotosParlamentariosRercosurReg = totalVotosConcejales;
 	}
 
 

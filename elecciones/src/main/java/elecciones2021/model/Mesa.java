@@ -58,8 +58,8 @@ public class Mesa implements Serializable {
 	@Column(name = "total_votos_blanco_legisladores_provinciales", columnDefinition = "integer default 0")
 	private int totalVotosBlancoLegisladoresProvinciales;
 	
-	@Column(name = "total_votos_blanco_concejales", columnDefinition = "integer default 0")
-	private int totalVotosBlancoConcejales;
+	@Column(name = "total_votos_blanco_parlamentarios_mercosur_reg", columnDefinition = "integer default 0")
+	private int totalVotosBlancoParlamentariosMercosurReg;
 	
 	@Column(name = "total_votos_blanco_intendente", columnDefinition = "integer default 0")
 	private int totalVotosBlancoIntendente;
@@ -84,8 +84,8 @@ public class Mesa implements Serializable {
 	@Column(name = "total_votos_impugnado_legisladores_provinciales", columnDefinition = "integer default 0")
 	private int totalVotosImpugnadoLegisladoresProvinciales;
 	
-	@Column(name = "total_votos_impugnado_concejales", columnDefinition = "integer default 0")
-	private int totalVotosImpugnadoConcejales;
+	@Column(name = "total_votos_impugnado_parlamentarios_mercosur_reg", columnDefinition = "integer default 0")
+	private int totalVotosImpugnadoParlamentariosMercosurReg;
 	
 	@Column(name = "total_votos_impugnado_senadores", columnDefinition = "integer default 0")
 	private int totalVotosImpugnadoSenadores;
@@ -126,8 +126,8 @@ public class Mesa implements Serializable {
 	private int totalVotosNulosParlamentariosMercosur;
 	
 	
-	@Column(name = "total_votos_nulos_concejales", columnDefinition = "integer default 0")
-	private int totalVotosNulosConcejales;
+	@Column(name = "total_votos_nulos_parlamentarios_mercosur_reg", columnDefinition = "integer default 0")
+	private int totalVotosNulosParlamentariosMercosurReg;
 
 	
 	
@@ -147,8 +147,8 @@ public class Mesa implements Serializable {
 	@Column(name = "total_x_col_legisladores_provinciales", columnDefinition = "integer default 0")
 	private int totalXColumnaLegisladoresProvinciales;
 	
-	@Column(name = "total_x_col_concejales", columnDefinition = "integer default 0")
-	private int totalVotosXColumnaConcejales;
+	@Column(name = "total_x_col_parlamentarios_mercosur_reg", columnDefinition = "integer default 0")
+	private int totalVotosXColumnaParlamentariosMercosurReg;
 	
 	@Column(name = "total_x_col_senadores", columnDefinition = "integer default 0")
 	private int totalVotosXColumnaSenadores;
@@ -174,8 +174,8 @@ public class Mesa implements Serializable {
 	@Column(name = "total_votos_recurridos_legisladores_provinciales", columnDefinition = "integer default 0")
 	private int totalVotosRecurridosLegisladoresProvinciales;
 	
-	@Column(name = "total_votos_recurridos_concejales", columnDefinition = "integer default 0")
-	private int totalVotosRecurridosConcejales;
+	@Column(name = "total_votos_recurridos_parlamentarios_mercosur_reg", columnDefinition = "integer default 0")
+	private int totalVotosRecurridosParlamentariosMercosurReg;
 	
 	
 	@Column(name = "total_votos_recurridos_senadores", columnDefinition = "integer default 0")
@@ -201,8 +201,8 @@ public class Mesa implements Serializable {
 	@Column(name = "total_votos_legisladores_provinciales", columnDefinition = "integer default 0")
 	private int totalVotosLegisladoresProvinciales;
 	
-	@Column(name = "total_votos_concejales", columnDefinition = "integer default 0")
-	private int totalVotosConcejales;
+	@Column(name = "total_votos_parlamentarios_mercosur_reg", columnDefinition = "integer default 0")
+	private int totalVotosParlamentariosMercosurReg;
 	
 	
 	@Column(name = "total_votos_senadores", columnDefinition = "integer default 0")
@@ -230,8 +230,8 @@ public class Mesa implements Serializable {
 	@Column(name = "total_votos_bolsin_legisladores_provinciales", columnDefinition = "integer default 0")
 	private int totalVotosBolsinLegisladoresProvinciales;
 	
-	@Column(name = "total_votos_bolsin_concejales", columnDefinition = "integer default 0")
-	private int totalVotosBolsinConcejales;
+	@Column(name = "total_votos_bolsin_parlamentarios_mercosur_reg", columnDefinition = "integer default 0")
+	private int totalVotosBolsinParlamentariosMercosurReg;
 	
 	@Column(name = "total_votos_bolsin_presidente", columnDefinition = "integer default 0")
 	private int totalVotosBolsinPresidente;
@@ -271,8 +271,8 @@ public class Mesa implements Serializable {
 		return totalVotosBlancoLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosBlancoConcejales() {
-		return totalVotosBlancoConcejales;
+	public int getTotalVotosBlancoParlamentariosMercosurReg() {
+		return totalVotosBlancoParlamentariosMercosurReg;
 	}
 
 	public int getTotalVotosBolsinDiputadosNacionales() {
@@ -283,8 +283,8 @@ public class Mesa implements Serializable {
 		return totalVotosBolsinLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosBolsinConcejales() {
-		return totalVotosBolsinConcejales;
+	public int getTotalVotosBolsinParlamentariosMercosurReg() {
+		return totalVotosBolsinParlamentariosMercosurReg;
 	}
 
 	public int getTotalVotosImpugnadoDiputadosNacionales() {
@@ -295,8 +295,8 @@ public class Mesa implements Serializable {
 		return totalVotosImpugnadoLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosImpugnadoConcejales() {
-		return totalVotosImpugnadoConcejales;
+	public int getTotalVotosImpugnadoParlamentariosMercosurReg() {
+		return totalVotosImpugnadoParlamentariosMercosurReg;
 	}
 
 	public int getTotalVotosNulosDiputadosNacionales() {
@@ -307,8 +307,8 @@ public class Mesa implements Serializable {
 		return totalVotosNulosLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosNulosConcejales() {
-		return totalVotosNulosConcejales;
+	public int getTotalVotosNulosParlamentariosMercosurReg() {
+		return totalVotosNulosParlamentariosMercosurReg;
 	}
 
 	public int getTotalVotosRecurridosDiputadosNacionales() {
@@ -319,8 +319,8 @@ public class Mesa implements Serializable {
 		return totalVotosRecurridosLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosRecurridosConcejales() {
-		return totalVotosRecurridosConcejales;
+	public int getTotalVotosRecurridosParlamentariosMercosurReg() {
+		return totalVotosRecurridosParlamentariosMercosurReg;
 	}
 
 	public int getTotalVotosXIndividuo() {
@@ -339,8 +339,8 @@ public class Mesa implements Serializable {
 		return totalVotosLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosConcejales() {
-		return totalVotosConcejales;
+	public int getTotalVotosParlamentariosMercosurReg() {
+		return totalVotosParlamentariosMercosurReg;
 	}
 
 	public int getTotalXColumnaDiputadosNacionales() {
@@ -351,8 +351,8 @@ public class Mesa implements Serializable {
 		return totalXColumnaLegisladoresProvinciales;
 	}
 
-	public int getTotalVotosXColumnaConcejales() {
-		return totalVotosXColumnaConcejales;
+	public int getTotalVotosXColumnaParlamentariosMercosurReg() {
+		return totalVotosXColumnaParlamentariosMercosurReg;
 	}
 
 	public void setTotalVotosBlancoDiputadosNacionales(int totalVotosBlancoDiputadosNacionales) {
@@ -363,8 +363,8 @@ public class Mesa implements Serializable {
 		this.totalVotosBlancoLegisladoresProvinciales = totalVotosBlancoLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosBlancoConcejales(int totalVotosBlancoConcejales) {
-		this.totalVotosBlancoConcejales = totalVotosBlancoConcejales;
+	public void setTotalVotosBlancoParlamentariosMercosurReg(int totalVotosBlancoConcejales) {
+		this.totalVotosBlancoParlamentariosMercosurReg = totalVotosBlancoConcejales;
 	}
 
 	public void setTotalVotosBolsinDiputadosNacionales(int totalVotosBolsinDiputadosNacionales) {
@@ -375,8 +375,8 @@ public class Mesa implements Serializable {
 		this.totalVotosBolsinLegisladoresProvinciales = totalVotosBolsinLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosBolsinConcejales(int totalVotosBolsinConcejales) {
-		this.totalVotosBolsinConcejales = totalVotosBolsinConcejales;
+	public void setTotalVotosBolsinParlamentariosMercosurReg(int totalVotosBolsinConcejales) {
+		this.totalVotosBolsinParlamentariosMercosurReg = totalVotosBolsinConcejales;
 	}
 
 	public void setTotalVotosImpugnadoDiputadosNacionales(int totalVotosImpugnadoDiputadosNacionales) {
@@ -387,8 +387,8 @@ public class Mesa implements Serializable {
 		this.totalVotosImpugnadoLegisladoresProvinciales = totalVotosImpugnadoLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosImpugnadoConcejales(int totalVotosImpugnadoConcejales) {
-		this.totalVotosImpugnadoConcejales = totalVotosImpugnadoConcejales;
+	public void setTotalVotosImpugnadoParlamentariosMercosurReg(int totalVotosImpugnadoConcejales) {
+		this.totalVotosImpugnadoParlamentariosMercosurReg = totalVotosImpugnadoConcejales;
 	}
 
 	public void setTotalVotosNulosDiputadosNacionales(int totalVotosNulosDiputadosNacionales) {
@@ -399,8 +399,8 @@ public class Mesa implements Serializable {
 		this.totalVotosNulosLegisladoresProvinciales = totalVotosNulosLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosNulosConcejales(int totalVotosNulosConcejales) {
-		this.totalVotosNulosConcejales = totalVotosNulosConcejales;
+	public void setTotalVotosNulosparlamentariosMercosurReg(int totalVotosNulosConcejales) {
+		this.totalVotosNulosParlamentariosMercosurReg = totalVotosNulosConcejales;
 	}
 
 	public void setTotalVotosRecurridosDiputadosNacionales(int totalVotosRecurridosDiputadosNacionales) {
@@ -411,8 +411,8 @@ public class Mesa implements Serializable {
 		this.totalVotosRecurridosLegisladoresProvinciales = totalVotosRecurridosLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosRecurridosConcejales(int totalVotosRecurridosConcejales) {
-		this.totalVotosRecurridosConcejales = totalVotosRecurridosConcejales;
+	public void setTotalVotosRecurridosParlamentariosMercosurReg(int totalVotosRecurridosConcejales) {
+		this.totalVotosRecurridosParlamentariosMercosurReg = totalVotosRecurridosConcejales;
 	}
 
 	public void setTotalVotosXIndividuo(int totalVotosXIndividuo) {
@@ -431,8 +431,8 @@ public class Mesa implements Serializable {
 		this.totalVotosLegisladoresProvinciales = totalVotosLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosConcejales(int totalVotosConcejales) {
-		this.totalVotosConcejales = totalVotosConcejales;
+	public void setTotalVotosParlamentariosMercosurReg(int totalVotosConcejales) {
+		this.totalVotosParlamentariosMercosurReg = totalVotosConcejales;
 	}
 
 	public void setTotalXColumnaDiputadosNacionales(int totalXColumnaDiputadosNacionales) {
@@ -443,8 +443,8 @@ public class Mesa implements Serializable {
 		this.totalXColumnaLegisladoresProvinciales = totalXColumnaLegisladoresProvinciales;
 	}
 
-	public void setTotalVotosXColumnaConcejales(int totalVotosXColumnaConcejales) {
-		this.totalVotosXColumnaConcejales = totalVotosXColumnaConcejales;
+	public void setTotalVotosXColumnaParlamentariosMercosurReg(int totalVotosXColumnaConcejales) {
+		this.totalVotosXColumnaParlamentariosMercosurReg = totalVotosXColumnaConcejales;
 	}
 
 

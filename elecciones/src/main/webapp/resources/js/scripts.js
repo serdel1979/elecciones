@@ -263,7 +263,7 @@ function alertPresidente()
 		}
 } 
 
-function total_votos_concej()
+function total_votos_parlamentarios_reg()
 {
 	var total = 0;
 	$( ".concej" ).each(function( index ) {
@@ -272,25 +272,24 @@ function total_votos_concej()
 
 			  total = total + parseInt($( this ).val());
 	});
-	console.log('consejal ',total);
 	return total;
 }
 
 	
-function alertConcej()
+function alertParlamentRegionales()
 {
 
-	if($("#total_votos_agrupaciones_politicas_concejales").val()=="")
-		$("#total_votos_agrupaciones_politicas_concejales").removeClass("error_columna_totales");
+	if($("#total_votos_agrupaciones_politicas_parlamentarios_regionales").val()=="")
+		$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").removeClass("error_columna_totales");
 	else
 		{
-			if(parseInt($("#total_votos_agrupaciones_politicas_concejales").val())!=total_votos_concej() )
+			if(parseInt($("#total_votos_agrupaciones_politicas_parlamentarios_regionales").val())!=total_votos_parlamentarios_reg() )
 			{
-				if (!$("#total_votos_agrupaciones_politicas_concejales").hasClass("error_columna_totales"))
-					$("#total_votos_agrupaciones_politicas_concejales").addClass("error_columna_totales");
+				if (!$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").hasClass("error_columna_totales"))
+					$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").addClass("error_columna_totales");
 			}	
 			else
-				$("#total_votos_agrupaciones_politicas_concejales").removeClass("error_columna_totales");
+				$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").removeClass("error_columna_totales");
 		
 		
 		}
@@ -328,9 +327,9 @@ $(document).ready(function(e){
 		alertLegProv();
 	});
 	
-	$( "#total_votos_agrupaciones_politicas_concejales" ).keyup(function() {
+	$( "#total_votos_agrupaciones_politicas_parlamentarios_regionales" ).keyup(function() {
 		//validar columna de concejales
-		alertConcej();
+		alertParlamentRegionales();
 	});
 	
 	$( "#total_votos_agrupaciones_politicas_presidente" ).keyup(function() {
@@ -450,9 +449,9 @@ $(document).ready(function(e){
 					  
 					  
 				  
-				  if(val.allowConcejales)
+				  if(val.allowParlamentariosMercosurReg)
 				  
-					  html_inner = html_inner + '<th class="tg-yw4l"><input class="concej" type="text" style="width:150px;" id="li_concejales_'+val.idListaInterna+'" onkeyup="alertConcej()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//concejales
+					  html_inner = html_inner + '<th class="tg-yw4l"><input class="parla_reg" type="text" style="width:150px;" id="li_parlamentarios_regionales_'+val.idListaInterna+'" onkeyup="alertParlamentRegionales()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//concejales
 				  
 				  else
 					  html_inner = html_inner + '<th class="tg-yw4l"></th>';
@@ -509,7 +508,7 @@ function cargar_mesa()
 				$(".dip_nac").val("0");
 				$(".senadores").val("0");
 				$(".leg_prov").val("0");
-				$(".concej").val("0");
+				$(".parla_reg").val("0");
 				$(".presidente").val("0");
 				$(".gobernador").val("0");
 				$(".parlamentarios").val("0");
@@ -525,6 +524,8 @@ function cargar_mesa()
 					$("#li_gobernador_"+value.idListaInterna).val(value.totalVotosGobernador);
 					$("#li_intendente_"+value.idListaInterna).val(value.totalVotosIntendente);
 					$("#li_parlamentarios_"+value.idListaInterna).val(value.totalVotosParlamentariosMercosur);
+					$("#li_parlamentarios_regionales_"+value.idListaInterna).val(value.totalVotosParlamentariosMercosurReg);
+					
 					$("#li_senadores_"+value.idListaInterna).val(value.totalVotosSenadores);
 					
 					
@@ -548,7 +549,7 @@ function cargar_mesa()
 
 				$("#total_votos_agrupaciones_politicas_diputados_nacionales").val(provider.mesa.totalVotosDiputadosNacionales);
 				$("#total_votos_agrupaciones_politicas_legisladores_provinciales").val(provider.mesa.totalVotosLegisladoresProvinciales);
-				$("#total_votos_agrupaciones_politicas_concejales").val(provider.mesa.totalVotosConcejales);
+				$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").val(provider.mesa.totalVotosParlamentariosMercosurReg);
 				$("#total_votos_agrupaciones_politicas_senadores").val(provider.mesa.totalVotosSenadores);
 				$("#total_votos_agrupaciones_politicas_gobernador").val(provider.mesa.totalVotosGobernador);
 				$("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").val(provider.mesa.totalVotosParlamentariosMercosur);
@@ -563,7 +564,7 @@ function cargar_mesa()
 				$("#total_votos_nulos_gobernador").val(provider.mesa.totalVotosNulosGobernador);
 				$("#total_votos_nulos_legisladores_provinciales").val(provider.mesa.totalVotosNulosLegisladoresProvinciales);
 				$("#total_votos_nulos_intendente").val(provider.mesa.totalVotosNulosIntendente);
-				$("#total_votos_nulos_concejales").val(provider.mesa.totalVotosNulosConcejales);
+				$("#total_votos_nulos_parlamentarios_regionales").val(provider.mesa.totalVotosNulosParlamentariosMercosurReg);
 
 				$("#total_votos_recurridos_presidente").val(provider.mesa.totalVotosRecurridosPresidente);
 				$("#total_votos_recurridos_senadores").val(provider.mesa.totalVotosRecurridosSenadores)
@@ -571,7 +572,7 @@ function cargar_mesa()
 				$("#total_votos_recurridos_parlamentarios_mercosur").val(provider.mesa.totalVotosRecurridosParlamentariosMercosur);
 				$("#total_votos_recurridos_gobernador").val(provider.mesa.totalVotosRecurridosGobernador)
 				$("#total_votos_recurridos_legisladores_provinciales").val(provider.mesa.totalVotosRecurridosLegisladoresProvinciales);
-				$("#total_votos_recurridos_diputados_nacionales").val(provider.mesa.totalVotosRecurridosDiputadosNacionales);
+				$("#total_votos_recurridos_parlamentarios_regionales").val(provider.mesa.totalVotosRecurridosParlamentariosMercosurReg);
 				$("#total_votos_recurridos_intendente").val(provider.mesa.totalVotosRecurridosIntendente);
 				
 				$("#total_votos_impugnados_presidente").val(provider.mesa.totalVotosImpugnadoPresidente);
@@ -581,7 +582,7 @@ function cargar_mesa()
 				$("#total_votos_impugnados_gobernador").val(provider.mesa.totalVotosImpugnadoGobernador);
 				$("#total_votos_impugnados_legisladores_provinciales").val(provider.mesa.totalVotosImpugnadoLegisladoresProvinciales);
 				$("#total_votos_impugnados_intendente").val(provider.mesa.totalVotosImpugnadoIntendente);
-				$("#total_votos_impugnados_concejales").val(provider.mesa.totalVotosImpugnadoConcejales);
+				$("#total_votos_impugnados_parlamentarios_regionales").val(provider.mesa.totalVotosImpugnadoParlamentariosMercosurReg);
 				
 
 				$("#total_votos_comando_electoral_presidente").val(provider.mesa.totalVotosBolsinPresidente);
@@ -591,7 +592,7 @@ function cargar_mesa()
 				$("#total_votos_comando_electoral_gobernador").val(provider.mesa.totalVotosBolsinGobernador);
 				$("#total_votos_comando_electoral_legisladores_provinciales").val(provider.mesa.totalVotosBolsinLegisladoresProvinciales);
 				$("#total_votos_comando_electoral_intendente").val(provider.mesa.totalVotosBolsinIntendente);
-				$("#total_votos_comando_electoral_concejales").val(provider.mesa.totalVotosBolsinConcejales);
+				$("#total_votos_comando_electoral_parlamentarios_regionales").val(provider.mesa.totalVotosBolsinParlamentariosMercosurReg);
 				
 
 				$("#total_votos_en_blanco_presidente").val(provider.mesa.totalVotosBlancoPresidente);
@@ -601,7 +602,7 @@ function cargar_mesa()
 				$("#total_votos_en_blanco_gobernador").val(provider.mesa.totalVotosBlancoGobernador);
 				$("#total_votos_en_blanco_legisladores_provinciales").val(provider.mesa.totalVotosBlancoLegisladoresProvinciales);
 				$("#total_votos_en_blanco_intendente").val(provider.mesa.totalVotosBlancoIntendente);
-				$("#total_votos_en_blanco_concejales").val(provider.mesa.totalVotosBlancoConcejales);
+				$("#total_votos_en_blanco_parlamentarios_regionales").val(provider.mesa.totalVotosBlancoParlamentariosMercosurReg);
 			
 				$("#total_votos_x_columna_presidente").val(provider.mesa.totalVotosXColumnaPresidente);
 				$("#total_votos_x_columna_senadores").val(provider.mesa.totalVotosXColumnaSenadores);
@@ -610,12 +611,12 @@ function cargar_mesa()
 				$("#total_votos_x_columna_gobernador").val(provider.mesa.totalVotosXColumnaGobernador);
 				$("#total_votos_x_columna_legisladores_provinciales").val(provider.mesa.totalXColumnaLegisladoresProvinciales);	
 				$("#total_votos_x_columna_intendente").val(provider.mesa.totalVotosXColumnaIntendente);
-				$("#total_votos_x_columna_concejales").val(provider.mesa.totalVotosXColumnaConcejales);
+				$("#total_votos_x_columna_parlamentarios_regionales").val(provider.mesa.totalVotosXColumnaParlamentariosMercosurReg);
 				
 
 				alertDipNac();
 				alertLegProv();
-				alertConcej();
+				alertParlamentRegionales();
 			}
 	
     }); 
@@ -684,21 +685,21 @@ function persistir_mesa()
 
 	dataRequest.total_votos_agrupaciones_politicas_diputados_nacionales = setParam($("#total_votos_agrupaciones_politicas_diputados_nacionales").val());
 	dataRequest.total_votos_agrupaciones_politicas_legisladores_provinciales = setParam($("#total_votos_agrupaciones_politicas_legisladores_provinciales").val());
-	dataRequest.total_votos_agrupaciones_politicas_concejales = setParam($("#total_votos_agrupaciones_politicas_concejales").val());	
+	dataRequest.total_votos_agrupaciones_politicas_parlamentarios_mercosur = setParam($("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").val());	
 	dataRequest.total_votos_agrupaciones_politicas_intendente = setParam($("#total_votos_agrupaciones_politicas_intendente").val());
 	dataRequest.total_votos_agrupaciones_politicas_senadores = setParam($("#total_votos_agrupaciones_politicas_senadores").val());
 	dataRequest.total_votos_agrupaciones_politicas_gobernador = setParam($("#total_votos_agrupaciones_politicas_gobernador").val());
 	dataRequest.total_votos_agrupaciones_politicas_presidente = setParam($("#total_votos_agrupaciones_politicas_presidente").val());
-	dataRequest.total_votos_agrupaciones_politicas_parlamentarios_mercosur = setParam($("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").val());
+	dataRequest.total_votos_agrupaciones_politicas_parlamentarios_regionales = setParam($("#total_votos_agrupaciones_politicas_parlamentarios_regionales").val());
 	
 	
 	
 	dataRequest.total_votos_nulos_diputados_nacionales = setParam($("#total_votos_nulos_diputados_nacionales").val());
 	dataRequest.total_votos_nulos_legisladores_provinciales = setParam($("#total_votos_nulos_legisladores_provinciales").val());
-	dataRequest.total_votos_nulos_concejales = setParam($("#total_votos_nulos_concejales").val());
+	dataRequest.total_votos_nulos_parlamentarios_mercosur = setParam($("#total_votos_nulos_parlamentarios_mercosur").val());
 	dataRequest.total_votos_nulos_presidente = setParam($("#total_votos_nulos_presidente").val());
 	dataRequest.total_votos_nulos_senadores = setParam($("#total_votos_nulos_senadores").val());
-	dataRequest.total_votos_nulos_parlamentarios_mercosur = setParam($("#total_votos_nulos_parlamentarios_mercosur").val());
+	dataRequest.total_votos_nulos_parlamentarios_regionales = setParam($("#total_votos_nulos_parlamentarios_regionales").val());
 	dataRequest.total_votos_nulos_gobernador = setParam($("#total_votos_nulos_gobernador").val());
 	dataRequest.total_votos_nulos_intendente = setParam($("#total_votos_nulos_intendente").val());
 	
@@ -706,19 +707,19 @@ function persistir_mesa()
 	
 	dataRequest.total_votos_recurridos_diputados_nacionales = setParam($("#total_votos_recurridos_diputados_nacionales").val());
 	dataRequest.total_votos_recurridos_legisladores_provinciales = setParam($("#total_votos_recurridos_legisladores_provinciales").val());
-	dataRequest.total_votos_recurridos_concejales = setParam($("#total_votos_recurridos_concejales").val());
+	dataRequest.total_votos_recurridos_parlamentarios_mercosur = setParam($("#total_votos_recurridos_parlamentarios_mercosur").val());
 	dataRequest.total_votos_recurridos_presidente = setParam($("#total_votos_recurridos_presidente").val());
 	dataRequest.total_votos_recurridos_gobernador = setParam($("#total_votos_recurridos_gobernador").val());
-	dataRequest.total_votos_recurridos_parlamentarios_mercosur = setParam($("#total_votos_recurridos_parlamentarios_mercosur").val());
+	dataRequest.total_votos_recurridos_parlamentarios_regionales = setParam($("#total_votos_recurridos_parlamentarios_regionales").val());
 	dataRequest.total_votos_recurridos_intendente = setParam($("#total_votos_recurridos_intendente").val());
 	dataRequest.total_votos_recurridos_senadores = setParam($("#total_votos_recurridos_senadores").val());
 	
 	
 	dataRequest.total_votos_impugnados_diputados_nacionales = setParam($("#total_votos_impugnados_diputados_nacionales").val());
 	dataRequest.total_votos_impugnados_legisladores_provinciales = setParam($("#total_votos_impugnados_legisladores_provinciales").val());
-	dataRequest.total_votos_impugnados_concejales = setParam($("#total_votos_impugnados_concejales").val());
-	dataRequest.total_votos_impugnados_presidente = setParam($("#total_votos_impugnados_presidente").val()); //
 	dataRequest.total_votos_impugnados_parlamentarios_mercosur = setParam($("#total_votos_impugnados_parlamentarios_mercosur").val());
+	dataRequest.total_votos_impugnados_presidente = setParam($("#total_votos_impugnados_presidente").val()); //
+	dataRequest.total_votos_impugnados_parlamentarios_regionales = setParam($("#total_votos_impugnados_parlamentarios_regionales").val());
 	dataRequest.total_votos_impugnados_gobernador = setParam($("#total_votos_impugnados_gobernador").val());
 	dataRequest.total_votos_impugnados_intendente = setParam($("#total_votos_impugnados_intendente").val());
 	dataRequest.total_votos_impugnados_senadores = setParam($("#total_votos_impugnados_senadores").val());
@@ -726,29 +727,29 @@ function persistir_mesa()
 	
 	dataRequest.total_votos_comando_electoral_diputados_nacionales = setParam($("#total_votos_comando_electoral_diputados_nacionales").val());
 	dataRequest.total_votos_comando_electoral_legisladores_provinciales = setParam($("#total_votos_comando_electoral_legisladores_provinciales").val());
-	dataRequest.total_votos_comando_electoral_concejales = setParam($("#total_votos_comando_electoral_concejales").val());
+	dataRequest.total_votos_comando_electoral_parlamentarios_mercosur = setParam($("#total_votos_comando_electoral_parlamentarios_mercosur").val());
 	dataRequest.total_votos_comando_electoral_presidente = setParam($("#total_votos_comando_electoral_presidente").val());
 	dataRequest.total_votos_comando_electoral_senadores = setParam($("#total_votos_comando_electoral_senadores").val());
-	dataRequest.total_votos_comando_electoral_parlamentarios_mercosur = setParam($("#total_votos_comando_electoral_parlamentarios_mercosur").val());
+	dataRequest.total_votos_comando_electoral_parlamentarios_regionales = setParam($("#total_votos_comando_electoral_parlamentarios_regionales").val());
 	dataRequest.total_votos_comando_electoral_gobernador = setParam($("#total_votos_comando_electoral_gobernador").val());
 	dataRequest.total_votos_comando_electoral_intendente = setParam($("#total_votos_comando_electoral_intendente").val());
 	
 	dataRequest.total_votos_en_blanco_diputados_nacionales = setParam($("#total_votos_en_blanco_diputados_nacionales").val());
 	dataRequest.total_votos_en_blanco_legisladores_provinciales = setParam($("#total_votos_en_blanco_legisladores_provinciales").val());
-	dataRequest.total_votos_en_blanco_concejales = setParam($("#total_votos_en_blanco_concejales").val());
+	dataRequest.total_votos_en_blanco_parlamentarios_mercosur = setParam($("#total_votos_en_blanco_parlamentarios_mercosur").val());
 	dataRequest.total_votos_en_blanco_presidente = setParam($("#total_votos_en_blanco_presidente").val());
 	dataRequest.total_votos_en_blanco_senadores = setParam($("#total_votos_en_blanco_senadores").val());
-	dataRequest.total_votos_en_blanco_parlamentarios_mercosur = setParam($("#total_votos_en_blanco_parlamentarios_mercosur").val());
+	dataRequest.total_votos_en_blanco_parlamentarios_regionales = setParam($("#total_votos_en_blanco_parlamentarios_regionales").val());
 	dataRequest.total_votos_en_blanco_gobernador = setParam($("#total_votos_en_blanco_gobernador").val());
 	dataRequest.total_votos_en_blanco_intendente = setParam($("#total_votos_en_blanco_intendente").val());
 
 
 	dataRequest.total_votos_x_columna_diputados_nacionales = setParam($("#total_votos_x_columna_diputados_nacionales").val());
 	dataRequest.total_votos_x_columna_legisladores_provinciales = setParam($("#total_votos_x_columna_legisladores_provinciales").val());
-	dataRequest.total_votos_x_columna_concejales = setParam($("#total_votos_x_columna_concejales").val());
+	dataRequest.total_votos_x_columna_parlamentarios_mercosur = setParam($("#total_votos_x_columna_parlamentarios_mercosur").val());
 	dataRequest.total_votos_x_columna_presidente = setParam($("#total_votos_x_columna_presidente").val());
 	dataRequest.total_votos_x_columna_senadores = setParam($("#total_votos_x_columna_senadores").val());
-	dataRequest.total_votos_x_columna_parlamentarios_mercosur = setParam($("#total_votos_x_columna_parlamentarios_mercosur").val());
+	dataRequest.total_votos_x_columna_parlamentarios_regionales = setParam($("#total_votos_x_columna_parlamentarios_regionales").val());
 	dataRequest.total_votos_x_columna_gobernador = setParam($("#total_votos_x_columna_gobernador").val());
 	dataRequest.total_votos_x_columna_intendente = setParam($("#total_votos_x_columna_intendente").val());
 	
@@ -766,11 +767,12 @@ function persistir_mesa()
 			    detalle.senadores = setParam($( this ).find(".senadores").val());
 			    detalle.diputados_nacionales = setParam($( this ).find(".dip_nac").val());
 			    detalle.legisladores_provinciales = setParam($( this ).find(".leg_prov").val());
-			    detalle.concejales = setParam($( this ).find(".concej").val());
 			    detalle.intendente = setParam($( this ).find(".intendente").val());
 			    detalle.presidente = setParam($( this ).find(".presidente").val());
 			    detalle.gobernador = setParam($( this ).find(".gobernador").val());
 			    detalle.parlamentarios_mercosur =  setParam($( this ).find(".parlamentarios").val());
+			    detalle.parlamentarios_regionales = setParam($( this ).find(".parla_reg").val());
+			    console.log(detalle);
 				escrutinio_detalle.push(detalle);
 			   
 		   }

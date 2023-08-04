@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\sergio\Desktop\elecciones\elecciones"/>
 			<item value="C:\Users\sergio\Desktop\elecciones-spring\elecciones2021-master"/>
 		</list>
 		<list key="projectNameTemplate">

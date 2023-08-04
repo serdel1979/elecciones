@@ -29,24 +29,30 @@ public interface MesaRepository extends JpaRepository<Mesa, Long> {
 	@Query(nativeQuery=true,value="select nombre, count(*) as totaltelegramas, sum(cargado) as totalcargados from (select c.id_circuito, c.nombre, case when m.fecha_de_carga is not null then 1 else 0 end as cargado from elecciones.circuitos c inner join elecciones.lugares_votacion as l on c.id_circuito = l.id_circuito inner join elecciones.mesa m on m.lugar_votacion_id = l.id_lugar_votacion) as p group by id_circuito, p.nombre")
 	List<Map<String, Object>> getTotalesXCircuito();
 	
-	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistanac() as p on li.id_lista_interna = p.id_lista_interna")
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxdip() as p on li.id_lista_interna = p.id_lista_interna")
 	List<Map<String, Object>> getTotalesDiputadosNacionales();
 	
 	
-	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistaprov() as p on li.id_lista_interna = p.id_lista_interna")
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistalegprov() as p on li.id_lista_interna = p.id_lista_interna")
 	List<Map<String, Object>> getTotalesLegisladoresProvinciales();
 	
-	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistampal() as p on li.id_lista_interna = p.id_lista_interna")
-	List<Map<String, Object>> getTotalesConcejales();
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistaParlamentariosMercosurReg() as p on li.id_lista_interna = p.id_lista_interna")
+	List<Map<String, Object>> getTotalesParlamentariosMercosurReg();
 	
 	
-	//@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistampal() as p on li.id_lista_interna = p.id_lista_interna")
-	//List<Map<String, Object>> getTotalesPresidente();
-	//List<Map<String, Object>> getTotalesGobernador();
-	//List<Map<String, Object>> getTotalesIntendente();
-	//List<Map<String, Object>> getTotalesParlamentario();
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistapresidente() as p on li.id_lista_interna = p.id_lista_interna")
+	List<Map<String, Object>> getTotalesPresidente();
 	
-	//@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistampal() as p on li.id_lista_interna = p.id_lista_interna")
-	//List<Map<String, Object>> getTotalesSenadoresNacionales();
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesxlistagobernador() as p on li.id_lista_interna = p.id_lista_interna")
+	List<Map<String, Object>> getTotalesGobernador();
+	
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesintendente() as p on li.id_lista_interna = p.id_lista_interna")
+	List<Map<String, Object>> getTotalesIntendente();
+	
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajesparlamentariosmercosur() as p on li.id_lista_interna = p.id_lista_interna")
+	List<Map<String, Object>> getTotalesParlamentario();
+	
+	@Query(nativeQuery=true,value="select li.texto_formateado, li.color, p.porcentaje as valor from elecciones.lista_interna li inner join elecciones.porcentajessenadores() as p on li.id_lista_interna = p.id_lista_interna")
+	List<Map<String, Object>> getTotalesSenadoresNacionales();
 	
 }

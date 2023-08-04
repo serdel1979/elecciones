@@ -16,7 +16,7 @@ public class ResultDashboardDTO {
 	
 	List<Map<String, Object>> totalesxLegisladoresProvinciales;
 	
-	List<Map<String, Object>> totalesxConcejales;
+	List<Map<String, Object>> totalesxParlamentariosMercosurReg;
 	
 	List<Map<String, Object>> totalesxPresidente;
 	
@@ -54,7 +54,7 @@ public class ResultDashboardDTO {
     	
     	this.totalesxLegisladoresProvinciales = new ArrayList<Map<String, Object>>();
     	
-    	this.totalesxConcejales = new ArrayList<Map<String, Object>>();
+    	this.totalesxParlamentariosMercosurReg = new ArrayList<Map<String, Object>>();
     	
     	this.totalesxPresidente = new  ArrayList<Map<String, Object>>();
     	
@@ -108,8 +108,8 @@ public class ResultDashboardDTO {
 		return totalesxLegisladoresProvinciales;
 	}
 
-	public List<Map<String, Object>> getTotalesxConcejales() {
-		return totalesxConcejales;
+	public List<Map<String, Object>> getTotalesxParlamentariosMercosurReg() {
+		return totalesxParlamentariosMercosurReg;
 	}
 
 	public void setTotalesxDiputadosNacionales(List<Map<String, Object>> totalesxDiputadosNacionales) {
@@ -120,8 +120,8 @@ public class ResultDashboardDTO {
 		this.totalesxLegisladoresProvinciales = totalesxLegisladoresProvinciales;
 	}
 
-	public void setTotalesxConcejales(List<Map<String, Object>> totalesxConcejales) {
-		this.totalesxConcejales = totalesxConcejales;
+	public void setTotalesxParlamentariosMercosurReg(List<Map<String, Object>> totalesxParlamentariosMercosurReg) {
+		this.totalesxParlamentariosMercosurReg = totalesxParlamentariosMercosurReg;
 	}
 
 	public List<Map<String, Object>> getTotalesxPresidente() {

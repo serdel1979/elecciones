@@ -161,9 +161,14 @@ public class AppController {
 		responseResultDashboardDTO.setTotalesxCircuito(mesaRepository.getTotalesXCircuito());
 		responseResultDashboardDTO.setTotalesxDiputadosNacionales(mesaRepository.getTotalesDiputadosNacionales());
 		responseResultDashboardDTO.setTotalesxLegisladoresProvinciales(mesaRepository.getTotalesLegisladoresProvinciales());
-		responseResultDashboardDTO.setTotalesxConcejales(mesaRepository.getTotalesConcejales());
-		//responseResultDashboardDTO.setTotalesxSenadores(mesaRepository.getTotalesSenadoresNacionales());
-
+		responseResultDashboardDTO.setTotalesxParlamentariosMercosurReg(mesaRepository.getTotalesParlamentariosMercosurReg());
+		responseResultDashboardDTO.setTotalesxSenadores(mesaRepository.getTotalesSenadoresNacionales());
+		
+		responseResultDashboardDTO.setTotalesxGobernador(mesaRepository.getTotalesGobernador());
+		responseResultDashboardDTO.setTotalesxPresidente(mesaRepository.getTotalesPresidente());
+		responseResultDashboardDTO.setTotalesxIntendente(mesaRepository.getTotalesIntendente());
+		responseResultDashboardDTO.setTotalesxParlamentarios(mesaRepository.getTotalesParlamentario());
+		
 		return responseResultDashboardDTO;
 
 	}
@@ -298,7 +303,7 @@ public class AppController {
 
       	 m.setTotalVotosDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_diputados_nacionales").toString()));
       	 m.setTotalVotosLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_legisladores_provinciales").toString()));
-      	 m.setTotalVotosConcejales(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_concejales").toString()));
+      	 m.setTotalVotosParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_parlamentarios_regionales").toString()));
       	 m.setTotalVotosIntendente(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_intendente").toString()));
       	 m.setTotalVotosGobernador(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_gobernador").toString()));
          m.setTotalVotosPresidente(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_presidente").toString()));
@@ -310,17 +315,17 @@ public class AppController {
 
       	 m.setTotalVotosNulosDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_nulos_diputados_nacionales").toString()));
       	 m.setTotalVotosNulosLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_nulos_legisladores_provinciales").toString()));
-      	 m.setTotalVotosNulosConcejales(Integer.valueOf(dataRequest.get("total_votos_nulos_concejales").toString()));
+      	 m.setTotalVotosNulosparlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_nulos_parlamentarios_regionales").toString()));
       	 m.setTotalVotosNulosIntendente(Integer.valueOf(dataRequest.get("total_votos_nulos_intendente").toString()));
       	 m.setTotalVotosNulosGobernador(Integer.valueOf(dataRequest.get("total_votos_nulos_gobernador").toString()));
-      	 m.setTotalVotosNulosPresidente(Integer.valueOf(dataRequest.get("total_votos_nulos_concejales").toString()));
+      	 m.setTotalVotosNulosPresidente(Integer.valueOf(dataRequest.get("total_votos_nulos_presidente").toString()));
       	 m.setTotalVotosNulosParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_nulos_parlamentarios_mercosur").toString()));
       	 m.setTotalVotosNulosSenadores(Integer.valueOf(dataRequest.get("total_votos_nulos_senadores").toString()));
       	 
     
       	 m.setTotalVotosRecurridosDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_recurridos_diputados_nacionales").toString()));
       	 m.setTotalVotosRecurridosLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_recurridos_legisladores_provinciales").toString()));
-      	 m.setTotalVotosRecurridosConcejales(Integer.valueOf(dataRequest.get("total_votos_recurridos_concejales").toString()));
+      	 m.setTotalVotosRecurridosParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_recurridos_parlamentarios_regionales").toString()));
       	 m.setTotalVotosRecurridosPresidente(Integer.valueOf(dataRequest.get("total_votos_recurridos_presidente").toString()));
       	 m.setTotalVotosRecurridosGobernador(Integer.valueOf(dataRequest.get("total_votos_recurridos_gobernador").toString()));
       	 m.setTotalVotosRecurridosParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_recurridos_parlamentarios_mercosur").toString()));
@@ -332,7 +337,7 @@ public class AppController {
 
        	 m.setTotalVotosImpugnadoDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_impugnados_diputados_nacionales").toString()));
       	 m.setTotalVotosImpugnadoLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_impugnados_legisladores_provinciales").toString()));
-      	 m.setTotalVotosImpugnadoConcejales(Integer.valueOf(dataRequest.get("total_votos_impugnados_concejales").toString()));
+      	 m.setTotalVotosImpugnadoParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_impugnados_parlamentarios_regionales").toString()));
       	 m.setTotalVotosImpugnadoPresidente(Integer.valueOf(dataRequest.get("total_votos_impugnados_presidente").toString()));
       	 m.setTotalVotosImpugnadoGobernador(Integer.valueOf(dataRequest.get("total_votos_impugnados_presidente").toString()));
       	 m.setTotalVotosImpugnadoParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_impugnados_parlamentarios_mercosur").toString()));
@@ -342,7 +347,7 @@ public class AppController {
 
       	 m.setTotalVotosBolsinDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_diputados_nacionales").toString()));
       	 m.setTotalVotosBolsinLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_legisladores_provinciales").toString()));
-      	 m.setTotalVotosBolsinConcejales(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_concejales").toString()));
+      	 m.setTotalVotosBolsinParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_parlamentarios_regionales").toString()));
       	 m.setTotalVotosBolsinPresidente(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_presidente").toString()));
       	 m.setTotalVotosBolsinGobernador(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_gobernador").toString()));
       	 m.setTotalVotosBolsinParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_parlamentarios_mercosur").toString()));
@@ -351,7 +356,7 @@ public class AppController {
 
       	 m.setTotalVotosBlancoDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_en_blanco_diputados_nacionales").toString()));
       	 m.setTotalVotosBlancoLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_en_blanco_legisladores_provinciales").toString()));
-      	 m.setTotalVotosBlancoConcejales(Integer.valueOf(dataRequest.get("total_votos_en_blanco_concejales").toString()));
+      	 m.setTotalVotosBlancoParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_en_blanco_parlamentarios_regionales").toString()));
       	 m.setTotalVotosBlancoPresidente(Integer.valueOf(dataRequest.get("total_votos_en_blanco_presidente").toString()));
       	 m.setTotalVotosBlancoGobernador(Integer.valueOf(dataRequest.get("total_votos_en_blanco_gobernador").toString()));
       	 m.setTotalVotosBlancoParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_en_blanco_parlamentarios_mercosur").toString()));
@@ -360,7 +365,7 @@ public class AppController {
 
       	 m.setTotalXColumnaDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_x_columna_diputados_nacionales").toString()));
       	 m.setTotalXColumnaLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_x_columna_legisladores_provinciales").toString()));
-      	 m.setTotalVotosXColumnaConcejales(Integer.valueOf(dataRequest.get("total_votos_x_columna_concejales").toString()));
+      	 m.setTotalVotosXColumnaParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_x_columna_parlamentarios_regionales").toString()));
       	 m.setTotalVotosXColumnaPresidente(Integer.valueOf(dataRequest.get("total_votos_x_columna_presidente").toString()));
       	 m.setTotalVotosXColumnaGobernador(Integer.valueOf(dataRequest.get("total_votos_x_columna_gobernador").toString()));
       	 m.setTotalVotosXColumnaParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_x_columna_parlamentarios_mercosur").toString()));
@@ -391,7 +396,7 @@ public class AppController {
 
       		 esc.setTotalVotosLegisladoresProvinciales(Integer.valueOf(hm.get("legisladores_provinciales").toString()));
 
-      		 esc.setTotalVotosConcejales(Integer.valueOf(hm.get("concejales").toString()));
+      		 esc.setTotalVotosParlamentariosMercosurReg(Integer.valueOf(hm.get("parlamentarios_regionales").toString()));
       		 
       		 esc.setTotalVotosIntendente(Integer.valueOf(hm.get("intendente").toString()));
       		 
@@ -436,7 +441,7 @@ public class AppController {
         if (Files.exists(file))
         {
             response.setContentType("application/excel");
-            response.addHeader("Content-Disposition", "attachment; filename=DetalleGenerales2021.xlsx");
+            response.addHeader("Content-Disposition", "attachment; filename=DetallePasos2023.xlsx");
             try
             {
                 Files.copy(file, response.getOutputStream());
@@ -1238,28 +1243,28 @@ public class AppController {
     			{
     				Escrutinio e = it_escrutinios.next();
     				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosConcejales());
+    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosurReg());
     			}
     			
     			Cell cell8 = row.createCell(columnCount++);
     			
-    			cell8.setCellValue(m.getTotalVotosNulosConcejales());
+    			cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosurReg());
     			
     			Cell cell9 = row.createCell(columnCount++);
     			
-    			cell9.setCellValue(m.getTotalVotosRecurridosConcejales());
+    			cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosurReg());
     			
     			Cell cell10 = row.createCell(columnCount++);
     			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoConcejales());
+    			cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosurReg());
     			
     			Cell cell11 = row.createCell(columnCount++);
     			
-    			cell11.setCellValue(m.getTotalVotosBolsinConcejales());
+    			cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosurReg());
     			
     			Cell cell12 = row.createCell(columnCount++);
     			
-    			cell12.setCellValue(m.getTotalVotosBlancoConcejales());
+    			cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosurReg());
     			
     		}
     		

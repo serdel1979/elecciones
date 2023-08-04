@@ -34,7 +34,7 @@
 					<div id="principal_descripcion">
 					<img src="./resources/img/escudo.jpg">
 	
-					JUZGADO FEDERAL CON COMPETENCIA ELECTORAL<br>DISTRITO BUENOS AIRES<br><div class="texto_no_resaltado">ELECCIONES PRIMARIAS, ABIERTAS, SIMULTANEAS Y OBLIGATORIAS DEL 13/08/2017</div><br><div class="texto_resaltado_grande">CERTIFICADO DE ESCRUTINIO</div>
+					JUZGADO FEDERAL CON COMPETENCIA ELECTORAL<br>DISTRITO BUENOS AIRES<br><div class="texto_no_resaltado">ELECCIONES PRIMARIAS, ABIERTAS, SIMULTANEAS Y OBLIGATORIAS DEL 13/08/2023</div><br><div class="texto_resaltado_grande">CERTIFICADO DE ESCRUTINIO</div>
 	
 					</div>
 					<div id="principal_circuito_mesa">
@@ -105,7 +105,7 @@
 								<th class="tg-031e">Gobernador</th>
 								<th class="tg-031e">Legisladores <br> Provinciales</th>
 								<th class="tg-031e">Intendente</th>
-								<th class="tg-031e">Concejales</th>
+								<th class="tg-031e">Parlamentarios <br> Regionales</th>
 							  </tr>
 							  <tr id="tr_totales_label">
 								<td class="tg-031e">Total de votos de la lista</td>
@@ -149,7 +149,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_gobernador" onkeyup="total_votos_gobernador()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_legisladores_provinciales" onkeyup="total_votos_leg_prov()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_intendente" onkeyup="alertIntendente()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_concejales" onkeyup="total_votos_concej()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_parlamentarios_regionales" onkeyup="total_votos_parlamentarios_reg()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 							  </tr>
 							  <tr>
 								<td class="tg-yw4l aleft" colspan="3">VOTOS NULOS</td>
@@ -161,7 +161,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_intendente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_concejales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_parlamentarios_regionales" /></td>
 							  </tr>
 							  <tr>
 								<td class="tg-yw4l aleft" colspan="3">VOTOS RECURRIDOS QUE SE REMITEN EN SOBRE Nro. 3</td>
@@ -172,7 +172,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_intendente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_concejales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_parlamentarios_regionales" /></td>
 							  </tr>
 							  <tr>
 								<td class="tg-yw4l aleft" colspan="3">VOTOS DE IDENTIDAD IMPUGNADA QUE SE REMITEN EN SOBRE Nro. 3</td>
@@ -183,7 +183,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_intendente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_concejales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_parlamentarios_regionales" /></td>
 							  </tr>
 							  <tr>
 								<td class="tg-yw4l aleft" colspan="3">VOTOS DEL COMANDO ELECTORAL QUE SE REMITEN EN BOLSIN</td>
@@ -195,7 +195,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_intendente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_concejales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_parlamentarios_regionales" /></td>
 							  </tr>
 							  <tr style="border-bottom: 3px #000 solid;">
 								<td class="tg-yw4l aleft" colspan="3">VOTOS EN BLANCO</td>
@@ -206,7 +206,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_intendente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_concejales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_parlamentarios_regionales" /></td>
 							  </tr>
 							  <tr>
 								<td class="tg-yw4l aleft" colspan="3">TOTAL POR COLUMNAS (*)</td>
@@ -217,7 +217,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_intendente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_concejales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_parlamentarios_regionales" /></td>
 							  </tr>
 													  
 							  <tr>
