@@ -565,7 +565,7 @@ public class AppController {
     			cell4.setCellValue(cm.getNombre());
     			
     			Cell cell5 = row.createCell(columnCount++);
-    			cell5.setCellValue("PRESIDENTE");
+    			cell5.setCellValue("PRESIDENTE VICEPRESIDENTE");
     			
     			Cell cell6 = row.createCell(columnCount++);
     			cell6.setCellValue(mesa.getTotalsobres());
@@ -599,6 +599,108 @@ public class AppController {
     		}
     		    		
     	}
+    	
+    	//PARLAMENTARIOS DEL MERCOSUR
+    	
+    	List<Mesa> mesasAll_parlamentarios_mercosur = mesaRepository.findLoaded();
+    	
+    	Iterator<Mesa> it_mesas_parlamentarios_mercosur = mesasAll_parlamentarios_mercosur.iterator();
+    	
+    	while(it_mesas_parlamentarios_mercosur.hasNext())
+    	{
+    		Mesa m = it_mesas_parlamentarios_mercosur.next();
+    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
+    		
+    		
+    		// Sorting
+    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+    		        @Override
+    		        public int compare(Escrutinio e2, Escrutinio e1)
+    		        {
+    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+    		        }
+    		    });
+    		
+    		
+    		/*Solo si la lista no esta vacia*/
+    		
+    		if(escrutinios.size()>0)
+    		{
+    			//Crear una fila para esta mesa
+    			Row row = sheet.createRow(rowCount++);
+    			
+    			int columnCount = 0;
+    			
+    			//obtener el lugar de votacion
+    			
+    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
+    			
+    			
+    			Cell cell1 = row.createCell(columnCount++);
+    			
+    			cell1.setCellValue(cm.getCircuito());
+    			
+    			Cell cell2 = row.createCell(columnCount++);
+    			
+    			cell2.setCellValue(m.getMesa());
+    			
+    			
+    			Cell cell3 = row.createCell(columnCount++);
+    			
+    			cell3.setCellValue(cm.getDireccion());
+    			
+    			Cell cell4 = row.createCell(columnCount++);
+    			
+    			cell4.setCellValue(cm.getNombre());
+    			
+    			Cell cell5 = row.createCell(columnCount++);
+    			
+    			cell5.setCellValue("PARLAMENTARIOS DEL MERCOSUR");
+
+    			Cell cell6 = row.createCell(columnCount++);
+    			
+    			cell6.setCellValue(m.getTotalsobres());
+    			
+    			Cell cell7 = row.createCell(columnCount++);
+    			
+    			cell7.setCellValue(m.getTotalVotosXIndividuo());
+
+    			
+    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+    			
+    			
+    			while(it_escrutinios.hasNext())
+    			{
+    				Escrutinio e = it_escrutinios.next();
+    				Cell cellEsc = row.createCell(columnCount++);
+    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosur());
+    			}
+    			
+    			Cell cell8 = row.createCell(columnCount++);
+    			
+    			cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosur());
+    			
+    			Cell cell9 = row.createCell(columnCount++);
+    			
+    			cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosur());
+    			
+    			Cell cell10 = row.createCell(columnCount++);
+    			
+    			cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosur());
+    			
+    			Cell cell11 = row.createCell(columnCount++);
+    			
+    			cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosur());
+    			
+    			Cell cell12 = row.createCell(columnCount++);
+    			
+    			cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosur());
+    			
+    		}
+    		
+    	}
+
+
     	
     	
         //ahora plasmar la parte de senadores
@@ -642,7 +744,7 @@ public class AppController {
     			cell4.setCellValue(cm.getNombre());
     			
     			Cell cell5 = row.createCell(columnCount++);
-    			cell5.setCellValue("SENADORES");
+    			cell5.setCellValue("SENADORES NACIONALES");
     			
     			Cell cell6 = row.createCell(columnCount++);
     			cell6.setCellValue(mesa.getTotalsobres());
@@ -782,15 +884,16 @@ public class AppController {
     	}
 
     	
-    	//PARLAMENTARIOS DEL MERCOSUR
     	
-    	List<Mesa> mesasAll_parlamentarios_mercosur = mesaRepository.findLoaded();
+    	//Plasmar la parte de PARLAMENTARIOS DEL MERCOSUR
     	
-    	Iterator<Mesa> it_mesas_parlamentarios_mercosur = mesasAll_parlamentarios_mercosur.iterator();
+    	List<Mesa> mesasAll_parlamentarios_regionales = mesaRepository.findLoaded();
     	
-    	while(it_mesas_parlamentarios_mercosur.hasNext())
+    	Iterator<Mesa> it_mesas_parlam_reg = mesasAll_parlamentarios_regionales.iterator();
+    	
+    	while(it_mesas_parlam_reg.hasNext())
     	{
-    		Mesa m = it_mesas_parlamentarios_mercosur.next();
+    		Mesa m = it_mesas_parlam_reg.next();
     		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
     		
     		
@@ -837,7 +940,7 @@ public class AppController {
     			
     			Cell cell5 = row.createCell(columnCount++);
     			
-    			cell5.setCellValue("PARLAMENTARIOS DEL MERCOSUR");
+    			cell5.setCellValue("PARLAMENTARIOS DEL MERCOSUR REGIONAL");
 
     			Cell cell6 = row.createCell(columnCount++);
     			
@@ -855,32 +958,33 @@ public class AppController {
     			{
     				Escrutinio e = it_escrutinios.next();
     				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosur());
+    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosurReg());
     			}
     			
     			Cell cell8 = row.createCell(columnCount++);
     			
-    			cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosur());
+    			cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosurReg());
     			
     			Cell cell9 = row.createCell(columnCount++);
     			
-    			cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosur());
+    			cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosurReg());
     			
     			Cell cell10 = row.createCell(columnCount++);
     			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosur());
+    			cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosurReg());
     			
     			Cell cell11 = row.createCell(columnCount++);
     			
-    			cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosur());
+    			cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosurReg());
     			
     			Cell cell12 = row.createCell(columnCount++);
     			
-    			cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosur());
+    			cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosurReg());
     			
     		}
     		
     	}
+    	
 
     	
     	//GOBERNADOR
@@ -1086,7 +1190,7 @@ public class AppController {
     	
     	
     	
-    	//PARLAMENTARIOS DEL MERCOSUR
+    	//INTENDENTE Y CONCEJALES
     	List<Mesa> mesasAll_intendente = mesaRepository.findLoaded();
     	
     	Iterator<Mesa> it_mesas_intendente = mesasAll_intendente.iterator();
@@ -1140,7 +1244,7 @@ public class AppController {
     			
     			Cell cell5 = row.createCell(columnCount++);
     			
-    			cell5.setCellValue("INTENDENTE");
+    			cell5.setCellValue("INTENDENTE CONCEJALES");
 
     			Cell cell6 = row.createCell(columnCount++);
     			
@@ -1185,108 +1289,6 @@ public class AppController {
     		
     	}
     	
-    	
-    	
-    	
-    	//Plasmar la parte de Concejales
-    	
-    	List<Mesa> mesasAll_concejales = mesaRepository.findLoaded();
-    	
-    	Iterator<Mesa> it_mesas_concejales = mesasAll_concejales.iterator();
-    	
-    	while(it_mesas_concejales.hasNext())
-    	{
-    		Mesa m = it_mesas_concejales.next();
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
-    		
-    		
-    		// Sorting
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
-    		        @Override
-    		        public int compare(Escrutinio e2, Escrutinio e1)
-    		        {
-    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    		        }
-    		    });
-    		
-    		
-    		/*Solo si la lista no esta vacia*/
-    		
-    		if(escrutinios.size()>0)
-    		{
-    			//Crear una fila para esta mesa
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			
-    			//obtener el lugar de votacion
-    			
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
-    			
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			
-    			cell2.setCellValue(m.getMesa());
-    			
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			
-    			cell5.setCellValue("CONCEJALES");
-
-    			Cell cell6 = row.createCell(columnCount++);
-    			
-    			cell6.setCellValue(m.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			
-    			cell7.setCellValue(m.getTotalVotosXIndividuo());
-
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			
-    			while(it_escrutinios.hasNext())
-    			{
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosurReg());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			
-    			cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosurReg());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			
-    			cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosurReg());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosurReg());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			
-    			cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosurReg());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			
-    			cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosurReg());
-    			
-    		}
-    		
-    	}
     	
 
     	
