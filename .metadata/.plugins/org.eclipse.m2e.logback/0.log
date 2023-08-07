@@ -14312,3 +14312,383 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache
 2023-08-04 08:48:39,239 [Worker-171: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-08-04 08:48:39,239 [Worker-171: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2023-08-04 08:48:39,239 [Worker-171: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-04 19:42:55,175 [Worker-170: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-04 19:42:55,191 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 19:42:55,192 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 19:42:55,193 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 19:42:55,193 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 19:42:55,199 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 19:42:55,199 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 19:42:55,199 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-04 19:50:37,339 [Worker-188: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-04 19:50:37,345 [Worker-188: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 19:50:37,345 [Worker-188: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 19:50:37,346 [Worker-188: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 19:50:37,346 [Worker-188: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 19:50:37,350 [Worker-188: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 19:50:37,350 [Worker-188: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 19:50:37,350 [Worker-188: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-04 19:59:38,124 [Worker-194: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-04 19:59:38,130 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 19:59:38,130 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 19:59:38,131 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 19:59:38,131 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 19:59:38,135 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 19:59:38,135 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 19:59:38,135 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-04 20:00:43,427 [Worker-193: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-04 20:00:43,433 [Worker-193: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 20:00:43,433 [Worker-193: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 20:00:43,434 [Worker-193: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 20:00:43,434 [Worker-193: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 20:00:43,438 [Worker-193: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 20:00:43,438 [Worker-193: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 20:00:43,438 [Worker-193: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-04 20:07:02,391 [Worker-192: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-04 20:07:02,394 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 20:07:02,394 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 20:07:02,395 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 20:07:02,395 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-04 20:07:02,397 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-04 20:07:02,397 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-04 20:07:02,397 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 13:26:33,327 [Worker-217: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 13:26:35,249 [Worker-217: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 13:26:35,249 [Worker-217: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 13:26:35,258 [Worker-217: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 13:26:35,260 [Worker-217: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 13:26:35,267 [Worker-217: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 13:26:35,267 [Worker-217: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 13:26:35,267 [Worker-217: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 13:31:31,769 [Worker-218: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 13:31:31,776 [Worker-218: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 13:31:31,776 [Worker-218: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 13:31:31,776 [Worker-218: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 13:31:31,777 [Worker-218: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 13:31:31,780 [Worker-218: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 13:31:31,780 [Worker-218: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 13:31:31,780 [Worker-218: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 15:30:29,483 [Worker-230: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 15:30:29,502 [Worker-230: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 15:30:29,502 [Worker-230: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 15:30:29,504 [Worker-230: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-05 15:30:30,013 [Worker-230: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-05 15:30:30,019 [Worker-230: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 15:30:30,020 [Worker-230: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 15:30:30,020 [Worker-230: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 17:12:23,889 [Worker-235: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 17:12:23,913 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:12:23,913 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:12:23,913 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:12:23,914 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:12:23,917 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:12:23,917 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:12:23,917 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 17:26:29,577 [Worker-235: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 17:26:29,586 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:26:29,586 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:26:29,586 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:26:29,586 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:26:29,593 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:26:29,593 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:26:29,593 [Worker-235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 17:30:08,135 [Worker-243: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 17:30:08,142 [Worker-243: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:30:08,142 [Worker-243: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:30:08,142 [Worker-243: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:30:08,143 [Worker-243: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:30:08,147 [Worker-243: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:30:08,147 [Worker-243: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:30:08,147 [Worker-243: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 17:30:28,009 [Worker-249: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 17:30:28,015 [Worker-249: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:30:28,015 [Worker-249: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:30:28,016 [Worker-249: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:30:28,016 [Worker-249: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:30:28,021 [Worker-249: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:30:28,021 [Worker-249: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:30:28,022 [Worker-249: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 17:34:55,948 [Worker-254: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 17:34:55,956 [Worker-254: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:34:55,956 [Worker-254: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:34:55,957 [Worker-254: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:34:55,957 [Worker-254: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:34:55,961 [Worker-254: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:34:55,961 [Worker-254: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:34:55,961 [Worker-254: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 17:40:39,901 [Worker-255: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 17:40:39,908 [Worker-255: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:40:39,908 [Worker-255: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:40:39,909 [Worker-255: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:40:39,909 [Worker-255: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-05 17:40:39,916 [Worker-255: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:40:39,917 [Worker-255: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 17:40:39,917 [Worker-255: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-05 22:30:05,300 [Worker-270: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-08-05 22:30:05,325 [Worker-270: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 22:30:05,325 [Worker-270: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 22:30:05,327 [Worker-270: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-05 22:30:05,692 [Worker-270: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-05 22:30:05,698 [Worker-270: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 22:30:05,699 [Worker-270: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-05 22:30:05,699 [Worker-270: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 00:29:23,806 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-08-06 00:30:28,249 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:30:28,253 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:30:28,258 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 00:30:28,296 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 00:30:28,327 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:30:28,328 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:30:28,328 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 00:32:19,233 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:32:19,234 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:32:19,240 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 00:32:19,250 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 00:32:19,260 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:32:19,261 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:32:19,261 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 00:34:47,370 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:34:47,371 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:34:47,373 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 00:34:47,387 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 00:34:47,395 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:34:47,396 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:34:47,396 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 00:34:59,057 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:34:59,057 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:34:59,061 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 00:34:59,071 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 00:34:59,084 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:34:59,084 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:34:59,085 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 00:38:06,163 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-08-06 00:39:00,966 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:39:00,967 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:39:00,974 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 00:39:01,008 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 00:39:01,033 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 00:39:01,034 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 00:39:01,034 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 00:45:40,942 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-08-06 00:50:37,283 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-08-06 01:07:02,909 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 01:07:03,060 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 01:07:03,066 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 01:07:03,105 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 01:07:03,113 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 01:07:03,113 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 01:07:03,114 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 01:33:01,675 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 01:33:01,687 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 01:33:01,700 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 01:33:01,727 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 01:33:01,740 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 01:33:01,740 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 01:33:01,740 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 01:33:29,502 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606 [346])
+2023-08-06 01:33:29,844 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606
+2023-08-06 01:33:29,844 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\aether-connector-okhttp-0.17.8.jar
+2023-08-06 01:33:29,845 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\commons-lang3-3.8.1.jar
+2023-08-06 01:33:29,845 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\guice-4.2.2-no_aop.jar
+2023-08-06 01:33:29,845 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\jansi-2.4.0.jar
+2023-08-06 01:33:29,846 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-artifact-3.8.7.jar
+2023-08-06 01:33:29,846 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-builder-support-3.8.7.jar
+2023-08-06 01:33:29,846 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-compat-3.8.7.jar
+2023-08-06 01:33:29,847 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-core-3.8.7.jar
+2023-08-06 01:33:29,847 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-embedder-3.8.7.jar
+2023-08-06 01:33:29,847 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-3.8.7.jar
+2023-08-06 01:33:29,848 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-builder-3.8.7.jar
+2023-08-06 01:33:29,848 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-plugin-api-3.8.7.jar
+2023-08-06 01:33:29,848 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-repository-metadata-3.8.7.jar
+2023-08-06 01:33:29,848 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-api-1.6.3.jar
+2023-08-06 01:33:29,849 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-connector-basic-1.6.3.jar
+2023-08-06 01:33:29,849 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-impl-1.6.3.jar
+2023-08-06 01:33:29,849 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-provider-3.8.7.jar
+2023-08-06 01:33:29,849 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-spi-1.6.3.jar
+2023-08-06 01:33:29,850 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-transport-wagon-1.6.3.jar
+2023-08-06 01:33:29,850 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-util-1.6.3.jar
+2023-08-06 01:33:29,850 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-3.8.7.jar
+2023-08-06 01:33:29,851 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-builder-3.8.7.jar
+2023-08-06 01:33:29,851 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-shared-utils-3.3.4.jar
+2023-08-06 01:33:29,851 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okhttp-3.14.1.jar
+2023-08-06 01:33:29,852 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okio-1.17.3.jar
+2023-08-06 01:33:29,852 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.inject-0.3.5.jar
+2023-08-06 01:33:29,852 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2023-08-06 01:33:29,853 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-build-api-0.0.7.jar
+2023-08-06 01:33:29,853 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-cipher-2.0.jar
+2023-08-06 01:33:29,855 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-classworlds-2.6.0.jar
+2023-08-06 01:33:29,855 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-component-annotations-2.1.0.jar
+2023-08-06 01:33:29,856 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-interpolation-1.26.jar
+2023-08-06 01:33:29,856 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-sec-dispatcher-2.0.jar
+2023-08-06 01:33:29,864 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-utils-3.3.1.jar
+2023-08-06 01:33:29,865 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-file-3.5.3.jar
+2023-08-06 01:33:29,865 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-provider-api-3.5.3.jar
+2023-08-06 01:33:29,867 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_31.1.0.jre [23])
+2023-08-06 01:33:29,869 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\com.google.guava_31.1.0.jre.jar
+2023-08-06 01:33:29,869 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [580])
+2023-08-06 01:33:29,870 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\slf4j.api_1.7.36.jar
+2023-08-06 01:33:29,871 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [50])
+2023-08-06 01:33:30,059 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2023-08-06 01:33:30,059 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221203-1659 [48])
+2023-08-06 01:33:30,071 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\javax.annotation_1.3.5.v20221203-1659.jar
+2023-08-06 01:33:30,071 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.4.0.v20221112-0806 [73])
+2023-08-06 01:33:30,088 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\org.apache.commons.cli_1.4.0.v20221112-0806.jar
+2023-08-06 01:33:30,089 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.1 [25])
+2023-08-06 01:33:30,177 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\sergio\Documents\sts-4.18.0.RELEASE\plugins\com.google.guava.failureaccess_1.0.1.jar
+2023-08-06 01:33:30,183 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 01:33:30,184 [Worker-22: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean
+2023-08-06 01:33:46,780 [Worker-20: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 01:33:46,780 [Worker-20: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 02:31:57,742 [Worker-14: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 02:31:57,758 [Worker-14: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean
+2023-08-06 02:32:19,083 [Worker-25: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 02:32:19,084 [Worker-25: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 02:32:36,465 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 02:32:36,466 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 02:32:36,474 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 02:32:36,936 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 02:32:36,948 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 02:32:36,948 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 02:32:36,949 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 02:32:37,380 [Worker-20: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 02:32:37,398 [Worker-20: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 02:51:50,914 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 02:51:50,914 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 02:51:50,919 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 02:51:50,927 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 02:51:50,931 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 02:51:50,931 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 02:51:50,932 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 02:52:06,454 [Worker-32: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 02:52:06,454 [Worker-32: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 03:04:15,132 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 03:04:15,133 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 03:04:15,134 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 03:04:15,169 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-08-06 03:04:15,176 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 03:04:15,177 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 03:04:15,177 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 03:06:24,443 [Worker-29: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 03:06:24,444 [Worker-29: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean
+2023-08-06 03:07:00,043 [Worker-34: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 03:07:00,044 [Worker-34: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 03:24:23,564 [Worker-41: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 03:24:23,582 [Worker-41: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 03:25:02,912 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 03:25:02,926 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 03:25:02,928 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 03:25:02,929 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 03:25:02,941 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 03:25:02,941 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 03:25:02,941 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 03:25:02,942 [Worker-44: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 03:25:02,942 [Worker-44: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 03:34:42,620 [Worker-47: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 03:34:42,620 [Worker-47: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 03:51:19,357 [Worker-49: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 03:51:19,358 [Worker-49: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 04:35:05,409 [Worker-53: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 04:35:05,409 [Worker-53: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 05:00:32,264 [Worker-55: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:00:32,269 [Worker-55: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean
+2023-08-06 05:01:04,994 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:01:04,996 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:01:04,998 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:01:05,001 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:01:05,023 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:01:05,023 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:01:05,023 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:01:05,024 [Worker-55: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 05:01:05,024 [Worker-55: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 05:01:17,842 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:01:17,842 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:01:17,843 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:01:17,843 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:01:17,848 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:01:17,848 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:01:17,849 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:01:29,548 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:01:29,548 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:01:29,548 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:01:29,549 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:01:29,552 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:01:29,552 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:01:29,552 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:02:16,053 [Worker-55: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:02:16,054 [Worker-55: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 05:08:28,831 [Worker-65: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:08:28,832 [Worker-65: Launching Executing clean in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean
+2023-08-06 05:09:01,198 [Worker-59: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:09:01,199 [Worker-59: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 05:20:40,402 [Worker-69: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.boot:12354854985:2.5.15 @ C:\Users\sergio\Desktop\elecciones\elecciones\pom.xml.
+2023-08-06 05:20:44,014 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:20:44,015 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:20:44,019 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:20:44,020 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:20:44,025 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:20:44,026 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:20:44,026 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:20:44,026 [Worker-69: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 05:20:44,026 [Worker-69: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 05:21:47,544 [Worker-72: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.boot:12354854985:2.5.15 @ C:\Users\sergio\Desktop\elecciones\elecciones\pom.xml.
+2023-08-06 05:21:49,479 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:21:49,480 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:21:49,486 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:21:49,487 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:21:49,493 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:21:49,494 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:21:49,494 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:21:49,495 [Worker-72: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 05:21:49,495 [Worker-72: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 05:22:04,201 [Worker-71: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:22:04,202 [Worker-71: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 05:29:42,587 [Worker-72: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:29:42,588 [Worker-72: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 05:33:19,391 [Worker-71: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.boot:12354854985:2.5.15 @ C:\Users\sergio\Desktop\elecciones\elecciones\pom.xml.
+2023-08-06 05:33:22,420 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:33:22,420 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:33:22,429 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:33:22,430 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:33:22,437 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:33:22,437 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:33:22,437 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:33:22,438 [Worker-71: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 05:33:22,438 [Worker-71: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 05:35:33,805 [Worker-85: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.boot:12354854985:2.5.15 @ C:\Users\sergio\Desktop\elecciones\elecciones\pom.xml.
+2023-08-06 05:35:36,102 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:35:36,102 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:35:36,107 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:35:36,108 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:35:36,116 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:35:36,117 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:35:36,117 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:35:36,118 [Worker-85: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 05:35:36,118 [Worker-85: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 05:35:54,368 [Worker-88: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:35:54,368 [Worker-88: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 05:43:13,860 [Worker-87: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.boot:12354854985:2.5.15 @ C:\Users\sergio\Desktop\elecciones\elecciones\pom.xml.
+2023-08-06 05:43:16,668 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:43:16,668 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:43:16,673 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:43:16,674 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 05:43:16,680 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 05:43:16,680 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 05:43:16,681 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 05:43:16,681 [Worker-87: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of elecciones
+2023-08-06 05:43:16,681 [Worker-87: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for elecciones
+2023-08-06 05:43:18,448 [Worker-92: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.14.0/log4j-api-2.14.0-sources.jar
+2023-08-06 05:43:20,825 [Worker-92: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.14.0/log4j-api-2.14.0-sources.jar
+2023-08-06 05:43:20,831 [Worker-92: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.logging.log4j:log4j-api:2.14.0
+2023-08-06 05:43:21,593 [Worker-92: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/2.14.0/log4j-core-2.14.0-sources.jar
+2023-08-06 05:43:34,181 [Worker-93: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":
+2023-08-06 05:43:34,182 [Worker-93: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-08-06 05:43:36,016 [Worker-92: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/2.14.0/log4j-core-2.14.0-sources.jar
+2023-08-06 05:43:36,021 [Worker-92: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.logging.log4j:log4j-core:2.14.0
+2023-08-06 11:27:19,576 [Worker-102: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 11:27:19,598 [Worker-102: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 11:27:19,614 [Worker-102: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-06 11:27:21,592 [Worker-102: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-08-06 11:27:21,607 [Worker-102: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-06 11:27:21,607 [Worker-102: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-06 11:27:21,607 [Worker-102: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sergio\Desktop\elecciones\elecciones\src\test\resources
+2023-08-06 11:27:55,177 [Worker-95: Launching Executing install in C__Users_sergio_Desktop_elecciones_elecciones] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\sergio\Desktop\elecciones\elecciones":

@@ -23,7 +23,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
                 <exclusion>
-                    <groupId>org.spring.boot</groupId>
+                    <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
                 <exclusion>
@@ -33,6 +33,16 @@
             </exclusions>
 
         </dependency>
+        <dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    			<artifactId>log4j-api</artifactId>
+    			<version>2.14.0</version>
+			</dependency>
+		<dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    			<artifactId>log4j-core</artifactId>
+    			<version>2.14.0</version>
+		</dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -152,14 +162,13 @@
   <groupId>org.webjars</groupId>
   <artifactId>jquery</artifactId>
   <version>3.1.1-1</version>
-</dependency>
+	</dependency>  
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.1.0.Final</version>
         </dependency>
-
-    </dependencies>
+      </dependencies>
     <build>
         <finalName>12354854985</finalName>
 	    <plugins>
