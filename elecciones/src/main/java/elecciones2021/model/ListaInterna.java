@@ -86,7 +86,8 @@ public class ListaInterna implements Serializable {
 	@Column(name = "texto_formateado")
 	private String texto_formateado;
 
-
+    @Column(name = "nro_orden", columnDefinition = "bigint")
+    private Long nroOrden;
 
 	public int getIdListaInterna() {
 		return idListaInterna;
@@ -186,6 +187,14 @@ public class ListaInterna implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public Long getNro_orden() {
+		return nroOrden;
+	}
+
+	public void setNro_orden(Long nro_orden) {
+		this.nroOrden = nro_orden;
 	}
 
 

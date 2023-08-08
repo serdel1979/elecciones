@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 
@@ -30,14 +31,18 @@ public class AgrupacionPolitica implements Serializable {
 	@Column(name = "id_agrupacion_politica")
 	private int idAgrupacionPolitica;
 
-	@Column(name = "descripcion")
+	@Column(name = "descripcion")  //nro_agrupacion
 	private String descripcion;
 
-	
+	@Column(name = "nro_agrupacion")  //nro_agrupacion
+	private String nroAgrupacion;
 
+	@Column(name = "nro_orden")  //nro_agrupacion
+	private Long nroOrden;
 	
     @OneToMany( fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval=true)
     @JoinColumn(name="agrupacion_politica_id", referencedColumnName="id_agrupacion_politica")
+    @OrderBy("nroOrden")
 	private Set<ListaInterna> listaInterna;
 
 
@@ -74,6 +79,30 @@ public class AgrupacionPolitica implements Serializable {
 
 	public void setListaInterna(Set<ListaInterna> listaInterna) {
 		this.listaInterna = listaInterna;
+	}
+
+
+
+	public String getNro_agrupacion() {
+		return nroAgrupacion;
+	}
+
+
+
+	public void setNro_agrupacion(String nro_agrupacion) {
+		this.nroAgrupacion = nro_agrupacion;
+	}
+
+
+
+	public Long getNroOrden() {
+		return nroOrden;
+	}
+
+
+
+	public void setNroOrden(Long nroOrden) {
+		this.nroOrden = nroOrden;
 	}
 
 
