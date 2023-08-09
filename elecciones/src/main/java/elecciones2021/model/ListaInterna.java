@@ -89,6 +89,10 @@ public class ListaInterna implements Serializable {
     @Column(name = "nro_orden", columnDefinition = "bigint")
     private Long nroOrden;
 
+    @Column(name = "nro_orden_pcial", columnDefinition = "bigint")
+    private Long nroOrdenPcial;
+
+    
 	public int getIdListaInterna() {
 		return idListaInterna;
 	}
@@ -195,6 +199,22 @@ public class ListaInterna implements Serializable {
 
 	public void setNro_orden(Long nro_orden) {
 		this.nroOrden = nro_orden;
+	}
+
+	public Long getNroOrden() {
+		return nroOrden;
+	}
+
+	public void setNroOrden(Long nroOrden) {
+		this.nroOrden = nroOrden;
+	}
+
+	public Long getNroOrdenPcial() {
+		return nroOrdenPcial;
+	}
+
+	public void setNroOrdenPcial(Long nroOrdenPcial) {
+		this.nroOrdenPcial = nroOrdenPcial;
 	}
 
 
