@@ -28,7 +28,9 @@ function total_votos_senadores() {
 
 			total = total + parseInt($(this).val());
 	});
-	return total + subtotal_votos_senadores();
+	var val = total + subtotal_votos_senadores();
+	console.log(val);
+	return val;
 }
 
 function subtotal_votos_senadores() {
@@ -70,17 +72,20 @@ function alertSubtotalSenadores() {
 
 
 function alertSenadores() {
-	if ($("#total_votos_x_columna_senadores").val() == "")
-		$("#total_votos_x_columna_senadores").removeClass("error_columna_totales");
-
+	console.log("entraaaaaaaaaaaaaa");
+	if ($("#total_votos_agrupaciones_politicas_senadores").val() == "")
+	{
+		$("#total_votos_agrupaciones_politicas_senadores").removeClass("error_columna_totales");
+    	console.log("error");
+    }
 	else {
-		if (parseInt($("#total_votos_x_columna_senadores").val()) != total_votos_senadores()) {
-			if (!$("#total_votos_x_columna_senadores").hasClass("error_columna_totales"))
-				$("#total_votos_x_columna_senadores").addClass("error_columna_totales");
+		if (parseInt($("#total_votos_agrupaciones_politicas_senadores").val()) != total_votos_senadores()) {
+			if (!$("#total_votos_agrupaciones_politicas_senadores").hasClass("error_columna_totales"))
+				$("#total_votos_agrupaciones_politicas_senadores").addClass("error_columna_totales");
 		}
 		else
 
-			$("#total_votos_x_columna_senadores").removeClass("error_columna_totales");
+			$("#total_votos_agrupaciones_politicas_senadores").removeClass("error_columna_totales");
 
 
 	}
@@ -170,15 +175,15 @@ function subtotal_votos_parlamentarios() {
 
 function alertParlamentarios() {
 
-	if ($("#total_votos_x_columna_parlamentarios_mercosur").val() == "")
-		$("#total_votos_x_columna_parlamentarios_mercosur").removeClass("error_columna_totales");
+	if ($("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").val() == "")
+		$("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").removeClass("error_columna_totales");
 	else {
-		if (parseInt($("#total_votos_x_columna_parlamentarios_mercosur").val()) != total_votos_parlamentarios()) {
-			if (!$("#total_votos_x_columna_parlamentarios_mercosur").hasClass("error_columna_totales"))
-				$("#total_votos_x_columna_parlamentarios_mercosur").addClass("error_columna_totales");
+		if (parseInt($("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").val()) != total_votos_parlamentarios()) {
+			if (!$("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").hasClass("error_columna_totales"))
+				$("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").addClass("error_columna_totales");
 		}
 		else
-			$("#total_votos_x_columna_parlamentarios_mercosur").removeClass("error_columna_totales");
+			$("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").removeClass("error_columna_totales");
 
 
 	}
@@ -223,20 +228,21 @@ function subtotal_votos_dip_nac() {
 
 			total = total + parseInt($(this).val());
 	});
+	console.log(total);
 	return total;
 }
 
 function alertDipNac() {
 
-	if ($("#total_votos_x_columna_diputados").val() == "")
-		$("#total_votos_x_columna_diputados").removeClass("error_columna_totales");
+	if ($("#total_votos_agrupaciones_politicas_diputados").val() == "")
+		$("#total_votos_agrupaciones_politicas_diputados").removeClass("error_columna_totales");
 	else {
-		if (parseInt($("#total_votos_x_columna_diputados").val()) != subtotal_votos_dip_nac()) {
-			if (!$("#total_votos_x_columna_diputados").hasClass("error_columna_totales"))
-				$("#total_votos_x_columna_diputados").addClass("error_columna_totales");
+		if (parseInt($("#total_votos_agrupaciones_politicas_diputados").val()) != total_votos_dip_nac()) {
+			if (!$("#total_votos_agrupaciones_politicas_diputados").hasClass("error_columna_totales"))
+				$("#total_votos_agrupaciones_politicas_diputados").addClass("error_columna_totales");
 		}
 		else
-			$("#total_votos_x_columna_diputados").removeClass("error_columna_totales");
+			$("#total_votos_agrupaciones_politicas_diputados").removeClass("error_columna_totales");
 
 
 	}
@@ -247,7 +253,7 @@ function alertSubtotalDipNac() {
 	if ($("#subtotal_votos_agrupaciones_politicas_diputados_nacionales").val() == "")
 		$("#subtotal_votos_agrupaciones_politicas_diputados_nacionales").removeClass("error_columna_totales");
 	else {
-		if (parseInt($("#subtotal_votos_agrupaciones_politicas_diputados_nacionales").val()) != total_votos_dip_nac()) {
+		if (parseInt($("#subtotal_votos_agrupaciones_politicas_diputados_nacionales").val()) != subtotal_votos_dip_nac()) {
 			if (!$("#subtotal_votos_agrupaciones_politicas_diputados_nacionales").hasClass("error_columna_totales"))
 				$("#subtotal_votos_agrupaciones_politicas_diputados_nacionales").addClass("error_columna_totales");
 		}
@@ -309,7 +315,7 @@ function total_votos_presidente() {
 
 			total = total + parseInt($(this).val());
 	});
-	return total + subtotal_votos_presidente;
+	return total + subtotal_votos_presidente();
 }
 
 
@@ -332,6 +338,7 @@ function alertSubtotalPresidente() {
 
 function alertPresidente() {
 
+console.log('alert presidente');
 
 	if ($("#total_votos_agrupaciones_politicas_presidente").val() == "")
 		$("#total_votos_agrupaciones_politicas_presidente").removeClass("error_columna_totales");
@@ -376,15 +383,15 @@ function total_votos_parlamentarios_reg() {
 
 function alertParlamentRegionales() {
 
-	if ($("#total_votos_x_columna_parlamentarios_regionales").val() == "")
-		$("#total_votos_x_columna_parlamentarios_regionales").removeClass("error_columna_totales");
+	if ($("#total_votos_agrupaciones_politicas_parlamentarios_regionales").val() == "")
+		$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").removeClass("error_columna_totales");
 	else {
-		if (parseInt($("#total_votos_x_columna_parlamentarios_regionales").val()) != total_votos_parlamentarios_reg()) {
-			if (!$("#total_votos_x_columna_parlamentarios_regionales").hasClass("error_columna_totales"))
-				$("#total_votos_x_columna_parlamentarios_regionales").addClass("error_columna_totales");
+		if (parseInt($("#total_votos_agrupaciones_politicas_parlamentarios_regionales").val()) != total_votos_parlamentarios_reg()) {
+			if (!$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").hasClass("error_columna_totales"))
+				$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").addClass("error_columna_totales");
 		}
 		else
-			$("#total_votos_x_columna_parlamentarios_regionales").removeClass("error_columna_totales");
+			$("#total_votos_agrupaciones_politicas_parlamentarios_regionales").removeClass("error_columna_totales");
 
 
 	}
@@ -1022,14 +1029,14 @@ function persistir_mesa() {
 
 
 
-	dataRequest.total_votos_agrupaciones_politicas_diputados_nacionales = setParam($("#total_votos_x_columna_diputados").val());
+	dataRequest.total_votos_agrupaciones_politicas_diputados_nacionales = setParam($("#total_votos_agrupaciones_politicas_diputados").val());
 	dataRequest.total_votos_agrupaciones_politicas_legisladores_provinciales = setParam($("#total_votos_agrupaciones_politicas_legisladores_provinciales").val());
-	dataRequest.total_votos_agrupaciones_politicas_parlamentarios_mercosur = setParam($("#total_votos_x_columna_parlamentarios_mercosur").val());
+	dataRequest.total_votos_agrupaciones_politicas_parlamentarios_mercosur = setParam($("#total_votos_agrupaciones_politicas_parlamentarios_mercosur").val());
 	dataRequest.total_votos_agrupaciones_politicas_intendente = setParam($("#total_votos_agrupaciones_politicas_intendente").val());
-	dataRequest.total_votos_agrupaciones_politicas_senadores = setParam($("#total_votos_x_columna_senadores").val());
+	dataRequest.total_votos_agrupaciones_politicas_senadores = setParam($("#total_votos_agrupaciones_politicas_senadores").val());
 	dataRequest.total_votos_agrupaciones_politicas_gobernador = setParam($("#total_votos_agrupaciones_politicas_gobernador").val());
-	dataRequest.total_votos_agrupaciones_politicas_presidente = setParam($("#total_votos_x_columna_presidente").val());
-	dataRequest.total_votos_agrupaciones_politicas_parlamentarios_regionales = setParam($("#total_votos_x_columna_parlamentarios_regionales").val());
+	dataRequest.total_votos_agrupaciones_politicas_presidente = setParam($("#total_votos_agrupaciones_politicas_presidente").val());
+	dataRequest.total_votos_agrupaciones_politicas_parlamentarios_regionales = setParam($("#total_votos_agrupaciones_politicas_parlamentarios_regionales").val());
 
 
 

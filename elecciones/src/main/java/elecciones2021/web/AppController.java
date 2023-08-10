@@ -289,6 +289,7 @@ public class AppController {
 	public @ResponseBody Map<String, Object> updateMesa(@RequestBody HashMap<String,Object> dataRequest)
 	{
 	  HashMap<String, Object> returnValue = new HashMap<String,Object>();	
+	  
 		
       Mesa m = mesaRepository.findMesa(Integer.valueOf(dataRequest.get("mesa").toString()));
       if(m != null)
@@ -414,7 +415,6 @@ public class AppController {
       	 m.getEscrutinios().clear();
 
       	 m.getEscrutinios().addAll(escrutinios);
-
 
       	 mesaRepository.saveAndFlush(m);
       }

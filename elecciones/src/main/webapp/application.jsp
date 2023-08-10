@@ -40,7 +40,7 @@
 					<div id="principal_circuito_mesa">
 					<div class="texto_no_resaltado">SECCION ELECTORAL</div><br>
 					<div style="margin-bottom: 5px;">118 - TRES DE FEBRERO</div>
-					<!-- span class="texto_no_resaltado">CIRCUITO<input id="nro_circuito" type="text" onkeypress='if(event.charCode==13) $("#b_cargar_mesa").click();return event.charCode >= 48 && event.charCode <= 57' /></span-->
+					<!-- span class="texto_no_resaltado">CIRCUITO<input id="nro_circuito" type="text" onkeypress='if(event.charCode==13) $("#b_cargar_mesa").click();return event.charCode >= 48 && event.charCode <= 57' /></span -->
 					<span class="texto_no_resaltado">MESA <input id="nro_mesa" type="text" onkeypress='if(event.charCode==13) $("#b_cargar_mesa").click();return event.charCode >= 48 && event.charCode <= 57' type="text" /></span>
 					<a id="b_cargar_mesa" onclick="cargar_mesa()" style="color:#39bd44">Cargar</a>	
 					</div>
@@ -83,7 +83,7 @@
 							<table class="tg">
 							  
 							  <col width="20">
-							  <!-- col width="340">
+							  <!-- col width="340" -->
 							  <!--col width="304"-->
 							  
 							  <col width="1288"> <!--unifica las 2 columnas para las generales-->
@@ -192,6 +192,16 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_intendente" onkeyup="alertIntendente()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 							-->	
 							  </tr>
+							  <td class="tg-yw4l aleft" colspan="3">TOTAL VOTOS AGRUPACIONES POLITICAS</td>
+								<td class="tg-yw4l">
+								<input type="text" style="width:120px;" onkeyup="alertPresidente()" id="total_votos_agrupaciones_politicas_presidente" />
+								</td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertParlamentarios()" id="total_votos_agrupaciones_politicas_parlamentarios_mercosur" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertSenadores()" id="total_votos_agrupaciones_politicas_senadores" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertDipNac()" id="total_votos_agrupaciones_politicas_diputados" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertParlamentRegionales()" id="total_votos_agrupaciones_politicas_parlamentarios_regionales" /></td>
+
+							  </tr>
 							  <tr>
 								<td class="tg-yw4l aleft" colspan="3">VOTOS NULOS</td>
 
@@ -206,7 +216,7 @@
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_intendente" /></td>
 								
-								-->
+								
 							  
 							  </tr>
 							  <tr>
@@ -273,10 +283,10 @@
 								<td class="tg-yw4l">
 								<input type="text" style="width:120px;" id="total_votos_x_columna_presidente" />
 								</td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertParlamentarios()" id="total_votos_x_columna_parlamentarios_mercosur" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertSenadores()" id="total_votos_x_columna_senadores" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertDipNac()" id="total_votos_x_columna_diputados" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertParlamentRegionales()" id="total_votos_x_columna_parlamentarios_regionales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_parlamentarios_mercosur" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_senadores" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_diputados" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_parlamentarios_regionales" /></td>
 								<!--  
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_legisladores_provinciales" /></td>
