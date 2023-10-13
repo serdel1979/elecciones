@@ -502,23 +502,24 @@ $(document).ready(function(e) {
 
 
 			$.each(value.listaInterna, function(ind, val) {
-				if (val.allowIntendente || val.allowLegProv || val.allowGobernador) {
+
+				if (val.nro_lista != 133) {
 					val.agrupacion = ap;
 					listas_provinciales.push(val);
 				}
 
-				if (val.nro_orden < 32 && (val.allowDipNac || val.allowParlamentarios || val.allowSenadores || val.allowPresidente)) {
+				
 
-					html_inner = html_inner + '<tr class="detalle_registro_votos_nacionales_1">';
-
-
+				html_inner = html_inner + '<tr class="detalle_registro_votos_nacionales_1">';
 
 
-					html_inner = html_inner + '<th class="tg-yw4l">' + val.nro_lista + '</th>';//numero de lista
 
-					html_inner = html_inner + '<th colspan="5" class="tg-yw4l aleft">' + ap + '</th>';//agrupacion politica
 
-			//		html_inner = html_inner + '<th class="tg-yw4l aleft">' + val.descripcion + '</th>';//lista interna
+				html_inner = html_inner + '<th class="tg-yw4l">' + val.nro_lista + '</th>';//numero de lista
+
+				html_inner = html_inner + '<th colspan="5" class="tg-yw4l aleft">' + ap + '</th>';//agrupacion politica
+
+			//	html_inner = html_inner + '<th class="tg-yw4l aleft">' + val.descripcion + '</th>';//lista interna
 
 
 					if (val.allowPresidente)
@@ -601,7 +602,7 @@ $(document).ready(function(e) {
 
 					html_inner = html_inner + '</tr>';
 
-				}
+				
 
 			});
 			// aca cierra el primer each
@@ -618,122 +619,14 @@ $(document).ready(function(e) {
 			'<td class="tg-yw4l"><input type="text" style="width:120px;" id="subtotal_votos_agrupaciones_politicas_parlamentarios_regionales" onkeyup="alertSubtotalParlamentRegionales()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>' +
 			'--></tr>'; */
 
+  	
+		
 
 		$(html_inner).insertAfter("#tr_totales_label_nacionales_1");
 
-		html_inner = "";
-		$.each(provider, function(index, value) {
-			var ap = value.descripcion;
-
-
-			$.each(value.listaInterna, function(ind, val) {
-				if (val.nro_orden > 31 && val.nro_orden < 48 && (val.allowDipNac || val.allowParlamentarios || val.allowSenadores || val.allowPresidente)) {
-
-					html_inner = html_inner + '<tr class="detalle_registro_votos_nacionales_2">';
-
-
-
-
-					html_inner = html_inner + '<th class="tg-yw4l">' + val.nro_lista + '</th>';//numero de lista
-
-					html_inner = html_inner + '<th colspan="2" class="tg-yw4l aleft">' + ap + '</th>';//agrupacion politica
-
-			//		html_inner = html_inner + '<th class="tg-yw4l aleft">' + val.descripcion + '</th>';//lista interna
-
-
-					if (val.allowPresidente)
-
-						html_inner = html_inner + '<th class="tg-yw4l"><input class="presidente" type="text" style="width:150px;" id="li_presidente_' + val.idListaInterna + '" onkeyup="alertPresidente()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//presidente
-
-					else
-
-						html_inner = html_inner + '<th class="tg-yw4l"></th>';
-
-
-
-					if (val.allowParlamentarios)
-
-						html_inner = html_inner + '<th class="tg-yw4l"><input style:"display: none" class="parlamentarios" type="text" style="width:150px;" id="li_parlamentarios_' + val.idListaInterna + '" onkeyup="alertParlamentarios()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//diputados nacionales
-
-					else
-
-						html_inner = html_inner + '<th class="tg-yw4l"></th>';
-
-/*  
-
-					if (val.allowSenadores)
-
-						html_inner = html_inner + '<th class="tg-yw4l"><input style:"display: none" class="senadores" type="text" style="width:150px;" id="li_senadores_' + val.idListaInterna + '" onkeyup="alertSenadores()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//presidente
-
-					else
-
-						html_inner = html_inner + '<th class="tg-yw4l"></th>';
-
-
-
-					if (val.allowDipNac)
-
-						html_inner = html_inner + '<th class="tg-yw4l"><input style:"display: none" class="dip_nac" type="text" style="width:150px;" id="li_diputados_nacionales_' + val.idListaInterna + '" onkeyup="alertDipNac()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//diputados nacionales
-
-					else
-
-						html_inner = html_inner + '<th class="tg-yw4l"></th>';
-
-
-
-					if (val.allowParlamentariosMercosurReg)
-
-						html_inner = html_inner + '<th class="tg-yw4l"><input class="parla_reg" type="text" style="width:150px;" id="li_parlamentarios_regionales_' + val.idListaInterna + '" onkeyup="alertParlamentRegionales()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//concejales
-
-					else
-						html_inner = html_inner + '<th class="tg-yw4l"></th>';
-
-
-					
-								 
-								 if(val.allowGobernador) //para gobernador
-								  
-									  html_inner = html_inner + '<th class="tg-yw4l"><input  style:"display: none" class="gobernador" type="text" style="width:150px;" id="li_gobernador_'+val.idListaInterna+'" onkeyup="alertGobernador()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//diputados nacionales
-								  
-								  else
-									  
-									  html_inner = html_inner + '<th class="tg-yw4l"></th>';  
-														  
-													  
-								  
-								  if(val.allowLegProv)
-									  
-									  html_inner = html_inner + '<th class="tg-yw4l"><input style:"display: none" class="leg_prov" type="text" style="width:150px;" id="li_legisladores_provinciales_'+val.idListaInterna+'" onkeyup="alertLegProv()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//legisladores provinciales
-								  
-								  else
-									  
-									  html_inner = html_inner + '<th class="tg-yw4l"></th>';
-								  
-								  
-								 
-								  if(val.allowIntendente) //pensado para intendente
-								  
-									  html_inner = html_inner + '<th class="tg-yw4l"><input style:"display: none" class="intendente" type="text" style="width:150px;" id="li_intendente_'+val.idListaInterna+'" onkeyup="alertIntendente()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"></th>';//diputados nacionales
-								  
-								  else
-									  
-									  html_inner = html_inner + '<th class="tg-yw4l"></th>';
-									  
-									  */
-
-					html_inner = html_inner + '</tr>';
-				}
-
-			});
-			// aca cierra el primer each
-
-
-		});
-		$(html_inner).insertAfter("#tr_totales_label_nacionales_2");
-
 		html_inner = "";							//insertar gobernadores
 		listas_provinciales.sort(function(a, b) {
-			return parseInt(a.nroOrdenPcial) - parseInt(b.nroOrdenPcial);
+			return parseInt(a.nro_lista) - parseInt(b.nro_lista);
 		});
 
 
