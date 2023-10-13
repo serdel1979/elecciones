@@ -1,0 +1,37 @@
+"id_lista_interna","permite_parlamentarios_mercosur_reg","permite_diputados_nacionales","permite_legisladores_provinciales","color","descripcion","nro_lista","texto_formateado","agrupacion_politica_id","permite_senadores_nacionales","permite_intendente","permite_parlamentarios_mercosur","permite_gobernador","permite_presidente"
+1,true,true,true,#CCCCCC,LISTA A CELESTE Y BLANCA,"8",LISTA A CELESTE Y BLANCA,1,true,true,true,true,true
+2,false,false,true,#CCCCCC,LISTA B FEDERALISMO PURO,"8",LISTA B FEDERALISMO PURO,1,true,true,true,true,true
+3,true,true,true,#CCCCCC,LISTA UNICA,"19",LISTA UNICA,2,true,true,true,true,true
+4,true,true,true,#CCCCCC,LISTA A PARA RENOVAR A LA IZQUIERDA,"255",LISTA A PARA RENOVAR A LA IZQUIERDA,3,true,true,true,true,true
+5,false,true,true,#CCCCCC,CORRIENTE DE PENSAMIENTO AUTENTICA,"258",CORRIENTE DE PENSAMIENTO AUTENTICA,4,true,true,true,true,true
+6,false,true,false,#CCCCCC,LISTA VERDE Y SOCIAL,"275",LISTA VERDE Y SOCIAL,5,true,true,true,true,true
+7,false,true,false,#CCCCCC,LISTA A CONFEDERAL,"292",LISTA A CONFEDERAL,6,true,true,true,true,true
+8,true,true,true,#CCCCCC,LISTA TODOS POR LA PCIA.,"298",LISTA TODOS POR LA PCIA.,7,true,true,true,true,true
+9,true,true,true,#CCCCCC,LISTA A PRIMERO LA PATRIA,"312",LISTA A PRIMERO LA PATRIA,8,true,true,true,true,true
+10,true,true,true,#CCCCCC,LISTA A PRINCIPIOS Y VALORES,"314",LISTA A PRINCIPIOS Y VALORES,9,true,true,true,true,true
+37,false,false,true,#CCCCCC,LISTA CREER,"864",LISTA CREER,31,true,true,true,true,true
+36,false,false,true,#CCCCCC,SOMOS RENOVADORES,"766",SOMOS RENOVADORES,30,true,true,true,true,true
+35,true,true,true,#CCCCCC,L F HAY OTRO CAMINO/1 HAY OTRO CAMINO,"508",L F HAY OTRO CAMINO/1 HAY OTRO CAMINO,29,true,true,true,true,true
+34,true,true,true,#CCCCCC,CELESTE Y BLANCA/CEL Y BLANCA 2,"507",CELESTE Y BLANCA/CEL Y BLANCA 2,28,true,true,true,true,true
+31,false,true,true,#CCCCCC,ES JUNTOS/LISTA 1 A,"506",ES JUNTOS/LISTA 1 A,27,true,true,true,true,true
+32,false,true,true,#CCCCCC,DAR EL PASO/LISTA 3 DAR EL PASO,"506",DAR EL PASO/LISTA 3 DAR EL PASO,27,true,true,true,true,true
+33,true,false,false,#CCCCCC,LISTA 100 U,"506",LISTA 100 U,27,true,true,true,true,true
+30,true,false,true,#CCCCCC,LISTA UNIDAD,"505/112",LISTA UNIDAD,26,true,true,true,true,true
+28,false,true,false,#CCCCCC,LISTA AZUL,"505",LISTA AZUL,25,true,true,true,true,true
+29,false,true,false,#CCCCCC,LISTA BLANCA,"505",LISTA BLANCA,25,true,true,true,true,true
+26,true,true,true,#CCCCCC,LISTA 1 A UNIDAD DE LA IZQUIERDA,"504",LISTA 1 A UNIDAD DE LA IZQUIERDA,24,true,true,true,true,true
+27,true,true,true,#CCCCCC,LISTA 10 R REVOLUCIONEMOS LA IZQUIERDA,"504",LISTA 10 R REVOLUCIONEMOS LA IZQUIERDA,24,true,true,true,true,true
+25,true,true,true,#CCCCCC,LISTA A LIBERTAD/1 A LIBERTAD,"503",LISTA A LIBERTAD/1 A LIBERTAD,23,true,true,true,true,true
+24,true,false,true,#CCCCCC,LISTA 1 NARANJA,"502/106",LISTA 1 NARANJA,22,true,true,true,true,true
+23,false,true,false,#CCCCCC,NARANJA 1,"502",NARANJA 1,21,true,true,true,true,true
+22,true,false,true,#CCCCCC,LISTA + VALORES,"501/27",LISTA + VALORES,20,true,true,true,true,true
+21,false,true,false,#CCCCCC,LISTA + VALORES,"501",LISTA + VALORES,19,true,true,true,true,true
+20,false,true,false,#CCCCCC,"1 A ESPERANZA","324","1 A ESPERANZA",18,true,true,true,true,true
+19,false,true,false,#CCCCCC,JUSTICIA Y DIGNIDAD,"323",JUSTICIA Y DIGNIDAD,17,true,true,true,true,true
+18,false,true,false,#CCCCCC,UNIDAD DE LOS TRABAJADORES,"322",UNIDAD DE LOS TRABAJADORES,16,true,true,true,true,true
+17,false,true,false,#CCCCCC,LISTA A BLANCA,"321",LISTA A BLANCA,15,true,true,true,true,true
+16,false,true,false,#CCCCCC,EN CONTRA DEL ABORTO,"320",EN CONTRA DEL ABORTO,14,true,true,true,true,true
+15,false,true,false,#CCCCCC,UNIDOS,"319",UNIDOS,13,true,true,true,true,true
+13,true,true,true,#CCCCCC,LISTA 1 A-UNITE POR BS. AS.,"317",LISTA 1 A-UNITE POR BS. AS.,12,true,true,true,true,true
+14,false,false,true,#CCCCCC,LISTA 2 B RENACER,"317",LISTA 2 B RENACER,12,true,true,true,true,true
+12,false,true,false,#CCCCCC,LISTA A ESPERANZA,"315",LISTA A ESPERANZA,11,true,true,true,true,true

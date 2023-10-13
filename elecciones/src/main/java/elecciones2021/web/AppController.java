@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpServletRequest;
@@ -71,40 +70,37 @@ import elecciones2021.repository.UserRepository;
 
 @Controller
 //@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = {"http://localhost:4200", "https://resultadostresdefebrero2021.com.ar","http://192.168.0.20:8080","http://192.168.1.9:8080","https://pasos2023-production.up.railway.app"})
+@CrossOrigin(origins = { "http://localhost:4200", "https://resultadostresdefebrero2021.com.ar",
+		"http://192.168.0.20:8080", "http://192.168.1.9:8080", "https://generales-production.up.railway.app" })
 
-@RequestMapping(value={"/client"})
+@RequestMapping(value = { "/client" })
 public class AppController {
-
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private RoleRepository roleRepository;
-	
+
 	@Autowired
 	private CircuitoMesaRepository circuitoMesaRepository;
 
 	@Autowired
 	private MesaRepository mesaRepository;
-	
+
 	@Autowired
 	private AgrupacionPoliticaRepository agrupacionPoliticaRepository;
-	
-	
+
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	
-
-	@RequestMapping(value = "/loadRoles", method = RequestMethod.GET, produces="application/json")
-	public @ResponseBody List<Role> getAllRoles(){
+	@RequestMapping(value = "/loadRoles", method = RequestMethod.GET, produces = "application/json")
+	public @ResponseBody List<Role> getAllRoles() {
 		return roleRepository.findAll();
 	}
 
 	@RequestMapping(value = "/application", method = RequestMethod.GET)
-	public ModelAndView  getFormCircuitoMesa(){
+	public ModelAndView getFormCircuitoMesa() {
 		ModelAndView responseModelAndView = new ModelAndView();
 		CircuitoMesaForm cm = new CircuitoMesaForm();
 		// cm.setMesa(null);
@@ -112,46 +108,47 @@ public class AppController {
 		responseModelAndView.setViewName("application");
 		return responseModelAndView;
 	}
-	@RequestMapping(value = "/loadCircuitoMesa", method = RequestMethod.POST)
-	public ModelAndView loadCircuitoMesa(@ModelAttribute("circuitoMesaForm") @Validated  CircuitoMesaForm circuitoMesaForm) {
 
-		CircuitoMesa cm=circuitoMesaRepository.findCircuitoMesa(circuitoMesaForm.getCircuito(), circuitoMesaForm.getMesa()); 
-		System.out.println(cm.getCircuito());
+	@RequestMapping(value = "/loadCircuitoMesa", method = RequestMethod.POST)
+	public ModelAndView loadCircuitoMesa(
+			@ModelAttribute("circuitoMesaForm") @Validated CircuitoMesaForm circuitoMesaForm) {
+
+		CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(circuitoMesaForm.getCircuito(),
+				circuitoMesaForm.getMesa());
+		//System.out.println(cm.getCircuito());
 		ModelAndView responseModelAndView = new ModelAndView();
 		responseModelAndView.getModel().put("circuito", cm.getCircuito());
 		responseModelAndView.getModel().put("mesa", circuitoMesaForm.getMesa());
 		responseModelAndView.setViewName("circuitoMesa");
 		return responseModelAndView;
 	}
-	
-	
-    @RequestMapping(value={"/getInfoFromMesaCircuito"}, method={RequestMethod.GET}, produces={"application/json"})
-    @ResponseBody
-    public HashMap<String, Object> getInfoFromMesaCircuito(@RequestParam int mesa) {
-        HashMap<String, Object> returnValue = new HashMap<String, Object>();
-        //busco la mesa en el repositorio de mesas
-        Mesa m = mesaRepository.findMesa(mesa);        
-        if(m != null)
-        {
-        	returnValue.put("success", true);
-        	/*Devuelve la mesa en cuestion*/
-        	returnValue.put("mesa", m);
-        }
-        else 
-        	returnValue.put("success", false);
-        return returnValue;
-    }
-    
-    @RequestMapping(value={"/loadPartidosPoliticos"}, method={RequestMethod.GET}, produces={"application/json"})
-    @ResponseBody
-    public List<AgrupacionPolitica> loadPartidosPoliticos() {
-    	
-    	return agrupacionPoliticaRepository.findAll();
 
-    }
+	@RequestMapping(value = { "/getInfoFromMesaCircuito" }, method = { RequestMethod.GET }, produces = {
+			"application/json" })
+	@ResponseBody
+	public HashMap<String, Object> getInfoFromMesaCircuito(@RequestParam int mesa) {
+		HashMap<String, Object> returnValue = new HashMap<String, Object>();
+		// busco la mesa en el repositorio de mesas
+		Mesa m = mesaRepository.findMesa(mesa);
+		if (m != null) {
+			returnValue.put("success", true);
+			/* Devuelve la mesa en cuestion */
+			returnValue.put("mesa", m);
+		} else
+			returnValue.put("success", false);
+		return returnValue;
+	}
 
+	@RequestMapping(value = { "/loadPartidosPoliticos" }, method = { RequestMethod.GET }, produces = {
+			"application/json" })
+	@ResponseBody
+	public List<AgrupacionPolitica> loadPartidosPoliticos() {
 
-	@RequestMapping(value={"/getResults"}, method={RequestMethod.GET}, produces={"application/json"})
+		return agrupacionPoliticaRepository.findAll();
+
+	}
+
+	@RequestMapping(value = { "/getResults" }, method = { RequestMethod.GET }, produces = { "application/json" })
 	@ResponseBody
 	public ResultDashboardDTO getDataDTO() {
 
@@ -160,19 +157,20 @@ public class AppController {
 		responseResultDashboardDTO.setTotalTelegramsLoaded(mesaRepository.getTotalMesasCargadas());
 		responseResultDashboardDTO.setTotalesxCircuito(mesaRepository.getTotalesXCircuito());
 		responseResultDashboardDTO.setTotalesxDiputadosNacionales(mesaRepository.getTotalesDiputadosNacionales());
-		responseResultDashboardDTO.setTotalesxLegisladoresProvinciales(mesaRepository.getTotalesLegisladoresProvinciales());
-		responseResultDashboardDTO.setTotalesxParlamentariosMercosurReg(mesaRepository.getTotalesParlamentariosMercosurReg());
+		responseResultDashboardDTO
+				.setTotalesxLegisladoresProvinciales(mesaRepository.getTotalesLegisladoresProvinciales());
+		responseResultDashboardDTO
+				.setTotalesxParlamentariosMercosurReg(mesaRepository.getTotalesParlamentariosMercosurReg());
 		responseResultDashboardDTO.setTotalesxSenadores(mesaRepository.getTotalesSenadoresNacionales());
-		
+
 		responseResultDashboardDTO.setTotalesxGobernador(mesaRepository.getTotalesGobernador());
 		responseResultDashboardDTO.setTotalesxPresidente(mesaRepository.getTotalesPresidente());
 		responseResultDashboardDTO.setTotalesxIntendente(mesaRepository.getTotalesIntendente());
 		responseResultDashboardDTO.setTotalesxParlamentarios(mesaRepository.getTotalesParlamentario());
-		
+
 		return responseResultDashboardDTO;
 
 	}
-
 
 //	@Transactional
 //	@MessageMapping("/updateMesa")
@@ -279,1065 +277,1009 @@ public class AppController {
 //
 //        return responseResultDashboardDTO;
 //	}
-	
-	
-	//"C:\\Users\\sergio\\Documents\\Paso2023.xlsx"
-	
+
+	// "C:\\Users\\sergio\\Documents\\Paso2023.xlsx"
+
 	@Transactional
-	@RequestMapping(value = "/updateMesa", method = RequestMethod.POST, headers = {"Content-type=application/json"}, produces="application/json")
-	
-	public @ResponseBody Map<String, Object> updateMesa(@RequestBody HashMap<String,Object> dataRequest)
-	{
-	  HashMap<String, Object> returnValue = new HashMap<String,Object>();	
-	  
-		
-      Mesa m = mesaRepository.findMesa(Integer.valueOf(dataRequest.get("mesa").toString()));
-      if(m != null)
-      {
-      	returnValue.put("existe_mesa", true);
-      	/*Actualizar la mesa*/
+	@RequestMapping(value = "/updateMesa", method = RequestMethod.POST, headers = {
+			"Content-type=application/json" }, produces = "application/json")
 
-           m.setFecha(new Date());
+	public @ResponseBody Map<String, Object> updateMesa(@RequestBody HashMap<String, Object> dataRequest) {
+		HashMap<String, Object> returnValue = new HashMap<String, Object>();
 
-      	 m.setTotalVotosXIndividuo(Integer.valueOf(dataRequest.get("ciudadanos_que_votaron_total").toString()));
-      	 m.setTotalsobres(Integer.valueOf(dataRequest.get("sobres_en_la_urna_total").toString()));
+		Mesa m = mesaRepository.findMesa(Integer.valueOf(dataRequest.get("mesa").toString()));
+		if (m != null) {
+			returnValue.put("existe_mesa", true);
+			/* Actualizar la mesa */
 
-      	 m.setTotalVotosDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_diputados_nacionales").toString()));
-      	 m.setTotalVotosLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_legisladores_provinciales").toString()));
-      	 m.setTotalVotosParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_parlamentarios_regionales").toString()));
-      	 m.setTotalVotosIntendente(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_intendente").toString()));
-      	 m.setTotalVotosGobernador(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_gobernador").toString()));
-         m.setTotalVotosPresidente(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_presidente").toString()));
-         m.setTotalVotosSenadores(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_senadores").toString()));
-         m.setTotalVotosParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_parlamentarios_mercosur").toString()));
-         
-         
-      	 
+			m.setFecha(new Date());
 
-      	 m.setTotalVotosNulosDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_nulos_diputados_nacionales").toString()));
-      	 m.setTotalVotosNulosLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_nulos_legisladores_provinciales").toString()));
-      	 m.setTotalVotosNulosparlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_nulos_parlamentarios_regionales").toString()));
-      	 m.setTotalVotosNulosIntendente(Integer.valueOf(dataRequest.get("total_votos_nulos_intendente").toString()));
-      	 m.setTotalVotosNulosGobernador(Integer.valueOf(dataRequest.get("total_votos_nulos_gobernador").toString()));
-      	 m.setTotalVotosNulosPresidente(Integer.valueOf(dataRequest.get("total_votos_nulos_presidente").toString()));
-      	 m.setTotalVotosNulosParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_nulos_parlamentarios_mercosur").toString()));
-      	 m.setTotalVotosNulosSenadores(Integer.valueOf(dataRequest.get("total_votos_nulos_senadores").toString()));
-      	 
-    
-      	 m.setTotalVotosRecurridosDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_recurridos_diputados_nacionales").toString()));
-      	 m.setTotalVotosRecurridosLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_recurridos_legisladores_provinciales").toString()));
-      	 m.setTotalVotosRecurridosParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_recurridos_parlamentarios_regionales").toString()));
-      	 m.setTotalVotosRecurridosPresidente(Integer.valueOf(dataRequest.get("total_votos_recurridos_presidente").toString()));
-      	 m.setTotalVotosRecurridosGobernador(Integer.valueOf(dataRequest.get("total_votos_recurridos_gobernador").toString()));
-      	 m.setTotalVotosRecurridosParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_recurridos_parlamentarios_mercosur").toString()));
-      	 m.setTotalVotosRecurridosIntendente(Integer.valueOf(dataRequest.get("total_votos_recurridos_intendente").toString()));
-      	 m.setTotalVotosRecurridosSenadores(Integer.valueOf(dataRequest.get("total_votos_recurridos_senadores").toString()));
-      	 
-      	 
-      	 
+			m.setTotalVotosXIndividuo(Integer.valueOf(dataRequest.get("ciudadanos_que_votaron_total").toString()));
+			m.setTotalsobres(Integer.valueOf(dataRequest.get("sobres_en_la_urna_total").toString()));
 
-       	 m.setTotalVotosImpugnadoDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_impugnados_diputados_nacionales").toString()));
-      	 m.setTotalVotosImpugnadoLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_impugnados_legisladores_provinciales").toString()));
-      	 m.setTotalVotosImpugnadoParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_impugnados_parlamentarios_regionales").toString()));
-      	 m.setTotalVotosImpugnadoPresidente(Integer.valueOf(dataRequest.get("total_votos_impugnados_presidente").toString()));
-      	 m.setTotalVotosImpugnadoGobernador(Integer.valueOf(dataRequest.get("total_votos_impugnados_presidente").toString()));
-      	 m.setTotalVotosImpugnadoParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_impugnados_parlamentarios_mercosur").toString()));
-      	 m.setTotalVotosImpugnadoIntendente(Integer.valueOf(dataRequest.get("total_votos_impugnados_intendente").toString()));
-      	 m.setTotalVotosImpugnadoSenadores(Integer.valueOf(dataRequest.get("total_votos_impugnados_senadores").toString()));
-      	 
+			m.setTotalVotosDiputadosNacionales(Integer
+					.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_diputados_nacionales").toString()));
+			m.setTotalVotosLegisladoresProvinciales(Integer.valueOf(
+					dataRequest.get("total_votos_agrupaciones_politicas_legisladores_provinciales").toString()));
+			m.setTotalVotosParlamentariosMercosurReg(Integer.valueOf(
+					dataRequest.get("total_votos_agrupaciones_politicas_parlamentarios_regionales").toString()));
+			m.setTotalVotosIntendente(
+					Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_intendente").toString()));
+			m.setTotalVotosGobernador(
+					Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_gobernador").toString()));
+			m.setTotalVotosPresidente(
+					Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_presidente").toString()));
+			m.setTotalVotosSenadores(
+					Integer.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_senadores").toString()));
+			m.setTotalVotosParlamentariosMercosur(Integer
+					.valueOf(dataRequest.get("total_votos_agrupaciones_politicas_parlamentarios_mercosur").toString()));
 
-      	 m.setTotalVotosBolsinDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_diputados_nacionales").toString()));
-      	 m.setTotalVotosBolsinLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_legisladores_provinciales").toString()));
-      	 m.setTotalVotosBolsinParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_parlamentarios_regionales").toString()));
-      	 m.setTotalVotosBolsinPresidente(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_presidente").toString()));
-      	 m.setTotalVotosBolsinGobernador(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_gobernador").toString()));
-      	 m.setTotalVotosBolsinParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_parlamentarios_mercosur").toString()));
-      	 m.setTotalVotosBolsinSenadores(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_senadores").toString()));
-      	 m.setTotalVotosBolsinIntendente(Integer.valueOf(dataRequest.get("total_votos_comando_electoral_intendente").toString()));
+			m.setTotalVotosNulosDiputadosNacionales(
+					Integer.valueOf(dataRequest.get("total_votos_nulos_diputados_nacionales").toString()));
+			m.setTotalVotosNulosLegisladoresProvinciales(
+					Integer.valueOf(dataRequest.get("total_votos_nulos_legisladores_provinciales").toString()));
+			m.setTotalVotosNulosparlamentariosMercosurReg(
+					Integer.valueOf(dataRequest.get("total_votos_nulos_parlamentarios_regionales").toString()));
+			m.setTotalVotosNulosIntendente(Integer.valueOf(dataRequest.get("total_votos_nulos_intendente").toString()));
+			m.setTotalVotosNulosGobernador(Integer.valueOf(dataRequest.get("total_votos_nulos_gobernador").toString()));
+			m.setTotalVotosNulosPresidente(Integer.valueOf(dataRequest.get("total_votos_nulos_presidente").toString()));
+			m.setTotalVotosNulosParlamentariosMercosur(
+					Integer.valueOf(dataRequest.get("total_votos_nulos_parlamentarios_mercosur").toString()));
+			m.setTotalVotosNulosSenadores(Integer.valueOf(dataRequest.get("total_votos_nulos_senadores").toString()));
 
-      	 m.setTotalVotosBlancoDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_en_blanco_diputados_nacionales").toString()));
-      	 m.setTotalVotosBlancoLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_en_blanco_legisladores_provinciales").toString()));
-      	 m.setTotalVotosBlancoParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_en_blanco_parlamentarios_regionales").toString()));
-      	 m.setTotalVotosBlancoPresidente(Integer.valueOf(dataRequest.get("total_votos_en_blanco_presidente").toString()));
-      	 m.setTotalVotosBlancoGobernador(Integer.valueOf(dataRequest.get("total_votos_en_blanco_gobernador").toString()));
-      	 m.setTotalVotosBlancoParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_en_blanco_parlamentarios_mercosur").toString()));
-      	 m.setTotalVotosBlancoSenadores(Integer.valueOf(dataRequest.get("total_votos_en_blanco_senadores").toString()));
-      	 m.setTotalVotosBlancoIntendente(Integer.valueOf(dataRequest.get("total_votos_en_blanco_senadores").toString()));
+			m.setTotalVotosRecurridosDiputadosNacionales(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_diputados_nacionales").toString()));
+			m.setTotalVotosRecurridosLegisladoresProvinciales(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_legisladores_provinciales").toString()));
+			m.setTotalVotosRecurridosParlamentariosMercosurReg(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_parlamentarios_regionales").toString()));
+			m.setTotalVotosRecurridosPresidente(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_presidente").toString()));
+			m.setTotalVotosRecurridosGobernador(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_gobernador").toString()));
+			m.setTotalVotosRecurridosParlamentariosMercosur(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_parlamentarios_mercosur").toString()));
+			m.setTotalVotosRecurridosIntendente(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_intendente").toString()));
+			m.setTotalVotosRecurridosSenadores(
+					Integer.valueOf(dataRequest.get("total_votos_recurridos_senadores").toString()));
 
-      	 m.setTotalXColumnaDiputadosNacionales(Integer.valueOf(dataRequest.get("total_votos_x_columna_diputados_nacionales").toString()));
-      	 m.setTotalXColumnaLegisladoresProvinciales(Integer.valueOf(dataRequest.get("total_votos_x_columna_legisladores_provinciales").toString()));
-      	 m.setTotalVotosXColumnaParlamentariosMercosurReg(Integer.valueOf(dataRequest.get("total_votos_x_columna_parlamentarios_regionales").toString()));
-      	 m.setTotalVotosXColumnaPresidente(Integer.valueOf(dataRequest.get("total_votos_x_columna_presidente").toString()));
-      	 m.setTotalVotosXColumnaGobernador(Integer.valueOf(dataRequest.get("total_votos_x_columna_gobernador").toString()));
-      	 m.setTotalVotosXColumnaParlamentariosMercosur(Integer.valueOf(dataRequest.get("total_votos_x_columna_parlamentarios_mercosur").toString()));
-      	 m.setTotalVotosXColumnaSenadores(Integer.valueOf(dataRequest.get("total_votos_x_columna_senadores").toString()));
-      	 m.setTotalVotosXColumnaIntendente(Integer.valueOf(dataRequest.get("total_votos_x_columna_intendente").toString()));
+			m.setTotalVotosImpugnadoDiputadosNacionales(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_diputados_nacionales").toString()));
+			m.setTotalVotosImpugnadoLegisladoresProvinciales(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_legisladores_provinciales").toString()));
+			m.setTotalVotosImpugnadoParlamentariosMercosurReg(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_parlamentarios_regionales").toString()));
+			m.setTotalVotosImpugnadoPresidente(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_presidente").toString()));
+			m.setTotalVotosImpugnadoGobernador(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_presidente").toString()));
+			m.setTotalVotosImpugnadoParlamentariosMercosur(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_parlamentarios_mercosur").toString()));
+			m.setTotalVotosImpugnadoIntendente(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_intendente").toString()));
+			m.setTotalVotosImpugnadoSenadores(
+					Integer.valueOf(dataRequest.get("total_votos_impugnados_senadores").toString()));
 
+			m.setTotalVotosBolsinDiputadosNacionales(
+					Integer.valueOf(dataRequest.get("total_votos_comando_electoral_diputados_nacionales").toString()));
+			m.setTotalVotosBolsinLegisladoresProvinciales(Integer
+					.valueOf(dataRequest.get("total_votos_comando_electoral_legisladores_provinciales").toString()));
+			m.setTotalVotosBolsinParlamentariosMercosurReg(Integer
+					.valueOf(dataRequest.get("total_votos_comando_electoral_parlamentarios_regionales").toString()));
+			m.setTotalVotosBolsinPresidente(
+					Integer.valueOf(dataRequest.get("total_votos_comando_electoral_presidente").toString()));
+			m.setTotalVotosBolsinGobernador(
+					Integer.valueOf(dataRequest.get("total_votos_comando_electoral_gobernador").toString()));
+			m.setTotalVotosBolsinParlamentariosMercosur(Integer
+					.valueOf(dataRequest.get("total_votos_comando_electoral_parlamentarios_mercosur").toString()));
+			m.setTotalVotosBolsinSenadores(
+					Integer.valueOf(dataRequest.get("total_votos_comando_electoral_senadores").toString()));
+			m.setTotalVotosBolsinIntendente(
+					Integer.valueOf(dataRequest.get("total_votos_comando_electoral_intendente").toString()));
 
-      	 /*Generar los escrutinios para esta mesa*/
+			m.setTotalVotosBlancoDiputadosNacionales(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_diputados_nacionales").toString()));
+			m.setTotalVotosBlancoLegisladoresProvinciales(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_legisladores_provinciales").toString()));
+			m.setTotalVotosBlancoParlamentariosMercosurReg(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_parlamentarios_regionales").toString()));
+			m.setTotalVotosBlancoPresidente(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_presidente").toString()));
+			m.setTotalVotosBlancoGobernador(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_gobernador").toString()));
+			m.setTotalVotosBlancoParlamentariosMercosur(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_parlamentarios_mercosur").toString()));
+			m.setTotalVotosBlancoSenadores(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_senadores").toString()));
+			m.setTotalVotosBlancoIntendente(
+					Integer.valueOf(dataRequest.get("total_votos_en_blanco_senadores").toString()));
 
+			m.setTotalXColumnaDiputadosNacionales(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_diputados_nacionales").toString()));
+			m.setTotalXColumnaLegisladoresProvinciales(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_legisladores_provinciales").toString()));
+			m.setTotalVotosXColumnaParlamentariosMercosurReg(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_parlamentarios_regionales").toString()));
+			m.setTotalVotosXColumnaPresidente(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_presidente").toString()));
+			m.setTotalVotosXColumnaGobernador(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_gobernador").toString()));
+			m.setTotalVotosXColumnaParlamentariosMercosur(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_parlamentarios_mercosur").toString()));
+			m.setTotalVotosXColumnaSenadores(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_senadores").toString()));
+			m.setTotalVotosXColumnaIntendente(
+					Integer.valueOf(dataRequest.get("total_votos_x_columna_intendente").toString()));
 
-      	 @SuppressWarnings("unchecked")
-			 List<HashMap<String,Object>> escrutinios_param = (List<HashMap<String,Object>>)dataRequest.get("escrutinio_detalle");
+			/* Generar los escrutinios para esta mesa */
 
-      	 Iterator<HashMap<String,Object>> it_escrutinios = escrutinios_param.iterator();
+			@SuppressWarnings("unchecked")
+			List<HashMap<String, Object>> escrutinios_param = (List<HashMap<String, Object>>) dataRequest
+					.get("escrutinio_detalle");
 
-      	 Set<Escrutinio> escrutinios = new HashSet<Escrutinio>();
+			Iterator<HashMap<String, Object>> it_escrutinios = escrutinios_param.iterator();
 
-      	 while(it_escrutinios.hasNext())
-      	 {
-      		 HashMap<String,Object> hm = it_escrutinios.next();
+			Set<Escrutinio> escrutinios = new HashSet<Escrutinio>();
 
-      		 Escrutinio esc = new Escrutinio();
+			while (it_escrutinios.hasNext()) {
+				HashMap<String, Object> hm = it_escrutinios.next();
 
-      		 esc.setIdListaInterna(Integer.valueOf(hm.get("lista_interna").toString()));
+				Escrutinio esc = new Escrutinio();
 
+				esc.setIdListaInterna(Integer.valueOf(hm.get("lista_interna").toString()));
 
-      		 esc.setTotalVotosDiputadosNacionales(Integer.valueOf(hm.get("diputados_nacionales").toString()));
+				esc.setTotalVotosDiputadosNacionales(Integer.valueOf(hm.get("diputados_nacionales").toString()));
 
-      		 esc.setTotalVotosLegisladoresProvinciales(Integer.valueOf(hm.get("legisladores_provinciales").toString()));
+				esc.setTotalVotosLegisladoresProvinciales(
+						Integer.valueOf(hm.get("legisladores_provinciales").toString()));
 
-      		 esc.setTotalVotosParlamentariosMercosurReg(Integer.valueOf(hm.get("parlamentarios_regionales").toString()));
-      		 
-      		 esc.setTotalVotosIntendente(Integer.valueOf(hm.get("intendente").toString()));
-      		 
-      		 esc.setTotalVotosPresidente(Integer.valueOf(hm.get("presidente").toString()));
-      		 
-      		 esc.setTotalVotosGobernador(Integer.valueOf(hm.get("gobernador").toString()));
-      		 
-      		 esc.setTotalVotosParlamentariosMercosur(Integer.valueOf(hm.get("parlamentarios_mercosur").toString()));
-      		 
-      		 esc.setTotalVotosSenadores(Integer.valueOf(hm.get("senadores").toString()));
+				esc.setTotalVotosParlamentariosMercosurReg(
+						Integer.valueOf(hm.get("parlamentarios_regionales").toString()));
 
-      		 escrutinios.add(esc);
+				esc.setTotalVotosIntendente(Integer.valueOf(hm.get("intendente").toString()));
 
-      	 }
-      	 m.getEscrutinios().clear();
+				esc.setTotalVotosPresidente(Integer.valueOf(hm.get("presidente").toString()));
 
-      	 m.getEscrutinios().addAll(escrutinios);
+				esc.setTotalVotosGobernador(Integer.valueOf(hm.get("gobernador").toString()));
 
-      	 mesaRepository.saveAndFlush(m);
-      }
-      else
-      	returnValue.put("existe_mesa", false);
-      
-		
-		
-        return returnValue;
+				esc.setTotalVotosParlamentariosMercosur(Integer.valueOf(hm.get("parlamentarios_mercosur").toString()));
+
+				esc.setTotalVotosSenadores(Integer.valueOf(hm.get("senadores").toString()));
+
+				escrutinios.add(esc);
+
+			}
+			m.getEscrutinios().clear();
+
+			m.getEscrutinios().addAll(escrutinios);
+
+			mesaRepository.saveAndFlush(m);
+		} else
+			returnValue.put("existe_mesa", false);
+
+		return returnValue;
 	}
 
 	@RequestMapping("/descargar")
-    public void downloadPDFResource( HttpServletRequest request,
-                                     HttpServletResponse response)
-    {
-        //If user is not authorized - he should be thrown out from here itself
+	public void downloadPDFResource(HttpServletRequest request, HttpServletResponse response) {
+		// If user is not authorized - he should be thrown out from here itself
 
-        //Authorized user will download the file
-        //String dataDirectory = "C:\\Users\\sergio\\Documents\\";
-		//String dataDirectory = "/tmp";
-        String relativeDirectoryPath = "data/"; 
-        String filePath = System.getProperty("user.dir") + "/" + relativeDirectoryPath;
-        Path file = Paths.get(filePath, "Paso2023.xlsx");
-        if (Files.exists(file))
-        {
-            response.setContentType("application/excel");
-            response.addHeader("Content-Disposition", "attachment; filename=DetallePasos2023.xlsx");
-            try
-            {
-                Files.copy(file, response.getOutputStream());
-                response.getOutputStream().flush();
-            }
-            catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
-	
-	
-
-    @RequestMapping(value={"/generateReport"}, method={RequestMethod.GET}, produces={"application/json"})
-    @ResponseBody
-    public Map<String,Object> generateReport() throws IOException {
-    	
-    	/*Crear encabezado de columnas*/
-    	
-    	 XSSFWorkbook workbook = new XSSFWorkbook();
-         XSSFSheet sheet = workbook.createSheet("Detalle de Mesas Cargadas");
-         
-
-         XSSFCellStyle createCellStyle = workbook.createCellStyle();
-         createCellStyle.setFillBackgroundColor(new XSSFColor(Color.BLACK));
-         XSSFFont createFont = workbook.createFont();
-         createCellStyle.setFont(createFont);
-         createFont.setBold(true);
-         
-         
-          
-       //  Object[][] bookData = {
-       //          {"Circuito", "Mesa", "Direccion", "Nombre", "Cargo", "Cant Sobres", "Cant Votantes","ALIANZA + VALORES","PARTIDO UNION CELESTE Y BLANCO","AZA.AVANZA LIBERTAD","FTE.DE IZQ.Y DE TRABAJADORES-UNIDAD","AZA.JUNTOS","FRENTE DE TODOS","FRENTE VAMOS CON VOS","VOTOS NULOS","VOTOS RECURRIDOS","VOTOS IMPUGNADOS","VOTOS DEL COMANDO ELECTORAL","VOTOS EN BLANCO"}
-       //  };
-         
-         Object[][] bookData = {
-        		    {"Circuito", "Mesa", "Direccion", "Nombre", "Cargo", "Cant Sobres", "Cant Votantes",
-        		     "LISTA A IZQUIERDA ANTICAPITALISTA", "LISTA IZQUIERDA ANTICAPITALISTA", "APERTURA LIBERAL ARGENTINA",
-        		     "LISTA A AZUL Y ROJO", "LISTA A COMPROMISO VECINAL",
-        		     "LISTA DIGNIDAD", "LISTA CONFEDERAL", "UNIDAD OBRERA",
-        		     "COALIC. PAZ DEMOC. Y SOBERANIA", "PATRIA UNIDA", "LISTA TODEX",
-        		     "NUEVA DEMOCRACIA", "FRENTE JOVEN", "LISTA A PRIMERO LA PATRIA",
-        		     "LISTA A DEMOS", "LISTA B RECONQUISTA", "LISTA C ANTICORRUPCION",
-        		     "LISTA A EL CAMBIO DE NUESTRAS VIDAS", "LISTA B LA FUERZA DEL CAMBIO",
-        		     "LISTA HACEMOS", "LISTA A CELESTE Y BLANCA", "LISTA B JUSTA Y SOBERANA",
-        		     "LISTA A LIBERTAD POR SIEMPRE", "LISTA A UNIR Y FORTALECER LA IZQUIERDA",
-        		     "L.B.UNIDAD DE LUCHADORES Y LA IZQUIERDA", "LISTA 1A TIERRA TECHO Y TRABAJO",
-        		     "LISTA 2B FUERZA FEDERAL", "LISTA AZUL UNICA",
-        		     "CORRIENTE DE PENSAMIENTO AUTENTICA", "LISTA UNICA",
-        		     "TODOS POR LA PROVINCIA", "ACCION Y SOLIDARIDAD", "SERVIR",
-        		     "SOLIDARIOS", "LISTA A UNIDAD", "VALORES EN ACCION",
-        		     "VALORES Y SOLIDARIDAD", "UNIDOS", "LISTA A FRENTE LABORISTA",
-        		     "LISTA B LA CLASE OBRERA", "LISTA C REFUNDACION",
-        		     "LISTA D VOLVER A LAS FUENTES", "P.A.S.E.", "CONSTRUYENDO FUTURO",
-        		     "LIBERTARIOS", "CELESTE A", "FALTA MENOS PARA VIVIR SIN MIEDO",
-        		     "LA FUERZA DEL CAMBIO", "CELESTE Y BLANCA - 2", "CELESTE Y BLANCA - 4",
-        		     "LIBERTAD POR SIEMPRE", "DEFENDAMOS LA PROVINCIA", "TOBA",
-        		     "JUSTICIA Y DIGNIDAD", "ESPERANZA", "CELESTE",
-        		     "PARTIDO AUTONOMISTA", "TRES DE FEBRERO EN ACCION",
-        		     "VOTOS NULOS", "VOTOS RECURRIDOS", "VOTOS IMPUGNADOS", "VOTOS DEL COMANDO ELECTORAL", "VOTOS EN BLANCO"}
-        		};
-
-
-  
-         int rowCount = 0;
-          
-         for (Object[] aBook : bookData) {
-             Row row = sheet.createRow(rowCount++);
-              
-             int columnCount = 0;
-              
-             for (Object field : aBook) {
-                 Cell cell = row.createCell(columnCount++);
-                 if (field instanceof String) {
-                     cell.setCellValue((String) field);
-                 } else if (field instanceof Integer) {
-                     cell.setCellValue((Integer) field);
-                 }
-                 
-                 cell.setCellStyle(createCellStyle);
-             }
-              
-         }
-    	
-    	HashMap<String, Object> returnValue = new HashMap<String,Object>();	
-    	
-    	
-        //plasmar la parte de presidente
-
-    	
-    	List<Mesa> mesasAll_presidente = mesaRepository.findLoaded();
-    	Iterator<Mesa> it_mesas_presidente = mesasAll_presidente.iterator();
-    	while(it_mesas_presidente.hasNext()) {
-    		
-    		Mesa mesa = it_mesas_presidente.next();
-    		
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(mesa.getEscrutinios());
-    		
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>(){
-    			@Override
-    			public int compare(Escrutinio e2, Escrutinio e1) {
-    				return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    			}
-    		});
-    		
-    		
-    		//si la lista no está vacía
-    		
-    		if(escrutinios.size()>0) {
-    			
-    			//crea fila
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(mesa.getCircuito(), mesa.getMesa());
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			cell2.setCellValue(mesa.getMesa());
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			cell5.setCellValue("PRESIDENTE VICEPRESIDENTE");
-    			
-    			Cell cell6 = row.createCell(columnCount++);
-    			cell6.setCellValue(mesa.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			cell7.setCellValue(mesa.getTotalVotosXIndividuo());
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			while(it_escrutinios.hasNext()) {
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEscrutinio = row.createCell(columnCount++);
-    				cellEscrutinio.setCellValue(e.getTotalVotosPresidente());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			cell8.setCellValue(mesa.getTotalVotosNulosPresidente());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			cell9.setCellValue(mesa.getTotalVotosRecurridosPresidente());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			cell10.setCellValue(mesa.getTotalVotosImpugnadoPresidente());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			cell11.setCellValue(mesa.getTotalVotosBolsinPresidente());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			cell12.setCellValue(mesa.getTotalVotosBlancoPresidente());
-    			
-    		}
-    		    		
-    	}
-    	
-    	//PARLAMENTARIOS DEL MERCOSUR
-    	
-    	List<Mesa> mesasAll_parlamentarios_mercosur = mesaRepository.findLoaded();
-    	
-    	Iterator<Mesa> it_mesas_parlamentarios_mercosur = mesasAll_parlamentarios_mercosur.iterator();
-    	
-    	while(it_mesas_parlamentarios_mercosur.hasNext())
-    	{
-    		Mesa m = it_mesas_parlamentarios_mercosur.next();
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
-    		
-    		
-    		// Sorting
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
-    		        @Override
-    		        public int compare(Escrutinio e2, Escrutinio e1)
-    		        {
-    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    		        }
-    		    });
-    		
-    		
-    		/*Solo si la lista no esta vacia*/
-    		
-    		if(escrutinios.size()>0)
-    		{
-    			//Crear una fila para esta mesa
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			
-    			//obtener el lugar de votacion
-    			
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
-    			
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			
-    			cell2.setCellValue(m.getMesa());
-    			
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			
-    			cell5.setCellValue("PARLAMENTARIOS DEL MERCOSUR");
-
-    			Cell cell6 = row.createCell(columnCount++);
-    			
-    			cell6.setCellValue(m.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			
-    			cell7.setCellValue(m.getTotalVotosXIndividuo());
-
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			
-    			while(it_escrutinios.hasNext())
-    			{
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosur());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			
-    			cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosur());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			
-    			cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosur());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosur());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			
-    			cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosur());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			
-    			cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosur());
-    			
-    		}
-    		
-    	}
-
-
-    	
-    	
-        //ahora plasmar la parte de senadores
-    	
-    	List<Mesa> mesasAll_senadores = mesaRepository.findLoaded();
-    	Iterator<Mesa> it_mesas_senadores = mesasAll_senadores.iterator();
-    	while(it_mesas_senadores.hasNext()) {
-    		
-    		Mesa mesa = it_mesas_senadores.next();
-    		
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(mesa.getEscrutinios());
-    		
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>(){
-    			@Override
-    			public int compare(Escrutinio e2, Escrutinio e1) {
-    				return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    			}
-    		});
-    		
-    		
-    		//si la lista no está vacía
-    		
-    		if(escrutinios.size()>0) {
-    			
-    			//crea fila
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(mesa.getCircuito(), mesa.getMesa());
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			cell2.setCellValue(mesa.getMesa());
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			cell5.setCellValue("SENADORES NACIONALES");
-    			
-    			Cell cell6 = row.createCell(columnCount++);
-    			cell6.setCellValue(mesa.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			cell7.setCellValue(mesa.getTotalVotosXIndividuo());
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			while(it_escrutinios.hasNext()) {
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEscrutinio = row.createCell(columnCount++);
-    				cellEscrutinio.setCellValue(e.getTotalVotosSenadores());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			cell8.setCellValue(mesa.getTotalVotosNulosSenadores());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			cell9.setCellValue(mesa.getTotalVotosRecurridosSenadores());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			cell10.setCellValue(mesa.getTotalVotosImpugnadoSenadores());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			cell11.setCellValue(mesa.getTotalVotosBolsinSenadores());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			cell12.setCellValue(mesa.getTotalVotosBlancoSenadores());
-    			
-    		}
-    		    		
-    	}
-    	
-    	
-    	//Plasmar la parte de los Diputados Nacionales
-    	
-    	List<Mesa> mesasAll_diputados = mesaRepository.findLoaded();
-    	
-    	Iterator<Mesa> it_mesas_diputados = mesasAll_diputados.iterator();
-    	
-    	while(it_mesas_diputados.hasNext())
-    	{
-    		Mesa m = it_mesas_diputados.next();
-    		
-    		
-    		
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
-    		
-    		
-    		// Sorting
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
-    		        @Override
-    		        public int compare(Escrutinio e2, Escrutinio e1)
-    		        {
-    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    		        }
-    		    });
-    		
-    		
-    		/*Solo si la lista no esta vacia*/
-    		
-    		if(escrutinios.size()>0)
-    		{
-    			//Crear una fila para esta mesa
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			
-    			//obtener el lugar de votacion
-    			
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
-
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			
-    			cell2.setCellValue(m.getMesa());
-    			
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			
-    			cell5.setCellValue("DIPUTADOS NACIONALES");
-
-    			Cell cell6 = row.createCell(columnCount++);
-    			
-    			cell6.setCellValue(m.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			
-    			cell7.setCellValue(m.getTotalVotosXIndividuo());
-
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			
-    			while(it_escrutinios.hasNext())
-    			{
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosDiputadosNacionales());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			
-    			cell8.setCellValue(m.getTotalVotosNulosDiputadosNacionales());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			
-    			cell9.setCellValue(m.getTotalVotosRecurridosDiputadosNacionales());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoDiputadosNacionales());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			
-    			cell11.setCellValue(m.getTotalVotosBolsinDiputadosNacionales());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			
-    			cell12.setCellValue(m.getTotalVotosBlancoDiputadosNacionales());
-    			
-    		}
-    		
-    	}
-
-    	
-    	
-    	//Plasmar la parte de PARLAMENTARIOS DEL MERCOSUR
-    	
-    	List<Mesa> mesasAll_parlamentarios_regionales = mesaRepository.findLoaded();
-    	
-    	Iterator<Mesa> it_mesas_parlam_reg = mesasAll_parlamentarios_regionales.iterator();
-    	
-    	while(it_mesas_parlam_reg.hasNext())
-    	{
-    		Mesa m = it_mesas_parlam_reg.next();
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
-    		
-    		
-    		// Sorting
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
-    		        @Override
-    		        public int compare(Escrutinio e2, Escrutinio e1)
-    		        {
-    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    		        }
-    		    });
-    		
-    		
-    		/*Solo si la lista no esta vacia*/
-    		
-    		if(escrutinios.size()>0)
-    		{
-    			//Crear una fila para esta mesa
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			
-    			//obtener el lugar de votacion
-    			
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
-    			
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			
-    			cell2.setCellValue(m.getMesa());
-    			
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			
-    			cell5.setCellValue("PARLAMENTARIOS DEL MERCOSUR REGIONAL");
-
-    			Cell cell6 = row.createCell(columnCount++);
-    			
-    			cell6.setCellValue(m.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			
-    			cell7.setCellValue(m.getTotalVotosXIndividuo());
-
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			
-    			while(it_escrutinios.hasNext())
-    			{
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosurReg());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			
-    			cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosurReg());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			
-    			cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosurReg());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosurReg());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			
-    			cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosurReg());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			
-    			cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosurReg());
-    			
-    		}
-    		
-    	}
-    	
-
-    	
-    	//GOBERNADOR
-    	List<Mesa> mesasAll_gobernador = mesaRepository.findLoaded();
-    	
-    	Iterator<Mesa> it_mesas_gobernador = mesasAll_gobernador.iterator();
-    	
-    	while(it_mesas_gobernador.hasNext())
-    	{
-    		Mesa m = it_mesas_gobernador.next();
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
-    		
-    		
-    		// Sorting
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
-    		        @Override
-    		        public int compare(Escrutinio e2, Escrutinio e1)
-    		        {
-    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    		        }
-    		    });
-    		
-    		
-    		/*Solo si la lista no esta vacia*/
-    		
-    		if(escrutinios.size()>0)
-    		{
-    			//Crear una fila para esta mesa
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			
-    			//obtener el lugar de votacion
-    			
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
-    			
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			
-    			cell2.setCellValue(m.getMesa());
-    			
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			
-    			cell5.setCellValue("GOBERNADOR");
-
-    			Cell cell6 = row.createCell(columnCount++);
-    			
-    			cell6.setCellValue(m.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			
-    			cell7.setCellValue(m.getTotalVotosXIndividuo());
-
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			
-    			while(it_escrutinios.hasNext())
-    			{
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosur());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			
-    			cell8.setCellValue(m.getTotalVotosNulosGobernador());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			
-    			cell9.setCellValue(m.getTotalVotosRecurridosGobernador());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoGobernador());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			
-    			cell11.setCellValue(m.getTotalVotosBolsinGobernador());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			
-    			cell12.setCellValue(m.getTotalVotosBlancoGobernador());
-    			
-    		}
-    		
-    	}
-    	
-    	
-    	//Plasmar la parte de los Legisladores Provinciales
-    	System.out.println("legisladores");
-    	List<Mesa> mesasAll_legisladores_provinciales = mesaRepository.findLoaded();
-    	
-    	Iterator<Mesa> it_mesas_legisladores_provinciales = mesasAll_legisladores_provinciales.iterator();
-    	
-    	while(it_mesas_legisladores_provinciales.hasNext())
-    	{
-    		Mesa m = it_mesas_legisladores_provinciales.next();
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
-    		
-    		
-    		// Sorting
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
-    		        @Override
-    		        public int compare(Escrutinio e2, Escrutinio e1)
-    		        {
-    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    		        }
-    		    });
-    		
-    		
-    		/*Solo si la lista no esta vacia*/
-    		
-    		if(escrutinios.size()>0)
-    		{
-    			//Crear una fila para esta mesa
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			
-    			//obtener el lugar de votacion
-    			
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
-    			
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			
-    			cell2.setCellValue(m.getMesa());
-    			
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			
-    			cell5.setCellValue("LEGISLADORES PROVINCIALES");
-
-    			Cell cell6 = row.createCell(columnCount++);
-    			
-    			cell6.setCellValue(m.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			
-    			cell7.setCellValue(m.getTotalVotosXIndividuo());
-
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			
-    			while(it_escrutinios.hasNext())
-    			{
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosLegisladoresProvinciales());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			
-    			cell8.setCellValue(m.getTotalVotosNulosLegisladoresProvinciales());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			
-    			cell9.setCellValue(m.getTotalVotosRecurridosLegisladoresProvinciales());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoLegisladoresProvinciales());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			
-    			cell11.setCellValue(m.getTotalVotosBolsinLegisladoresProvinciales());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			
-    			cell12.setCellValue(m.getTotalVotosBlancoLegisladoresProvinciales());
-    			
-    		}
-    		
-    	}
-    	
-    	
-    	
-    	
-    	//INTENDENTE Y CONCEJALES
-    	List<Mesa> mesasAll_intendente = mesaRepository.findLoaded();
-    	
-    	Iterator<Mesa> it_mesas_intendente = mesasAll_intendente.iterator();
-    	
-    	while(it_mesas_intendente.hasNext())
-    	{
-    		Mesa m = it_mesas_intendente.next();
-    		List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios()); 
-    		
-    		
-    		// Sorting
-    		Collections.sort(escrutinios, new Comparator<Escrutinio>() {
-    		        @Override
-    		        public int compare(Escrutinio e2, Escrutinio e1)
-    		        {
-    		            return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
-    		        }
-    		    });
-    		
-    		
-    		/*Solo si la lista no esta vacia*/
-    		
-    		if(escrutinios.size()>0)
-    		{
-    			//Crear una fila para esta mesa
-    			Row row = sheet.createRow(rowCount++);
-    			
-    			int columnCount = 0;
-    			
-    			//obtener el lugar de votacion
-    			
-    			CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
-    			
-    			
-    			Cell cell1 = row.createCell(columnCount++);
-    			
-    			cell1.setCellValue(cm.getCircuito());
-    			
-    			Cell cell2 = row.createCell(columnCount++);
-    			
-    			cell2.setCellValue(m.getMesa());
-    			
-    			
-    			Cell cell3 = row.createCell(columnCount++);
-    			
-    			cell3.setCellValue(cm.getDireccion());
-    			
-    			Cell cell4 = row.createCell(columnCount++);
-    			
-    			cell4.setCellValue(cm.getNombre());
-    			
-    			Cell cell5 = row.createCell(columnCount++);
-    			
-    			cell5.setCellValue("INTENDENTE CONCEJALES");
-
-    			Cell cell6 = row.createCell(columnCount++);
-    			
-    			cell6.setCellValue(m.getTotalsobres());
-    			
-    			Cell cell7 = row.createCell(columnCount++);
-    			
-    			cell7.setCellValue(m.getTotalVotosXIndividuo());
-
-    			
-    			Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
-    			
-    			
-    			while(it_escrutinios.hasNext())
-    			{
-    				Escrutinio e = it_escrutinios.next();
-    				Cell cellEsc = row.createCell(columnCount++);
-    				cellEsc.setCellValue(e.getTotalVotosIntendente());
-    			}
-    			
-    			Cell cell8 = row.createCell(columnCount++);
-    			
-    			cell8.setCellValue(m.getTotalVotosNulosIntendente());
-    			
-    			Cell cell9 = row.createCell(columnCount++);
-    			
-    			cell9.setCellValue(m.getTotalVotosRecurridosIntendente());
-    			
-    			Cell cell10 = row.createCell(columnCount++);
-    			
-    			cell10.setCellValue(m.getTotalVotosImpugnadoIntendente());
-    			
-    			Cell cell11 = row.createCell(columnCount++);
-    			
-    			cell11.setCellValue(m.getTotalVotosBolsinIntendente());
-    			
-    			Cell cell12 = row.createCell(columnCount++);
-    			
-    			cell12.setCellValue(m.getTotalVotosBlancoIntendente());
-    			
-    		}
-    		
-    	}
-    	
-    	
-
-    	
-    	
-    	
-    	
-    	
-    	for(int i=0;i<bookData[0].length;i++)
-    		
-    		sheet.autoSizeColumn(i);
-    	
-
-    	String relativeDirectoryPath = "data/"; 
-
-    	// Combina la ruta del directorio relativo con el nombre del archivo
-    	String filePath = System.getProperty("user.dir") + "/" + relativeDirectoryPath + "Paso2023.xlsx";
-    	// Asegurarse de que el directorio exista, si no, crearlo
-    	try {
-    	    Files.createDirectories(Paths.get(System.getProperty("user.dir"), relativeDirectoryPath));
-    	} catch (IOException e) {
-    	    e.printStackTrace();
-    	    returnValue.put("success", false);
-    	    returnValue.put("message", "Ha ocurrido un error al crear el directorio");
-    	    return returnValue;
-    	}
-    	//Escupir el archivo a la direccion utilizada
-       // try (FileOutputStream outputStream = new FileOutputStream("C:\\Users\\sergio\\Documents\\Paso2023.xlsx")) {
-    	//try (FileOutputStream outputStream = new FileOutputStream("/tmp/DetallePaso2019.xlsx")) {
-    	try (FileOutputStream outputStream = new FileOutputStream(filePath)) {
-    		workbook.write(outputStream);
-            returnValue.put("success", true);
-        }
-        catch (Exception e) {
-        	e.printStackTrace();
-        	returnValue.put("success", false);
-        	returnValue.put("message", "Ha ocurrido un error al generar el archivo Excel");
-        	
+		// Authorized user will download the file
+		// String dataDirectory = "C:\\Users\\sergio\\Documents\\";
+		// String dataDirectory = "/tmp";
+		String relativeDirectoryPath = "data/";
+		String filePath = System.getProperty("user.dir") + "/" + relativeDirectoryPath;
+		Path file = Paths.get(filePath, "Paso2023.xlsx");
+		if (Files.exists(file)) {
+			response.setContentType("application/excel");
+			response.addHeader("Content-Disposition", "attachment; filename=DetallePasos2023.xlsx");
+			try {
+				Files.copy(file, response.getOutputStream());
+				response.getOutputStream().flush();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
 		}
-    	return returnValue;
+	}
 
-    }
+	@RequestMapping(value = { "/generateReport" }, method = { RequestMethod.GET }, produces = { "application/json" })
+	@ResponseBody
+	public Map<String, Object> generateReport() throws IOException {
 
-	
-	
-	
+		/* Crear encabezado de columnas */
+
+		XSSFWorkbook workbook = new XSSFWorkbook();
+		XSSFSheet sheet = workbook.createSheet("Detalle de Mesas Cargadas");
+
+		XSSFCellStyle createCellStyle = workbook.createCellStyle();
+		createCellStyle.setFillBackgroundColor(new XSSFColor(Color.BLACK));
+		XSSFFont createFont = workbook.createFont();
+		createCellStyle.setFont(createFont);
+		createFont.setBold(true);
+
+		// Object[][] bookData = {
+		// {"Circuito", "Mesa", "Direccion", "Nombre", "Cargo", "Cant Sobres", "Cant
+		// Votantes","ALIANZA + VALORES","PARTIDO UNION CELESTE Y BLANCO","AZA.AVANZA
+		// LIBERTAD","FTE.DE IZQ.Y DE TRABAJADORES-UNIDAD","AZA.JUNTOS","FRENTE DE
+		// TODOS","FRENTE VAMOS CON VOS","VOTOS NULOS","VOTOS RECURRIDOS","VOTOS
+		// IMPUGNADOS","VOTOS DEL COMANDO ELECTORAL","VOTOS EN BLANCO"}
+		// };
+
+		Object[][] bookData = { { "Circuito", "Mesa", "Direccion", "Nombre", "Cargo", "Cant Sobres", "Cant Votantes",
+				"137/ - LISTA 1A TIERRA TECHO Y TRABAJO", "13/276 - LISTA IZQUIERDA ANTICAPITALISTA",
+				"220 - DEFENDAMOS LA PROVINCIA", "961 - TRES DE FEBRERO EN ACCION", "298 - TOBA", "333 - LIBERTARIOS",
+				"13/ - LISTA A IZQUIERDA ANTICAPITALISTA", "20 - APERTURA LIBERAL ARGENTINA",
+				"323 - JUSTICIA Y DIGNIDAD", "40 - LISTA A AZUL Y ROJO", "324 - ESPERANZA",
+				"57 - LISTA A COMPROMISO VECINAL", "506/320 CELESTE", "921 - PARTIDO AUTONOMISTA",
+				"90 - LISTA DIGNIDAD", "90 - LISTA CONFEDERAL", "92 - UNIDAD OBRERA",
+				"94 - COALIC. PAZ DEMOC. Y SOBERANIA", "94 - PATRIA UNIDA", "94 - LISTA TODEX", "94 - NUEVA DEMOCRACIA",
+				"94 - FRENTE JOVEN", "95 - LISTA A PRIMERO LA PATRIA", "131 - LISTA A DEMOS",
+				"131 - LISTA B RECONQUISTA", "131 - LISTA C ANTICORRUPCION", "132 - FALTA MENOS PARA VIVIR SIN MIEDO",
+				"132 - LA FUERZA DEL CAMBIO", "134 - CELESTE Y BLANCA - 2", "134 - CELESTE Y BLANCA - 4",
+				"135 - LISTA A LIBERTAD POR SIEMPRE", "136 - L.B.UNIDAD DE LUCHADORES Y LA IZQUIERDA",
+				"309 - LISTA A UNIDAD", "311 - VALORES EN ACCION", "317 - VALORES Y SOLIDARIDAD", "319 - UNIDOS",
+				"321 - LISTA A FRENTE LABORISTA", "321 - LISTA B LA CLASE OBRERA", "321 - LISTA C REFUNDACION",
+				"321 - LISTA D VOLVER A LAS FUENTES", "323 - P.A.S.E.", "328 - CONSTRUYENDO FUTURO", "506 - CELESTE A",
+				"132 - LISTA A EL CAMBIO DE NUESTRAS VIDAS", "132 - LISTA B LA FUERZA DEL CAMBIO",
+				"133 - LISTA HACEMOS", "134 - LISTA A CELESTE Y BLANCA", "134 - LISTA B JUSTA Y SOBERANA",
+				"268 - LISTA UNICA", "136 - LISTA A UNIR Y FORTALECER LA IZQUIERDA",
+				"137/329 - LISTA 1A TIERRA TECHO Y TRABAJO", "329 - LISTA 1A TIERRA TECHO Y TRABAJO",
+				"329 - LISTA 2B FUERZA FEDERAL", "191 - LISTA AZUL UNICA", "258 - CORRIENTE DE PENSAMIENTO AUTENTICA",
+				"298 - TODOS POR LA PROVINCIA", "304 - ACCION Y SOLIDARIDAD", "304 - SERVIR", "304 - SOLIDARIOS",
+				"276 - LISTA IZQUIERDA ANTICAPITALISTA", "131/318 LISTA C ANTICORRUPCION", "VOTOS NULOS",
+				"VOTOS RECURRIDOS", "VOTOS IMPUGNADOS", "VOTOS DEL COMANDO ELECTORAL", "VOTOS EN BLANCO" } };
+
+		int rowCount = 0;
+
+		for (Object[] aBook : bookData) {
+			Row row = sheet.createRow(rowCount++);
+
+			int columnCount = 0;
+
+			for (Object field : aBook) {
+				Cell cell = row.createCell(columnCount++);
+				if (field instanceof String) {
+					cell.setCellValue((String) field);
+				} else if (field instanceof Integer) {
+					cell.setCellValue((Integer) field);
+				}
+
+				cell.setCellStyle(createCellStyle);
+			}
+
+		}
+
+		HashMap<String, Object> returnValue = new HashMap<String, Object>();
+
+		// plasmar la parte de presidente
+
+		List<Mesa> mesasAll_presidente = mesaRepository.findLoaded();
+		Iterator<Mesa> it_mesas_presidente = mesasAll_presidente.iterator();
+		while (it_mesas_presidente.hasNext()) {
+
+			Mesa mesa = it_mesas_presidente.next();
+
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(mesa.getEscrutinios());
+
+			// System.out.println(escrutinios);
+
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			// si la lista no está vacía
+
+			if (escrutinios.size() > 0) {
+
+				// crea fila
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+				System.out.println(mesa.getCircuito());
+				System.out.println(mesa.getMesa());
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(mesa.getCircuito(), mesa.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+				cell2.setCellValue(mesa.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+				cell5.setCellValue("PRESIDENTE VICEPRESIDENTE");
+
+				Cell cell6 = row.createCell(columnCount++);
+				cell6.setCellValue(mesa.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+				cell7.setCellValue(mesa.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+
+					Escrutinio e = it_escrutinios.next();
+					System.out.println(e.getIdListaInterna());
+					Cell cellEscrutinio = row.createCell(columnCount++);
+					cellEscrutinio.setCellValue(e.getTotalVotosPresidente());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+				cell8.setCellValue(mesa.getTotalVotosNulosPresidente());
+
+				Cell cell9 = row.createCell(columnCount++);
+				cell9.setCellValue(mesa.getTotalVotosRecurridosPresidente());
+
+				Cell cell10 = row.createCell(columnCount++);
+				cell10.setCellValue(mesa.getTotalVotosImpugnadoPresidente());
+
+				Cell cell11 = row.createCell(columnCount++);
+				cell11.setCellValue(mesa.getTotalVotosBolsinPresidente());
+
+				Cell cell12 = row.createCell(columnCount++);
+				cell12.setCellValue(mesa.getTotalVotosBlancoPresidente());
+
+			}
+
+		}
+
+		// PARLAMENTARIOS DEL MERCOSUR
+
+		List<Mesa> mesasAll_parlamentarios_mercosur = mesaRepository.findLoaded();
+
+		Iterator<Mesa> it_mesas_parlamentarios_mercosur = mesasAll_parlamentarios_mercosur.iterator();
+
+		while (it_mesas_parlamentarios_mercosur.hasNext()) {
+			Mesa m = it_mesas_parlamentarios_mercosur.next();
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios());
+
+			// Sorting
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			/* Solo si la lista no esta vacia */
+
+			if (escrutinios.size() > 0) {
+				// Crear una fila para esta mesa
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+
+				// obtener el lugar de votacion
+
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+
+				cell2.setCellValue(m.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+
+				cell5.setCellValue("PARLAMENTARIOS DEL MERCOSUR");
+
+				Cell cell6 = row.createCell(columnCount++);
+
+				cell6.setCellValue(m.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+
+				cell7.setCellValue(m.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+					Escrutinio e = it_escrutinios.next();
+					Cell cellEsc = row.createCell(columnCount++);
+					cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosur());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+
+				cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosur());
+
+				Cell cell9 = row.createCell(columnCount++);
+
+				cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosur());
+
+				Cell cell10 = row.createCell(columnCount++);
+
+				cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosur());
+
+				Cell cell11 = row.createCell(columnCount++);
+
+				cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosur());
+
+				Cell cell12 = row.createCell(columnCount++);
+
+				cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosur());
+
+			}
+
+		}
+
+		// ahora plasmar la parte de senadores
+
+		List<Mesa> mesasAll_senadores = mesaRepository.findLoaded();
+		Iterator<Mesa> it_mesas_senadores = mesasAll_senadores.iterator();
+		while (it_mesas_senadores.hasNext()) {
+
+			Mesa mesa = it_mesas_senadores.next();
+
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(mesa.getEscrutinios());
+
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			// si la lista no está vacía
+
+			if (escrutinios.size() > 0) {
+
+				// crea fila
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(mesa.getCircuito(), mesa.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+				cell2.setCellValue(mesa.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+				cell5.setCellValue("SENADORES NACIONALES");
+
+				Cell cell6 = row.createCell(columnCount++);
+				cell6.setCellValue(mesa.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+				cell7.setCellValue(mesa.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+					Escrutinio e = it_escrutinios.next();
+					Cell cellEscrutinio = row.createCell(columnCount++);
+					cellEscrutinio.setCellValue(e.getTotalVotosSenadores());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+				cell8.setCellValue(mesa.getTotalVotosNulosSenadores());
+
+				Cell cell9 = row.createCell(columnCount++);
+				cell9.setCellValue(mesa.getTotalVotosRecurridosSenadores());
+
+				Cell cell10 = row.createCell(columnCount++);
+				cell10.setCellValue(mesa.getTotalVotosImpugnadoSenadores());
+
+				Cell cell11 = row.createCell(columnCount++);
+				cell11.setCellValue(mesa.getTotalVotosBolsinSenadores());
+
+				Cell cell12 = row.createCell(columnCount++);
+				cell12.setCellValue(mesa.getTotalVotosBlancoSenadores());
+
+			}
+
+		}
+
+		// Plasmar la parte de los Diputados Nacionales
+
+		List<Mesa> mesasAll_diputados = mesaRepository.findLoaded();
+
+		Iterator<Mesa> it_mesas_diputados = mesasAll_diputados.iterator();
+
+		while (it_mesas_diputados.hasNext()) {
+			Mesa m = it_mesas_diputados.next();
+
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios());
+
+			// Sorting
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			/* Solo si la lista no esta vacia */
+
+			if (escrutinios.size() > 0) {
+				// Crear una fila para esta mesa
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+
+				// obtener el lugar de votacion
+
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+
+				cell2.setCellValue(m.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+
+				cell5.setCellValue("DIPUTADOS NACIONALES");
+
+				Cell cell6 = row.createCell(columnCount++);
+
+				cell6.setCellValue(m.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+
+				cell7.setCellValue(m.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+					Escrutinio e = it_escrutinios.next();
+					Cell cellEsc = row.createCell(columnCount++);
+					cellEsc.setCellValue(e.getTotalVotosDiputadosNacionales());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+
+				cell8.setCellValue(m.getTotalVotosNulosDiputadosNacionales());
+
+				Cell cell9 = row.createCell(columnCount++);
+
+				cell9.setCellValue(m.getTotalVotosRecurridosDiputadosNacionales());
+
+				Cell cell10 = row.createCell(columnCount++);
+
+				cell10.setCellValue(m.getTotalVotosImpugnadoDiputadosNacionales());
+
+				Cell cell11 = row.createCell(columnCount++);
+
+				cell11.setCellValue(m.getTotalVotosBolsinDiputadosNacionales());
+
+				Cell cell12 = row.createCell(columnCount++);
+
+				cell12.setCellValue(m.getTotalVotosBlancoDiputadosNacionales());
+
+			}
+
+		}
+
+		// Plasmar la parte de PARLAMENTARIOS DEL MERCOSUR
+
+		List<Mesa> mesasAll_parlamentarios_regionales = mesaRepository.findLoaded();
+
+		Iterator<Mesa> it_mesas_parlam_reg = mesasAll_parlamentarios_regionales.iterator();
+
+		while (it_mesas_parlam_reg.hasNext()) {
+			Mesa m = it_mesas_parlam_reg.next();
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios());
+
+			// Sorting
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			/* Solo si la lista no esta vacia */
+
+			if (escrutinios.size() > 0) {
+				// Crear una fila para esta mesa
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+
+				// obtener el lugar de votacion
+
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+
+				cell2.setCellValue(m.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+
+				cell5.setCellValue("PARLAMENTARIOS DEL MERCOSUR REGIONAL");
+
+				Cell cell6 = row.createCell(columnCount++);
+
+				cell6.setCellValue(m.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+
+				cell7.setCellValue(m.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+					Escrutinio e = it_escrutinios.next();
+					Cell cellEsc = row.createCell(columnCount++);
+					cellEsc.setCellValue(e.getTotalVotosParlamentariosMercosurReg());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+
+				cell8.setCellValue(m.getTotalVotosNulosParlamentariosMercosurReg());
+
+				Cell cell9 = row.createCell(columnCount++);
+
+				cell9.setCellValue(m.getTotalVotosRecurridosParlamentariosMercosurReg());
+
+				Cell cell10 = row.createCell(columnCount++);
+
+				cell10.setCellValue(m.getTotalVotosImpugnadoParlamentariosMercosurReg());
+
+				Cell cell11 = row.createCell(columnCount++);
+
+				cell11.setCellValue(m.getTotalVotosBolsinParlamentariosMercosurReg());
+
+				Cell cell12 = row.createCell(columnCount++);
+
+				cell12.setCellValue(m.getTotalVotosBlancoParlamentariosMercosurReg());
+
+			}
+
+		}
+
+		// GOBERNADOR
+		List<Mesa> mesasAll_gobernador = mesaRepository.findLoaded();
+
+		Iterator<Mesa> it_mesas_gobernador = mesasAll_gobernador.iterator();
+
+		while (it_mesas_gobernador.hasNext()) {
+			Mesa m = it_mesas_gobernador.next();
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios());
+
+			// Sorting
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			/* Solo si la lista no esta vacia */
+
+			if (escrutinios.size() > 0) {
+				// Crear una fila para esta mesa
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+
+				// obtener el lugar de votacion
+
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+
+				cell2.setCellValue(m.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+
+				cell5.setCellValue("GOBERNADOR");
+
+				Cell cell6 = row.createCell(columnCount++);
+
+				cell6.setCellValue(m.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+
+				cell7.setCellValue(m.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+					Escrutinio e = it_escrutinios.next();
+					Cell cellEsc = row.createCell(columnCount++);
+					cellEsc.setCellValue(e.getTotalVotosGobernador());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+
+				cell8.setCellValue(m.getTotalVotosNulosGobernador());
+
+				Cell cell9 = row.createCell(columnCount++);
+
+				cell9.setCellValue(m.getTotalVotosRecurridosGobernador());
+
+				Cell cell10 = row.createCell(columnCount++);
+
+				cell10.setCellValue(m.getTotalVotosImpugnadoGobernador());
+
+				Cell cell11 = row.createCell(columnCount++);
+
+				cell11.setCellValue(m.getTotalVotosBolsinGobernador());
+
+				Cell cell12 = row.createCell(columnCount++);
+
+				cell12.setCellValue(m.getTotalVotosBlancoGobernador());
+
+			}
+
+		}
+
+		// Plasmar la parte de los Legisladores Provinciales
+		System.out.println("legisladores");
+		List<Mesa> mesasAll_legisladores_provinciales = mesaRepository.findLoaded();
+
+		Iterator<Mesa> it_mesas_legisladores_provinciales = mesasAll_legisladores_provinciales.iterator();
+
+		while (it_mesas_legisladores_provinciales.hasNext()) {
+			Mesa m = it_mesas_legisladores_provinciales.next();
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios());
+
+			// Sorting
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			/* Solo si la lista no esta vacia */
+
+			if (escrutinios.size() > 0) {
+				// Crear una fila para esta mesa
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+
+				// obtener el lugar de votacion
+
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+
+				cell2.setCellValue(m.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+
+				cell5.setCellValue("LEGISLADORES PROVINCIALES");
+
+				Cell cell6 = row.createCell(columnCount++);
+
+				cell6.setCellValue(m.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+
+				cell7.setCellValue(m.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+					Escrutinio e = it_escrutinios.next();
+					Cell cellEsc = row.createCell(columnCount++);
+					cellEsc.setCellValue(e.getTotalVotosLegisladoresProvinciales());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+
+				cell8.setCellValue(m.getTotalVotosNulosLegisladoresProvinciales());
+
+				Cell cell9 = row.createCell(columnCount++);
+
+				cell9.setCellValue(m.getTotalVotosRecurridosLegisladoresProvinciales());
+
+				Cell cell10 = row.createCell(columnCount++);
+
+				cell10.setCellValue(m.getTotalVotosImpugnadoLegisladoresProvinciales());
+
+				Cell cell11 = row.createCell(columnCount++);
+
+				cell11.setCellValue(m.getTotalVotosBolsinLegisladoresProvinciales());
+
+				Cell cell12 = row.createCell(columnCount++);
+
+				cell12.setCellValue(m.getTotalVotosBlancoLegisladoresProvinciales());
+
+			}
+
+		}
+
+		// INTENDENTE Y CONCEJALES
+		List<Mesa> mesasAll_intendente = mesaRepository.findLoaded();
+
+		Iterator<Mesa> it_mesas_intendente = mesasAll_intendente.iterator();
+
+		while (it_mesas_intendente.hasNext()) {
+			Mesa m = it_mesas_intendente.next();
+			List<Escrutinio> escrutinios = new ArrayList<Escrutinio>(m.getEscrutinios());
+
+			// Sorting
+			Collections.sort(escrutinios, new Comparator<Escrutinio>() {
+				@Override
+				public int compare(Escrutinio e2, Escrutinio e1) {
+					return Integer.valueOf(e2.getIdListaInterna()).compareTo(e1.getIdListaInterna());
+				}
+			});
+
+			/* Solo si la lista no esta vacia */
+
+			if (escrutinios.size() > 0) {
+				// Crear una fila para esta mesa
+				Row row = sheet.createRow(rowCount++);
+
+				int columnCount = 0;
+
+				// obtener el lugar de votacion
+
+				CircuitoMesa cm = circuitoMesaRepository.findCircuitoMesa(m.getCircuito(), m.getMesa());
+
+				Cell cell1 = row.createCell(columnCount++);
+
+				cell1.setCellValue(cm.getCircuito());
+
+				Cell cell2 = row.createCell(columnCount++);
+
+				cell2.setCellValue(m.getMesa());
+
+				Cell cell3 = row.createCell(columnCount++);
+
+				cell3.setCellValue(cm.getDireccion());
+
+				Cell cell4 = row.createCell(columnCount++);
+
+				cell4.setCellValue(cm.getNombre());
+
+				Cell cell5 = row.createCell(columnCount++);
+
+				cell5.setCellValue("INTENDENTE CONCEJALES");
+
+				Cell cell6 = row.createCell(columnCount++);
+
+				cell6.setCellValue(m.getTotalsobres());
+
+				Cell cell7 = row.createCell(columnCount++);
+
+				cell7.setCellValue(m.getTotalVotosXIndividuo());
+
+				Iterator<Escrutinio> it_escrutinios = escrutinios.iterator();
+
+				while (it_escrutinios.hasNext()) {
+					Escrutinio e = it_escrutinios.next();
+					Cell cellEsc = row.createCell(columnCount++);
+					cellEsc.setCellValue(e.getTotalVotosIntendente());
+				}
+
+				Cell cell8 = row.createCell(columnCount++);
+
+				cell8.setCellValue(m.getTotalVotosNulosIntendente());
+
+				Cell cell9 = row.createCell(columnCount++);
+
+				cell9.setCellValue(m.getTotalVotosRecurridosIntendente());
+
+				Cell cell10 = row.createCell(columnCount++);
+
+				cell10.setCellValue(m.getTotalVotosImpugnadoIntendente());
+
+				Cell cell11 = row.createCell(columnCount++);
+
+				cell11.setCellValue(m.getTotalVotosBolsinIntendente());
+
+				Cell cell12 = row.createCell(columnCount++);
+
+				cell12.setCellValue(m.getTotalVotosBlancoIntendente());
+
+			}
+
+		}
+
+		for (int i = 0; i < bookData[0].length; i++)
+
+			sheet.autoSizeColumn(i);
+
+		String relativeDirectoryPath = "data/";
+
+		// Combina la ruta del directorio relativo con el nombre del archivo
+		String filePath = System.getProperty("user.dir") + "/" + relativeDirectoryPath + "Paso2023.xlsx";
+		// Asegurarse de que el directorio exista, si no, crearlo
+		try {
+			Files.createDirectories(Paths.get(System.getProperty("user.dir"), relativeDirectoryPath));
+		} catch (IOException e) {
+			e.printStackTrace();
+			returnValue.put("success", false);
+			returnValue.put("message", "Ha ocurrido un error al crear el directorio");
+			return returnValue;
+		}
+		// Escupir el archivo a la direccion utilizada
+		// try (FileOutputStream outputStream = new
+		// FileOutputStream("C:\\Users\\sergio\\Documents\\Paso2023.xlsx")) {
+		// try (FileOutputStream outputStream = new
+		// FileOutputStream("/tmp/DetallePaso2019.xlsx")) {
+		try (FileOutputStream outputStream = new FileOutputStream(filePath)) {
+			workbook.write(outputStream);
+			returnValue.put("success", true);
+		} catch (Exception e) {
+			e.printStackTrace();
+			returnValue.put("success", false);
+			returnValue.put("message", "Ha ocurrido un error al generar el archivo Excel");
+
+		}
+		return returnValue;
+
+	}
+
 }

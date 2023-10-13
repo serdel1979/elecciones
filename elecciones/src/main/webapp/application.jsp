@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Municipalidad de Tres de Febrero - Elecciones Generales 2021</title>
+        <title>Municipalidad de Tres de Febrero - Elecciones Generales 2023</title>
         <!-- CSS -->
 		<link href="<c:url value="/resources/bootstrap/css/bootstrap.min.css" />" rel="stylesheet"  type="text/css" />
         
@@ -92,19 +92,20 @@
 							  <col width="100">
 							  <col width="156">
 
-							  <tr>
+							  <tr style="background: #f0f0f0">
 								<th class="tg-031e" rowspan="2">N&deg;</th>
-								<th class="tg-031e agrupaciones-politicas" rowspan="2">AGRUPACIONES POLITICAS</th>
-								<th class="tg-031e" rowspan="2">LISTAS INTERNAS</th>
+								<th class="tg-031e agrupaciones-politicas" colspan="5" rowspan="2">AGRUPACIONES POLITICAS</th>
+							<!--	<th class="tg-031e" rowspan="2">LISTAS INTERNAS</th>   -->
 
 								
 								<th class="tg-031e">Presidente <br> Vicepresidente</th>
 								<th class="tg-031e">Parlamentarios <br>del mercosur <br> nacional (D.N)</th>
+							<!-- 
 								<th class="tg-031e">Senadores <br> Nacionales</th>
 								<th class="tg-031e">Diputados <br> Nacionales</th>
 								<th class="tg-031e">Parlamentarios <br>del mercosur <br> regional (D.N)</th>
 								
-							<!--  
+							 
 								
 								<th class="tg-031e">Gobernador</th>
 								<th class="tg-031e">Legisladores <br> Provinciales</th>
@@ -113,14 +114,15 @@
 								-->	
 
 							  </tr>
-							  <tr id="tr_totales_label_nacionales_1">
+							  <tr style="background: #f0f0f0" id="tr_totales_label_nacionales_1">
 								<td class="tg-031e">Total de votos de la lista</td>
 								<td class="tg-031e">Total de votos de la lista</td>
+							<!--
 								<td class="tg-031e">Total de votos de la lista</td>
 								<td class="tg-031e">Total de votos de la lista</td>
 								<td class="tg-031e">Total de votos de la lista</td>
 								
-							<!--  	
+							  	
 								<td class="tg-031e">Total de votos de la lista</td>
 								<td class="tg-031e">Total de votos de la lista</td>
 								<td class="tg-031e">Total de votos de la lista</td>
@@ -149,32 +151,7 @@
 							  </tr-->
 							  
 							  <!--  Duplicado -->
-							  <tr>
-								<th class="tg-031e" rowspan="2">N&deg;</th>
-								<th class="tg-031e agrupaciones-politicas" rowspan="2">AGRUPACIONES POLITICAS</th>
-								<th class="tg-031e" rowspan="2">LISTAS INTERNAS</th>
 
-								
-								<th class="tg-031e">Presidente <br> Vicepresidente</th>
-								<th class="tg-031e">Parlamentarios <br>del mercosur <br> nacional (D.N)</th>
-								<th class="tg-031e">Senadores <br> Nacionales</th>
-								<th class="tg-031e">Diputados <br> Nacionales</th>
-								<th class="tg-031e">Parlamentarios <br>del mercosur <br> regional (D.N)</th>
-								
-							<!--  	
-								<th class="tg-031e">Gobernador</th>
-								<th class="tg-031e">Legisladores <br> Provinciales</th>
-								<th class="tg-031e">Intendente <br> concejales y <br> consejeros escolares </th>
-							-->
-							  </tr>
-							 
-							  <tr id="tr_totales_label_nacionales_2">
-								<td class="tg-031e">Total de votos de la lista</td>
-								<td class="tg-031e">Total de votos de la lista</td>
-								<td class="tg-031e">Total de votos de la lista</td>
-								<td class="tg-031e">Total de votos de la lista</td>
-								<td class="tg-031e">Total de votos de la lista</td>
-								
 							<!-- ACA 
 							  <tr style="border-bottom: 3px #000 solid;">
 								  <tr colspan="3">
@@ -185,49 +162,54 @@
 									
 								  </tr>	
 							
-							<!--  
+							 
 							
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_gobernador" onkeyup="total_votos_gobernador()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_legisladores_provinciales" onkeyup="total_votos_leg_prov()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_intendente" onkeyup="alertIntendente()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
+							
+							  
 							-->	
-							  </tr>
-							  <td class="tg-yw4l aleft" colspan="3">TOTAL VOTOS AGRUPACIONES POLITICAS</td>
+							  <td class="tg-yw4l aleft" colspan="6">TOTAL VOTOS AGRUPACIONES POLITICAS</td>
 								<td class="tg-yw4l">
 								<input type="text" style="width:120px;" onkeyup="alertPresidente()" id="total_votos_agrupaciones_politicas_presidente" />
 								</td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertParlamentarios()" id="total_votos_agrupaciones_politicas_parlamentarios_mercosur" /></td>
+							<!--
 								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertSenadores()" id="total_votos_agrupaciones_politicas_senadores" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertDipNac()" id="total_votos_agrupaciones_politicas_diputados" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertParlamentRegionales()" id="total_votos_agrupaciones_politicas_parlamentarios_regionales" /></td>
-
+							-->	
 							  </tr>
 							  <tr>
-								<td class="tg-yw4l aleft" colspan="3">VOTOS NULOS</td>
+								<td class="tg-yw4l aleft" colspan="6">VOTOS NULOS</td>
 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_presidente" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_parlamentarios_mercosur" /></td>
+							<!-- 	
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_senadores" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_diputados" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_diputados_nacionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_parlamentarios_regionales" /></td>
 								
-								<!--  
+								 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_intendente" /></td>
-								
+								-->
 								
 							  
 							  </tr>
 							  <tr>
-								<td class="tg-yw4l aleft" colspan="3">VOTOS RECURRIDOS QUE SE REMITEN EN SOBRE Nro. 3</td>
+								<td class="tg-yw4l aleft" colspan="6">VOTOS RECURRIDOS QUE SE REMITEN EN SOBRE Nro. 3</td>
 							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_presidente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_parlamentarios_mercosurs" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_parlamentarios_mercosur" /></td>
+							<!-- 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_senadores" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_diputados" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_parlamentarios_regionales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_diputados_nacionales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_parlamentarios_regionales" /></td>
 								
-							<!--  	
+								
+							 	
 							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_intendente" /></td>
@@ -236,29 +218,31 @@
 								
 							  </tr>
 							  <tr>
-							  	<td class="tg-yw4l aleft" colspan="3">VOTOS DE INDENTIDAD IMPUGNADA QUE SE REMITEN ES SOBRE Nro. 3 </td>
+							  	<td class="tg-yw4l aleft" colspan="6">VOTOS DE INDENTIDAD IMPUGNADA QUE SE REMITEN ES SOBRE Nro. 3 </td>
 							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_presidente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_parlamentarios_mercosurs" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_parlamentarios_mercosur" /></td>
+							<!-- 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_senadores" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_diputados" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_diputados_nacionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_parlamentarios_regionales" /></td>
 							
-							<!--  	
+							 	
 							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_intendente" /></td>
 								-->
 							  </tr>
 							  <tr>
-								<td class="tg-yw4l aleft" colspan="3">VOTOS DEL COMANDO ELECTORAL QUE SE REMITEN EN EL BOLSIN</td>
+								<td class="tg-yw4l aleft" colspan="6">VOTOS DEL COMANDO ELECTORAL QUE SE REMITEN EN EL BOLSIN</td>
 								
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_presidente" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_parlamentarios_mercosurs" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_parlamentarios_mercosur" /></td>
+						<!--
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_senadores" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_diputados" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_diputados_nacionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_parlamentarios_regionales" /></td>
 								
-							<!--  	
+							  	
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_intendente" /></td>
@@ -266,28 +250,31 @@
 								-->
 							  </tr>
 							  <tr style="border-bottom: 3px #000 solid;">
-							  <td class="tg-yw4l aleft" colspan="3">VOTOS EN BLANCO</td>
+							  <td class="tg-yw4l aleft" colspan="6">VOTOS EN BLANCO</td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_presidente" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_parlamentarios_mercosur" /></td>
+							<!-- 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_senadores" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_diputados" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_diputados_nacionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_parlamentarios_regionales" /></td>
-								<!--  
+								 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_intendente" /></td>
 								-->
 							  </tr>
 							  <tr style="border-bottom: 3px #000 solid;">
-							  <td class="tg-yw4l aleft" colspan="3">TOTAL POR COLUMNAS</td>
+							  <td class="tg-yw4l aleft" colspan="6">TOTAL POR COLUMNAS</td>
 								<td class="tg-yw4l">
 								<input type="text" style="width:120px;" id="total_votos_x_columna_presidente" />
 								</td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_parlamentarios_mercosur" /></td>
+							<!-- 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_senadores" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_diputados" /></td>
+						
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_diputados_nacionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_parlamentarios_regionales" /></td>
-								<!--  
+								 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_intendente" /></td>
@@ -301,7 +288,7 @@
 							 
 							
 							
-							 -->	
+								
 								
 							<!--  	
 								<td class="tg-031e">Total de votos de la lista</td>
@@ -311,10 +298,13 @@
 							  -->
 							  
 							  </tr>
-							  <tr id="tr_cargos_provinciales">
+							  <tr style="background: #f0f0f0" id="tr_cargos_provinciales">
 								<th class="tg-031e" rowspan="2">N&deg;</th>
-								<th class="tg-031e agrupaciones-politicas"  rowspan="2">AGRUPACIONES POLITICAS</th>
-								<th class="tg-031e" colspan="3" rowspan="2">LISTAS INTERNAS</th>
+								<th class="tg-031e agrupaciones-politicas" rowspan="2">AGRUPACIONES POLITICAS</th>
+						<!-- 	<th class="tg-031e" colspan="3" rowspan="2">LISTAS INTERNAS</th>  -->	
+								<th class="tg-031e">Senadores <br> Nacionales</th>
+								<th class="tg-031e">Diputados <br> Nacionales</th>
+								<th class="tg-031e">Parlamentarios <br>del mercosur <br> regional (D.N)</th>
 								<th class="tg-031e"  rowspan="2">Gobernador</th>
 								<th class="tg-031e"  rowspan="2">Legisladores <br> Provinciales</th>
 								<th class="tg-031e"  rowspan="2">Intendente <br> concejales y <br> consejeros escolares </th>
@@ -324,7 +314,10 @@
 							  
 							  <tr style="border-bottom: 3px #000 solid;">
 								  <tr colspan="3">
-									<td colspan="5" class="tg-yw4l aleft" >TOTAL VOTOS AGRUPACIONES POLITICAS:</td>
+									<td colspan="2" class="tg-yw4l aleft" >TOTAL VOTOS AGRUPACIONES POLITICAS:</td>
+									<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertSenadores()" id="total_votos_agrupaciones_politicas_senadores" /></td>
+									<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertDipNac()" id="total_votos_agrupaciones_politicas_diputados" /></td>
+									<td class="tg-yw4l"><input type="text" style="width:120px;" onkeyup="alertParlamentRegionales()" id="total_votos_agrupaciones_politicas_parlamentarios_regionales" /></td>
 									<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_gobernador" onkeyup="total_votos_gobernador()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 									<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_legisladores_provinciales" onkeyup="total_votos_leg_prov()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
 									<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_agrupaciones_politicas_intendente" onkeyup="alertIntendente()" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" /></td>
@@ -339,82 +332,71 @@
 							-->	
 							  </tr>
 							  <tr>
-								<td class="tg-yw4l aleft" colspan="5">VOTOS NULOS</td>
+								<td class="tg-yw4l aleft" colspan="2">VOTOS NULOS</td>
 
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_senadores" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_diputados_nacionales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_parlamentarios_regionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_intendente" /></td>
-								
-								<!--  
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_gobernador" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_legisladores_provinciales" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_intendente" /></td>
-								
-								-->
+
 							  
 							  </tr>
 							  <tr>
-								<td class="tg-yw4l aleft" colspan="5">VOTOS RECURRIDOS QUE SE REMITEN EN SOBRE Nro. 3</td>
+								<td class="tg-yw4l aleft" colspan="2">VOTOS RECURRIDOS QUE SE REMITEN EN SOBRE Nro. 3</td>
+
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_senadores" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_diputados_nacionales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_parlamentarios_regionales" /></td>
 							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_intendente" /></td>
 								
-							<!--  	
-							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_gobernador" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_legisladores_provinciales" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_intendente" /></td>
-								
-								-->
-								
+
 							  </tr>
 							  <tr>
-							  	<td class="tg-yw4l aleft" colspan="5">VOTOS DE INDENTIDAD IMPUGNADA QUE SE REMITEN ES SOBRE Nro. 3 </td>
+							  	<td class="tg-yw4l aleft" colspan="2">VOTOS DE INDENTIDAD IMPUGNADA QUE SE REMITEN ES SOBRE Nro. 3 </td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_senadores" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_diputados_nacionales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_parlamentarios_regionales" /></td>
 							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_intendente" /></td>
 							
-							<!--  	
-							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_gobernador" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_legisladores_provinciales" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_impugnados_intendente" /></td>
-								-->
 							  </tr>
 							  <tr>
-								<td class="tg-yw4l aleft" colspan="5">VOTOS DEL COMANDO ELECTORAL QUE SE REMITEN EN EL BOLSIN</td>
+								<td class="tg-yw4l aleft" colspan="2">VOTOS DEL COMANDO ELECTORAL QUE SE REMITEN EN EL BOLSIN</td>
 								
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_senadores" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_diputados_nacionales" /></td>
+								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_parlamentarios_regionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_intendente" /></td>
-								
-							<!--  	
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_gobernador" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_legisladores_provinciales" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_comando_electoral_intendente" /></td>
-								
-								-->
+
 							  </tr>
 							  <tr style="border-bottom: 3px #000 solid;">
-							  <td class="tg-yw4l aleft" colspan="5">VOTOS EN BLANCO</td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_gobernador" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_legisladores_provinciales" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_intendente" /></td>
+							  <td class="tg-yw4l aleft" colspan="2">VOTOS EN BLANCO</td>
+
+							  <td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_senadores" /></td>
+							  <td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_diputados_nacionales" /></td>
+							  <td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_parlamentarios_regionales" /></td>
+							  <td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_gobernador" /></td>
+							  <td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_legisladores_provinciales" /></td>
+							  <td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_intendente" /></td>
 								
-								<!--  
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_gobernador" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_legisladores_provinciales" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_en_blanco_intendente" /></td>
-								-->
 							  </tr>
 							  <tr style="border-bottom: 3px #000 solid;">
-							  <td class="tg-yw4l aleft" colspan="5">TOTAL POR COLUMNAS</td>
+							  <td class="tg-yw4l aleft" colspan="2">TOTAL POR COLUMNAS</td>
+							  <td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_senadores" /></td>
+						
+							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_diputados_nacionales" /></td>
+							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_parlamentarios_regionales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_intendente" /></td>
-								<!--  
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_gobernador" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_legisladores_provinciales" /></td>
-								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_x_columna_intendente" /></td>
-								-->
+
 							  </tr>
 													  
 							  <tr>
