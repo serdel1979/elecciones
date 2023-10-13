@@ -182,6 +182,7 @@
 							-->	
 							  </tr>
 							  <tr>
+								
 								<td class="tg-yw4l aleft" colspan="6">VOTOS NULOS</td>
 
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_nulos_presidente" /></td>
@@ -213,7 +214,7 @@
 							  	<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_gobernador" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_legisladores_provinciales" /></td>
 								<td class="tg-yw4l"><input type="text" style="width:120px;" id="total_votos_recurridos_intendente" /></td>
-								
+							
 								-->
 								
 							  </tr>

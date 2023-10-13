@@ -1088,6 +1088,9 @@ function persistir_mesa() {
 		if (input_text) {
 			foundDetalle = escrutinio_detalle.find(detalle => detalle.lista_interna == input_text.match(/\d+$/)[0]);
 			if (foundDetalle){
+				foundDetalle.senadores = setParam($(this).find(".senadores").val());
+				foundDetalle.diputados_nacionales = setParam($(this).find(".dip_nac").val());
+				foundDetalle.parlamentarios_regionales = setParam($(this).find(".parla_reg").val());
 				foundDetalle.legisladores_provinciales = setParam($(this).find(".leg_prov").val());
 				foundDetalle.intendente = setParam($(this).find(".intendente").val());
 				foundDetalle .gobernador = setParam($(this).find(".gobernador").val());
@@ -1096,14 +1099,14 @@ function persistir_mesa() {
 			else {
 				var detalle = new Object();
 				detalle.lista_interna = input_text.match(/\d+$/)[0];
-				detalle.senadores = 0;
-				detalle.diputados_nacionales = 0;
+				detalle.senadores =  setParam($(this).find(".senadores").val());
+				detalle.diputados_nacionales = setParam($(this).find(".dip_nac").val());
 				detalle.legisladores_provinciales = setParam($(this).find(".leg_prov").val());
 				detalle.intendente = setParam($(this).find(".intendente").val());
 				detalle.presidente = 0;
 				detalle.gobernador = setParam($(this).find(".gobernador").val());
 				detalle.parlamentarios_mercosur = 0;
-				detalle.parlamentarios_regionales =0;
+				detalle.parlamentarios_regionales = setParam($(this).find(".parla_reg").val());
    			    escrutinio_detalle.push(detalle);
 				}
 	
