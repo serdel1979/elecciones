@@ -594,7 +594,6 @@ public class AppController {
 				while (it_escrutinios.hasNext()) {
 
 					Escrutinio e = it_escrutinios.next();
-					System.out.println(e.getIdListaInterna());
 					Cell cellEscrutinio = row.createCell(columnCount++);
 					cellEscrutinio.setCellValue(e.getTotalVotosPresidente());
 				}
